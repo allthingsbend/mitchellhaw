@@ -322,3 +322,38 @@ section {
     padding: 72px 0;
   }
 }
+.page-hero {
+  background:
+    linear-gradient(rgba(16, 47, 41, 0.68), rgba(16, 47, 41, 0.78)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 130px 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-hero p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.18rem;
+}
+
+.page-hero .section-label {
+  color: var(--sage);
+}
+
+.service-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .service-grid.three {
+    grid-template-columns: 1fr;
+  }
+}
