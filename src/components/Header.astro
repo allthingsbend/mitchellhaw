@@ -1,59 +1,16 @@
 ---
-// Header.astro
+// src/components/Header.astro
 ---
 <header class="site-header">
-  <div class="container header-inner">
-    <div class="logo">
-      <a href="/">Mitchell Haw</a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/seo">SEO</a></li>
-        <li><a href="/ai-search">AI Search</a></li>
-        <li><a href="/video-marketing">Video Marketing</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Reach Out</a></li>
-      </ul>
+  <div class="nav-container">
+    <a href="/" class="logo">Mitchell Haw</a>
+    
+    <nav>
+      <a href="/services/seo">SEO</a>
+      <a href="/services/ai-search">AI Search</a>
+      <a href="/services/video-marketing">Video Marketing</a>
+      <a href="/about">About</a>
+      <a href="/contact" class="nav-cta">Reach Out</a>
     </nav>
   </div>
 </header>
-
-<style>
-  .site-header {
-    padding: 1.5rem 0;
-    width: 100%;
-  }
-
-  .header-inner {
-    display: flex;
-    justify-content: space-between; /* This pushes nav to the right */
-    align-items: center;
-  }
-
-  .logo a {
-    font-weight: 700;
-    font-size: 1.25rem;
-    text-decoration: none;
-    color: #000;
-  }
-
-  .main-nav ul {
-    display: flex;
-    gap: 2rem; /* Adds consistent space between links */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .main-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-  }
-
-  .main-nav a:hover {
-    color: #000;
-  }
-</style>
