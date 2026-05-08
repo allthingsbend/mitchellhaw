@@ -1,16 +1,19 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Mitchell Haw | SEO & AI Search Consultant in Bend, Oregon</title>
+
     <meta
       name="description"
-      content="Mitchell Haw helps businesses improve SEO, AI search visibility, local search, content strategy, and organic growth. Based in Bend, Oregon."
+      content="Mitchell Haw helps businesses improve SEO, AI search visibility, local search, content strategy, and organic growth."
     />
   </head>
 
@@ -19,69 +22,92 @@ import Footer from '../components/Footer.astro';
 
     <main>
       <section class="hero">
-        <div class="hero-overlay">
-          <div class="container hero-grid">
-            <div>
-              <p class="eyebrow">Bend, Oregon SEO & AI Search Consultant</p>
-              <h1>SEO, AI search, and digital visibility for brands that want to be found.</h1>
-              <p class="hero-text">
-                I help businesses improve how they show up across Google, AI search engines,
-                local results, maps, and content-driven discovery.
-              </p>
-              <div class="hero-buttons">
-                <a href="/services/seo" class="primary-btn">SEO Services</a>
-                <a href="/services/ai-search" class="secondary-btn">AI Search Help</a>
-              </div>
-            </div>
+        <div class="hero-inner">
+          <p class="eyebrow">
+            Bend, Oregon SEO & AI Search Consultant
+          </p>
 
-            <div class="hero-card">
-              <p class="card-label">Focused on</p>
-              <ul>
-                <li>Technical SEO</li>
-                <li>AI search visibility</li>
-                <li>Local SEO</li>
-                <li>Content strategy</li>
-                <li>Site architecture</li>
-              </ul>
-            </div>
+          <h1>
+            SEO, AI search, and digital visibility for brands that want to be found.
+          </h1>
+
+          <p class="hero-text">
+            I help businesses improve visibility across Google, AI search,
+            local discovery, maps, and content-driven search experiences.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="/services/seo" class="primary-btn">
+              SEO Services
+            </a>
+
+            <a href="/services/ai-search" class="secondary-btn">
+              AI Search Help
+            </a>
           </div>
         </div>
       </section>
 
       <section class="intro">
         <div class="container narrow">
-          <h2>Practical search strategy with a Central Oregon mindset.</h2>
+          <p class="section-label">
+            Practical search strategy
+          </p>
+
+          <h2>
+            Clear SEO and AI search help with a Central Oregon mindset.
+          </h2>
+
           <p>
-            I combine technical SEO, content planning, local search, and AI visibility strategy
-            to help businesses build a stronger presence online. My approach is clear, practical,
-            and focused on work that can actually move the needle.
+            I focus on technical SEO, content strategy, local visibility,
+            AI search readiness, and helping brands become easier to find online.
           </p>
         </div>
       </section>
 
       <section class="services">
         <div class="container">
-          <h2>What I help with</h2>
+          <div class="section-heading">
+            <p class="section-label">Services</p>
+
+            <h2>What I help with</h2>
+          </div>
 
           <div class="service-grid">
             <div class="card">
               <h3>SEO Strategy</h3>
-              <p>Keyword research, technical SEO, metadata, internal linking, content planning, and organic growth strategy.</p>
+
+              <p>
+                Technical SEO, keyword research, metadata,
+                internal linking, site architecture, and organic growth strategy.
+              </p>
             </div>
 
             <div class="card">
               <h3>AI Search Visibility</h3>
-              <p>Improve how your brand appears in ChatGPT, Perplexity, Gemini, AI Overviews, and other AI search experiences.</p>
+
+              <p>
+                Improve visibility across ChatGPT, Perplexity,
+                Gemini, AI Overviews, and answer engines.
+              </p>
             </div>
 
             <div class="card">
               <h3>Local SEO</h3>
-              <p>Google Business Profile optimization, local landing pages, maps visibility, reviews, and citation cleanup.</p>
+
+              <p>
+                Google Business Profile optimization, maps visibility,
+                reviews, citations, and local landing pages.
+              </p>
             </div>
 
             <div class="card">
-              <h3>Content Strategy</h3>
-              <p>Helpful, search-friendly content built around real questions, customer intent, and long-term discoverability.</p>
+              <h3>Video Marketing</h3>
+
+              <p>
+                Search-friendly YouTube strategy, short-form content,
+                and video discovery across search and social platforms.
+              </p>
             </div>
           </div>
         </div>
@@ -90,18 +116,24 @@ import Footer from '../components/Footer.astro';
       <section class="about">
         <div class="container about-grid">
           <div>
-            <p class="eyebrow">About</p>
-            <h2>Hi, I’m Mitchell Haw.</h2>
+            <p class="section-label light">About</p>
+
+            <h2>
+              Hi, I’m Mitchell Haw.
+            </h2>
           </div>
 
           <div>
             <p>
-              I work in SEO and organic search strategy, helping brands improve their visibility
-              across traditional search, AI search, local listings, and content platforms.
+              I work in SEO and organic search strategy, helping brands
+              improve visibility across Google, AI search engines,
+              local listings, and content platforms.
             </p>
+
             <p>
-              I’m based in Bend, Oregon, and I bring a practical, outdoors-inspired approach:
-              keep things useful, clear, durable, and built for the long run.
+              Based in Bend, Oregon, I bring a practical,
+              long-term approach focused on useful content,
+              discoverability, and strong digital foundations.
             </p>
           </div>
         </div>
@@ -109,12 +141,23 @@ import Footer from '../components/Footer.astro';
 
       <section class="cta">
         <div class="container narrow">
-          <h2>Want help improving your search visibility?</h2>
-          <p>
-            Whether you need SEO support, AI search strategy, local visibility help, or a better
-            content plan, I can help you figure out the next best steps.
+          <p class="section-label">
+            Reach Out
           </p>
-          <a href="mailto:hello@example.com" class="primary-btn">Contact Me</a>
+
+          <h2>
+            Looking for help with SEO or AI search visibility?
+          </h2>
+
+          <p>
+            Whether you need SEO strategy, AI search support,
+            local SEO help, or content planning,
+            feel free to reach out.
+          </p>
+
+          <a href="/contact" class="primary-btn">
+            Contact Me
+          </a>
         </div>
       </section>
     </main>
@@ -122,232 +165,3 @@ import Footer from '../components/Footer.astro';
     <Footer />
   </body>
 </html>
-
-<style>
-  :root {
-    --cream: #f5f1ea;
-    --sand: #e7dccb;
-    --pine: #245747;
-    --pine-dark: #15382f;
-    --sage: #d8e2d7;
-    --text: #1f2933;
-    --muted: #5f6f66;
-    --white: #ffffff;
-    --border: #d8d0c3;
-  }
-
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.7;
-  }
-
-  .container {
-    width: min(1120px, 92%);
-    margin: 0 auto;
-  }
-
-  .narrow {
-    max-width: 820px;
-    text-align: center;
-  }
-
-  .hero {
-    min-height: 720px;
-    background:
-      linear-gradient(rgba(21, 56, 47, 0.55), rgba(21, 56, 47, 0.65)),
-      url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
-    background-size: cover;
-    background-position: center;
-    color: white;
-  }
-
-  .hero-overlay {
-    padding: 130px 0 110px;
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr;
-    gap: 48px;
-    align-items: center;
-  }
-
-  .eyebrow {
-    color: var(--sage);
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
-
-  h1 {
-    font-size: clamp(3rem, 7vw, 6rem);
-    line-height: 0.98;
-    margin: 0 0 24px;
-    max-width: 850px;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
-    margin: 0 0 20px;
-  }
-
-  .hero-text {
-    font-size: 1.2rem;
-    max-width: 680px;
-    margin-bottom: 34px;
-  }
-
-  .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    display: inline-block;
-    padding: 14px 22px;
-    border-radius: 999px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
-  .primary-btn {
-    background: var(--pine);
-    color: white;
-  }
-
-  .secondary-btn {
-    border: 2px solid white;
-    color: white;
-  }
-
-  .hero-card {
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--text);
-    padding: 32px;
-    border-radius: 22px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
-  }
-
-  .card-label {
-    color: var(--pine);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 0;
-  }
-
-  .hero-card ul {
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  .hero-card li {
-    margin: 10px 0;
-    font-weight: 700;
-  }
-
-  section {
-    padding: 90px 0;
-  }
-
-  .intro {
-    background: var(--white);
-  }
-
-  .intro p,
-  .cta p {
-    font-size: 1.1rem;
-    color: var(--muted);
-  }
-
-  .services {
-    background: var(--cream);
-  }
-
-  .service-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    margin-top: 34px;
-  }
-
-  .card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 28px;
-    box-shadow: 0 12px 28px rgba(31, 41, 51, 0.06);
-  }
-
-  .card h3 {
-    margin-top: 0;
-    color: var(--pine-dark);
-  }
-
-  .about {
-    background: var(--pine-dark);
-    color: white;
-  }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 60px;
-    align-items: start;
-  }
-
-  .about p {
-    font-size: 1.08rem;
-  }
-
-  .cta {
-    background: var(--sand);
-    text-align: center;
-  }
-
-  .cta .primary-btn {
-    margin-top: 14px;
-  }
-
-  @media (max-width: 900px) {
-    .hero-grid,
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .service-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .hero {
-      min-height: auto;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .hero-overlay {
-      padding: 90px 0 80px;
-    }
-
-    .service-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .hero-buttons {
-      flex-direction: column;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-      text-align: center;
-    }
-  }
-</style>
