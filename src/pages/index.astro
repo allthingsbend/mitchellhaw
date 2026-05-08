@@ -1,0 +1,368 @@
+# File: src/pages/index.astro
+
+```astro
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitchell Haw | SEO, AI Search & Digital Visibility</title>
+    <meta
+      name="description"
+      content="Mitchell Haw helps brands improve SEO, AI search visibility, local search presence, and organic growth strategies. Based in Bend, Oregon."
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <p class="eyebrow">Bend, Oregon SEO & AI Search Strategy</p>
+
+          <h1>
+            Helping brands grow through SEO, AI Search,
+            content strategy, and digital visibility.
+          </h1>
+
+          <p class="hero-text">
+            I help businesses improve how they appear across Google,
+            ChatGPT, AI search engines, maps, social platforms, and
+            organic search results. My focus is on practical strategies
+            that improve visibility, traffic, and long-term brand growth.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="/services/seo" class="primary-btn">SEO Services</a>
+            <a href="/services/ai-search" class="secondary-btn">AI Search Help</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <h2>Services</h2>
+
+          <div class="service-grid">
+            <div class="card">
+              <h3>SEO Strategy</h3>
+              <p>
+                Technical SEO, on-page optimization, keyword research,
+                content planning, internal linking, migrations, and
+                long-term organic growth strategies.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>AI Search Visibility</h3>
+              <p>
+                Improve visibility across ChatGPT, Perplexity,
+                Gemini, Claude, AI Overviews, and emerging AI-driven
+                search experiences.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Local SEO</h3>
+              <p>
+                Google Business Profile optimization, local landing
+                pages, citation cleanup, review strategies, and map
+                visibility improvements.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Content Strategy</h3>
+              <p>
+                Build useful, search-friendly content that answers
+                real questions and helps users discover your business
+                earlier in the customer journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container narrow">
+          <h2>About Mitchell Haw</h2>
+
+          <p>
+            I work in organic search strategy with a focus on SEO,
+            AI search visibility, local search, content structure,
+            and digital discoverability.
+          </p>
+
+          <p>
+            Over the years, I have worked across large multi-location
+            websites, tourism brands, local businesses, and content-driven
+            platforms. My approach combines technical SEO foundations,
+            strong content strategy, local visibility, and emerging
+            AI search optimization.
+          </p>
+
+          <p>
+            Based in Bend, Oregon, I also build and manage local web
+            properties focused on travel, outdoor recreation, and
+            community-driven content.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container narrow">
+          <h2>Looking for SEO or AI Search Help?</h2>
+
+          <p>
+            Whether you need help improving rankings, preparing for
+            AI-driven search, organizing site architecture, or growing
+            local visibility, feel free to reach out.
+          </p>
+
+          <a href="mailto:hello@example.com" class="primary-btn">
+            Contact Me
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :root {
+    --background: #f7f5f2;
+    --text: #1f2933;
+    --accent: #2f5d50;
+    --accent-light: #dfe9e4;
+    --border: #d6d6d6;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+  }
+
+  .narrow {
+    max-width: 800px;
+  }
+
+  .hero {
+    padding: 100px 0 80px;
+    background: linear-gradient(to bottom, #edf4f1, #f7f5f2);
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+
+  .hero-text {
+    max-width: 760px;
+    font-size: 1.15rem;
+    margin-bottom: 32px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 14px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s ease;
+  }
+
+  .primary-btn {
+    background: var(--accent);
+    color: white;
+  }
+
+  .primary-btn:hover {
+    opacity: 0.92;
+  }
+
+  .secondary-btn {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+  }
+
+  section {
+    padding: 80px 0;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+  }
+
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .about,
+  .cta {
+    background: white;
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 80px 0 60px;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+    }
+  }
+</style>
+```
+
+# Also Create This Folder Structure
+
+```text
+src/
+  pages/
+    index.astro
+  components/
+    Header.astro
+    Footer.astro
+```
+
+# Minimal Header Component
+
+File: `src/components/Header.astro`
+
+```astro
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">Mitchell Haw</a>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/services/seo">SEO</a>
+      <a href="/services/ai-search">AI Search</a>
+      <a href="/about">About</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    padding: 22px 0;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #1f2933;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #1f2933;
+    font-weight: 600;
+  }
+</style>
+```
+
+# Minimal Footer Component
+
+File: `src/components/Footer.astro`
+
+```astro
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Mitchell Haw. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: 40px 0;
+    text-align: center;
+    background: #1f2933;
+    color: white;
+  }
+
+  .container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+  }
+</style>
+```
+
+# After Adding These Files
+
+Run:
+
+```bash
+git add .
+git commit -m "Add homepage and Astro pages"
+git push
+```
+
+Then redeploy in Cloudflare Pages.
