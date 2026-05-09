@@ -101,7 +101,7 @@ nav a {
   color: white;
   background:
     linear-gradient(rgba(16, 47, 41, 0.55), rgba(16, 47, 41, 0.7)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+    url("/images/smith-rock-central-oregon.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -245,7 +245,7 @@ section {
 .about {
   background:
     linear-gradient(rgba(16, 47, 41, 0.94), rgba(16, 47, 41, 0.94)),
-    url("https://images.unsplash.com/photo-1445308394109-4ec2920981b1?auto=format&fit=crop&w=1800&q=80");
+    url("url("/images/smith-rock-central-oregon.jpg");");
   background-size: cover;
   background-position: center;
   color: white;
