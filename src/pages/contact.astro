@@ -1,42 +1,29 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <title>Contact Mitchell Haw | SEO & AI Search Help</title>
-    <meta name="description" content="Reach out to Mitchell Haw for SEO, AI search, local SEO, content strategy, and video marketing help." />
-  </head>
+<Layout
+  title="Contact Mitchell Haw | SEO & AI Search Help"
+  description="Reach out to Mitchell Haw for SEO, AI search, local SEO, content strategy, and video marketing help."
+>
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-label">Contact</p>
+        <h1>Reach out about SEO, AI search, or digital visibility help.</h1>
+        <p>Send me a quick note about what you are working on and where you need help.</p>
+        <a href="mailto:hello@example.com" class="primary-btn">Email Me</a>
+      </div>
+    </section>
 
-  <body>
-    <Header />
-
-    <main>
-      <section class="page-hero">
-        <div class="container narrow">
-          <p class="section-label">Contact</p>
-          <h1>Reach out about SEO, AI search, or digital visibility help.</h1>
-          <p>
-            Send me a quick note about what you are working on and where you need help.
-          </p>
-
-          <a href="mailto:hello@example.com" class="primary-btn">Email Me</a>
-        </div>
-      </section>
-
-      <section class="intro">
-        <div class="container narrow">
-          <h2>Good fits</h2>
-          <p>
-            SEO strategy, AI search visibility, local SEO, content planning, site architecture,
-            technical SEO audits, website migrations, video marketing strategy, and organic growth planning.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+    <section class="intro">
+      <div class="container narrow">
+        <h2>Good fits</h2>
+        <p>
+          SEO strategy, AI search visibility, local SEO, content planning, site architecture,
+          technical SEO audits, website migrations, video marketing strategy, and organic growth planning.
+        </p>
+      </div>
+    </section>
+  </main>
+</Layout>
