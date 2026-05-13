@@ -6,6 +6,34 @@ import Layout from '../layouts/Layout.astro';
   title="Mitchell Haw | SEO & AI Search Consultant in Bend, Oregon"
   description="Mitchell Haw helps businesses improve SEO, AI search visibility, local search, content strategy, and organic growth."
 >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://mitchellhaw.com/#person",
+          "name": "Mitchell Haw",
+          "url": "https://mitchellhaw.com/",
+          "jobTitle": "Digital Strategist & SEO / AI Search Lead",
+          "image": "https://mitchellhaw.com/images/mitchell-haw.jpg",
+          "sameAs": [
+            "https://www.linkedin.com/in/mitchellhaw"
+          ],
+          "description": "Digital Strategist specializing in SEO and AI Search optimization."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://mitchellhaw.com/#website",
+          "url": "https://mitchellhaw.com/",
+          "name": "Mitchell Haw",
+          "publisher": {
+            "@id": "https://mitchellhaw.com/#person"
+          }
+        }
+      ]
+    }
+  </script>
   <main>
     <section class="hero">
       <div class="hero-inner">
