@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pages = [
+  {
+    title: 'Home',
+    url: '/',
+    description: 'Homepage for Mitchell Haw.'
+  },
+  {
+    title: 'SEO Services',
+    url: '/services/seo/',
+    description: 'Organic search and SEO consulting services.'
+  },
+  {
+    title: 'AI Search Consulting',
+    url: '/services/ai-search/',
+    description: 'AI search, GEO, and generative engine optimization services.'
+  },
+  {
+    title: 'Video Marketing Strategy',
+    url: '/services/video-marketing/',
+    description: 'Video and YouTube marketing strategy services.'
+  },
+  {
+    title: 'About',
+    url: '/about/',
+    description: 'Learn more about Mitchell Haw.'
+  },
+  {
+    title: 'Contact',
+    url: '/contact/',
+    description: 'Contact Mitchell Haw.'
+  }
+];
+---
+
+<Layout
+  title="HTML Sitemap | Mitchell Haw"
+  description="Browse all pages on MitchellHaw.com."
+>
+  <main class="page-section">
+    <section class="container">
+      <h1>HTML Sitemap</h1>
+
+      <p>
+        Browse the main pages on MitchellHaw.com.
+      </p>
+
+      <ul class="sitemap-list">
+        {pages.map((page) => (
+          <li>
+            <a href={page.url}>
+              <strong>{page.title}</strong>
+            </a>
+            <br />
+            <span>{page.description}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .sitemap-list {
+    margin-top: 2rem;
+    padding-left: 1.25rem;
+  }
+
+  .sitemap-list li {
+    margin-bottom: 1.5rem;
+  }
+
+  .sitemap-list a {
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  .sitemap-list span {
+    opacity: 0.8;
+  }
+</style>
