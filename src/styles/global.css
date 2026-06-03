@@ -1,14 +1,18 @@
 :root {
-  --cream: #f6f1e8;
-  --sand: #e5d6c1;
-  --pine: #234f42;
-  --pine-dark: #102f29;
-  --sage: #d9e4d6;
-  --river: #426b69;
-  --text: #1f2933;
-  --muted: #5f6f66;
+  --cream: #f7f3ea;
+  --sand: #e7dcc8;
+  --navy: #081f2d;
+  --navy-soft: #102f43;
+  --pine: #1f5c4d;
+  --sage: #dce9dc;
+  --river: #3f7f82;
+  --sky: #dff3f5;
+  --gold: #f2b84b;
+  --text: #17212b;
+  --muted: #66737a;
   --white: #ffffff;
-  --border: #d7cbb9;
+  --border: rgba(23, 33, 43, 0.12);
+  --shadow: 0 24px 70px rgba(8, 31, 45, 0.14);
 }
 
 * {
@@ -48,15 +52,15 @@ a {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(246, 241, 232, 0.94);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(35, 79, 66, 0.1);
+  background: rgba(247, 243, 234, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(8, 31, 45, 0.08);
 }
 
 .nav-container {
   width: min(1180px, 94%);
   margin: 0 auto;
-  min-height: 78px;
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,11 +68,12 @@ a {
 }
 
 .logo {
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: 1.08rem;
+  font-weight: 900;
   text-decoration: none;
-  color: var(--pine-dark);
+  color: var(--navy);
   white-space: nowrap;
+  letter-spacing: -0.3px;
 }
 
 nav {
@@ -80,13 +85,13 @@ nav {
 
 nav a {
   text-decoration: none;
-  font-weight: 700;
-  color: var(--pine-dark);
-  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 0.94rem;
 }
 
 .nav-cta {
-  background: var(--pine);
+  background: var(--navy);
   color: white;
   padding: 10px 18px;
   border-radius: 999px;
@@ -95,29 +100,41 @@ nav a {
 /* HERO */
 
 .hero {
-  min-height: 720px;
-  display: flex;
-  align-items: center;
+  position: relative;
+  overflow: hidden;
   color: white;
   background:
-    linear-gradient(rgba(16, 47, 41, 0.55), rgba(16, 47, 41, 0.7)),
-    url("/images/smith-rock-central-oregon.jpg");
-  background-size: cover;
-  background-position: center;
+    radial-gradient(circle at 18% 20%, rgba(242, 184, 75, 0.24), transparent 25%),
+    radial-gradient(circle at 80% 25%, rgba(63, 127, 130, 0.35), transparent 30%),
+    linear-gradient(135deg, #061823 0%, #0b2a3b 45%, #123d38 100%);
 }
 
-.hero-inner {
-  width: min(1180px, 94%);
-  margin: 0 auto;
-  padding: 120px 0;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -10% -30% -10%;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(-3deg);
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 70px;
+  align-items: center;
+  padding: 90px 0;
 }
 
 .eyebrow,
 .section-label {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.82rem;
-  font-weight: 800;
+  font-size: 0.78rem;
+  font-weight: 900;
   color: var(--pine);
   margin: 0 0 16px;
 }
@@ -128,31 +145,32 @@ nav a {
 }
 
 h1 {
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  line-height: 0.98;
-  max-width: 820px;
+  font-size: clamp(3.4rem, 7vw, 6.8rem);
+  line-height: 0.92;
+  max-width: 860px;
   margin: 0 0 28px;
-  letter-spacing: -2px;
+  letter-spacing: -4px;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.1rem);
-  line-height: 1.1;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.02;
   margin: 0 0 22px;
-  letter-spacing: -1.5px;
+  letter-spacing: -2px;
 }
 
 h3 {
   margin: 0 0 12px;
   font-size: 1.25rem;
-  color: var(--pine-dark);
+  color: var(--navy);
+  letter-spacing: -0.5px;
 }
 
 .hero-text {
-  max-width: 620px;
-  font-size: 1.16rem;
+  max-width: 680px;
+  font-size: 1.18rem;
   margin: 0 0 36px;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .hero-buttons {
@@ -166,40 +184,100 @@ h3 {
   display: inline-block;
   padding: 14px 22px;
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 900;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .primary-btn {
-  background: var(--pine);
-  color: white;
+  background: var(--gold);
+  color: var(--navy);
 }
 
 .secondary-btn {
-  border: 2px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.38);
   color: white;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .primary-btn:hover,
 .secondary-btn:hover {
   transform: translateY(-2px);
-  opacity: 0.94;
+  opacity: 0.95;
+}
+
+/* HERO VISUAL */
+
+.visibility-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 34px;
+  padding: 32px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+}
+
+.card-label {
+  margin: 0 0 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  color: var(--sage);
+}
+
+.orbit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.orbit span,
+.channel-grid div {
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: 900;
+}
+
+.orbit span {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.visibility-card p:last-child {
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0;
 }
 
 /* GENERAL SECTIONS */
 
 section {
-  padding: 90px 0;
+  padding: 96px 0;
 }
 
 .intro {
   background: white;
 }
 
+.intro-grid,
+.about-grid,
+.search-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 64px;
+  align-items: start;
+}
+
 .intro p,
 .cta p,
-.page-hero p {
+.page-hero p,
+.about p {
   color: var(--muted);
   font-size: 1.08rem;
 }
@@ -208,19 +286,19 @@ section {
 
 .services {
   background:
-    radial-gradient(circle at top left, rgba(66, 107, 105, 0.14), transparent 30%),
+    radial-gradient(circle at top left, rgba(63, 127, 130, 0.15), transparent 28%),
     var(--cream);
 }
 
 .section-heading {
-  max-width: 760px;
-  margin-bottom: 34px;
+  max-width: 820px;
+  margin-bottom: 36px;
 }
 
 .service-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 22px;
 }
 
 .service-grid.three {
@@ -228,11 +306,32 @@ section {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.95);
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 28px;
   padding: 30px;
-  box-shadow: 0 18px 40px rgba(31, 41, 51, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--river));
+  border-radius: 0 0 999px 999px;
+}
+
+.card-number {
+  display: inline-block;
+  margin-bottom: 28px;
+  color: var(--river);
+  font-weight: 900;
+  font-size: 0.85rem;
 }
 
 .card p {
@@ -240,48 +339,67 @@ section {
   margin-bottom: 0;
 }
 
-/* ABOUT */
+/* SEARCH EVERYWHERE */
 
-.about {
+.search-everywhere {
   background:
-    linear-gradient(rgba(16, 47, 41, 0.94), rgba(16, 47, 41, 0.94)),
-    url("url("/images/smith-rock-central-oregon.jpg");");
+    linear-gradient(rgba(8, 31, 45, 0.95), rgba(8, 31, 45, 0.95)),
+    url("/images/smith-rock-central-oregon.jpg");
   background-size: cover;
   background-position: center;
   color: white;
 }
 
-.about h2 {
+.search-everywhere h2 {
   color: white;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 60px;
-  align-items: start;
+.search-everywhere p {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.08rem;
 }
 
-.about p {
-  font-size: 1.08rem;
-  color: rgba(255, 255, 255, 0.9);
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.channel-grid div {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ABOUT */
+
+.about {
+  background: white;
+}
+
+.about-grid {
+  align-items: center;
 }
 
 /* CTA */
 
 .cta {
-  background: var(--sand);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(242, 184, 75, 0.22), transparent 35%),
+    var(--sand);
   text-align: center;
 }
 
 .cta .primary-btn {
   margin-top: 16px;
+  background: var(--navy);
+  color: white;
 }
 
 /* FOOTER */
 
 .footer {
-  background: var(--pine-dark);
+  background: var(--navy);
   color: rgba(255, 255, 255, 0.82);
   padding: 34px 0;
   text-align: center;
@@ -295,8 +413,8 @@ section {
 
 .page-hero {
   background:
-    linear-gradient(rgba(16, 47, 41, 0.68), rgba(16, 47, 41, 0.78)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80");
+    linear-gradient(rgba(8, 31, 45, 0.75), rgba(8, 31, 45, 0.84)),
+    url("/images/smith-rock-central-oregon.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -316,23 +434,23 @@ section {
 
 /* TABLET */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+  .hero-grid,
+  .intro-grid,
+  .about-grid,
+  .search-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
   .service-grid,
   .service-grid.three {
     grid-template-columns: 1fr 1fr;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .hero {
+  .hero-grid {
     min-height: auto;
-  }
-
-  .hero-inner {
-    padding: 90px 0;
+    padding: 86px 0;
   }
 
   nav {
@@ -355,8 +473,12 @@ section {
   }
 
   h1 {
-    font-size: 3rem;
-    letter-spacing: -1px;
+    font-size: 3.4rem;
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    letter-spacing: -1.3px;
   }
 
   .hero-buttons {
@@ -369,11 +491,17 @@ section {
   }
 
   .service-grid,
-  .service-grid.three {
+  .service-grid.three,
+  .channel-grid,
+  .orbit {
     grid-template-columns: 1fr;
   }
 
   section {
     padding: 72px 0;
+  }
+
+  .visibility-card {
+    padding: 24px;
   }
 }
