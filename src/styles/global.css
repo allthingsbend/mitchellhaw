@@ -670,3 +670,61 @@ section {
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.86rem;
 }
+/* MOBILE HEADER FIX */
+
+@media (max-width: 640px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    width: min(94%, 420px);
+    min-height: auto;
+    padding: 14px;
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .logo {
+    display: block;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+  }
+
+  nav a {
+    text-align: center;
+    padding: 10px 12px;
+    background: rgba(8, 31, 45, 0.06);
+  }
+
+  .nav-cta {
+    grid-column: 1 / -1;
+    background: var(--pine);
+    color: white;
+  }
+
+  .hero-grid {
+    padding-top: 48px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 14vw, 4.2rem);
+    line-height: 0.95;
+  }
+
+  .hero-text {
+    font-size: 1.05rem;
+  }
+}
