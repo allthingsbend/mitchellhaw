@@ -17,9 +17,7 @@ import Layout from '../layouts/Layout.astro';
           "url": "https://mitchellhaw.com/",
           "jobTitle": "Digital Strategist & SEO / AI Search Lead",
           "image": "https://mitchellhaw.com/images/mitchell-haw.jpg",
-          "sameAs": [
-            "https://www.linkedin.com/in/mitchellhaw"
-          ],
+          "sameAs": ["https://www.linkedin.com/in/mitchellhaw"],
           "description": "Digital Strategist specializing in SEO and AI Search optimization."
         },
         {
@@ -34,63 +32,111 @@ import Layout from '../layouts/Layout.astro';
       ]
     }
   </script>
+
   <main>
     <section class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">Bend, Oregon SEO & AI Search Consultant</p>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">SEO & AI Search Consultant in Bend, Oregon</p>
+          <h1>Helping businesses get found wherever people search.</h1>
+          <p class="hero-text">
+            I help brands improve visibility across Google, AI search, local maps,
+            YouTube, content platforms, and the search experiences shaping how people discover businesses today.
+          </p>
 
-        <h1>SEO, AI search, and digital visibility for brands that want to be found.</h1>
+          <div class="hero-buttons">
+            <a href="/services/seo" class="primary-btn">Explore SEO Services</a>
+            <a href="/services/ai-search" class="secondary-btn">AI Search Strategy</a>
+          </div>
+        </div>
 
-        <p class="hero-text">
-          I help businesses improve visibility across Google, AI search,
-          local discovery, maps, and content-driven search experiences.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="/services/seo" class="primary-btn">SEO Services</a>
-          <a href="/services/ai-search" class="secondary-btn">AI Search Help</a>
+        <div class="visibility-card">
+          <p class="card-label">Search Visibility System</p>
+          <div class="orbit">
+            <span>Google</span>
+            <span>AI Search</span>
+            <span>Maps</span>
+            <span>YouTube</span>
+            <span>Content</span>
+            <span>Reviews</span>
+          </div>
+          <p>
+            Modern search is not one channel anymore. I help businesses build the foundation to show up across the full discovery journey.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="intro">
-      <div class="container narrow">
-        <p class="section-label">Practical search strategy</p>
-        <h2>Clear SEO and AI search help with a Central Oregon mindset.</h2>
-        <p>
-          I focus on technical SEO, content strategy, local visibility,
-          AI search readiness, and helping brands become easier to find online.
-        </p>
+      <div class="container intro-grid">
+        <div>
+          <p class="section-label">Modern search strategy</p>
+          <h2>SEO is no longer just rankings and keywords.</h2>
+        </div>
+        <div>
+          <p>
+            People now discover businesses through Google, maps, AI answers, YouTube,
+            social platforms, local listings, reviews, and content recommendations.
+          </p>
+          <p>
+            I help businesses connect those pieces into one practical search strategy.
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="services">
       <div class="container">
         <div class="section-heading">
-          <p class="section-label">Services</p>
-          <h2>What I help with</h2>
+          <p class="section-label">What I help with</p>
+          <h2>Search visibility built for how people find businesses now.</h2>
         </div>
 
         <div class="service-grid">
           <div class="card">
+            <span class="card-number">01</span>
             <h3>SEO Strategy</h3>
-            <p>Technical SEO, keyword research, metadata, internal linking, site architecture, and organic growth strategy.</p>
+            <p>Technical SEO, content planning, keyword research, metadata, internal linking, and site architecture.</p>
           </div>
 
           <div class="card">
+            <span class="card-number">02</span>
             <h3>AI Search Visibility</h3>
-            <p>Improve visibility across ChatGPT, Perplexity, Gemini, AI Overviews, and answer engines.</p>
+            <p>Improve how your business appears across ChatGPT, Perplexity, Gemini, AI Overviews, and answer engines.</p>
           </div>
 
           <div class="card">
+            <span class="card-number">03</span>
             <h3>Local SEO</h3>
-            <p>Google Business Profile optimization, maps visibility, reviews, citations, and local landing pages.</p>
+            <p>Google Business Profile optimization, local landing pages, maps visibility, reviews, and citations.</p>
           </div>
 
           <div class="card">
-            <h3>Video Marketing</h3>
-            <p>Search-friendly YouTube strategy, short-form content, and video discovery across search and social platforms.</p>
+            <span class="card-number">04</span>
+            <h3>Video & Content Discovery</h3>
+            <p>YouTube, short-form video, content hubs, and search-friendly publishing systems that support organic growth.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-everywhere">
+      <div class="container search-grid">
+        <div>
+          <p class="section-label light">Search everywhere</p>
+          <h2>Your customers are searching in more places than ever.</h2>
+          <p>
+            I help businesses show up in the places that matter most, from traditional organic results to AI-generated answers and local discovery.
+          </p>
+        </div>
+
+        <div class="channel-grid">
+          <div>Google Search</div>
+          <div>Google Maps</div>
+          <div>AI Answers</div>
+          <div>YouTube</div>
+          <div>Local Listings</div>
+          <div>Content Hubs</div>
         </div>
       </div>
     </section>
@@ -98,19 +144,19 @@ import Layout from '../layouts/Layout.astro';
     <section class="about">
       <div class="container about-grid">
         <div>
-          <p class="section-label light">About</p>
-          <h2>Hi, I’m Mitchell Haw.</h2>
+          <p class="section-label">About</p>
+          <h2>Practical SEO and AI search support from Bend, Oregon.</h2>
         </div>
 
         <div>
           <p>
-            I work in SEO and organic search strategy, helping brands improve visibility
-            across Google, AI search engines, local listings, and content platforms.
+            I’m Mitchell Haw, a digital strategist focused on SEO, AI search,
+            local visibility, content strategy, and organic growth.
           </p>
 
           <p>
-            Based in Bend, Oregon, I bring a practical, long-term approach focused on
-            useful content, discoverability, and strong digital foundations.
+            I work with businesses that want clear strategy, useful content,
+            stronger technical foundations, and better visibility across the full search journey.
           </p>
         </div>
       </div>
@@ -118,11 +164,11 @@ import Layout from '../layouts/Layout.astro';
 
     <section class="cta">
       <div class="container narrow">
-        <p class="section-label">Reach Out</p>
-        <h2>Looking for help with SEO or AI search visibility?</h2>
+        <p class="section-label">Ready to improve visibility?</p>
+        <h2>Let’s make your business easier to find.</h2>
         <p>
-          Whether you need SEO strategy, AI search support, local SEO help, or content planning,
-          feel free to reach out.
+          Whether you need SEO strategy, AI search support, local SEO help,
+          or a clearer content roadmap, I can help you figure out what to focus on next.
         </p>
         <a href="/contact" class="primary-btn">Contact Me</a>
       </div>
