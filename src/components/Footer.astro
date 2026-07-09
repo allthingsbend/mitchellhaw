@@ -1,19 +1,185 @@
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 Mitchell Haw. All rights reserved.</p>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      
+      <div class="footer-about">
+        <a href="/" class="footer-logo">Mitchell Haw</a>
+
+        <p class="footer-description">
+          SEO consultant based in Bend, Oregon, helping businesses improve
+          Google visibility, local search performance, website strategy,
+          content, and AI search visibility.
+        </p>
+
+        <a href="/contact/" class="footer-contact">
+          Get in touch →
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Services</p>
+
+        <div class="footer-link-list">
+          <a href="/services/seo/">SEO Services</a>
+          <a href="/services/seo-bend-oregon/">Bend Oregon SEO</a>
+          <a href="/services/ai-search/">AI Search Strategy</a>
+          <a href="/services/video-marketing/">Video Marketing</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Central Oregon SEO</p>
+
+        <div class="footer-link-list">
+          <a href="/services/seo-bend-oregon/">Bend SEO</a>
+          <a href="/services/seo-redmond-oregon/">Redmond SEO</a>
+          <a href="/services/seo-sisters-oregon/">Sisters SEO</a>
+          <a href="/services/seo-sunriver-oregon/">Sunriver SEO</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Explore</p>
+
+        <div class="footer-link-list">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/sitemap-html/">Sitemap</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {new Date().getFullYear()} Mitchell Haw. All rights reserved.</p>
+      <p>Bend, Oregon</p>
+    </div>
   </div>
 </footer>
 
 <style>
-  .footer {
-    padding: 40px 0;
-    text-align: center;
-    background: #1f2933;
+  .site-footer {
+    background: #081f2d;
     color: white;
+    padding: 72px 0 0;
   }
 
-  .container {
-    width: min(1100px, 92%);
+  .footer-container {
+    width: min(1180px, 94%);
     margin: 0 auto;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 56px;
+    padding-bottom: 56px;
+  }
+
+  .footer-about {
+    max-width: 440px;
+  }
+
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+  }
+
+  .footer-description {
+    margin: 0 0 22px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .footer-contact {
+    display: inline-block;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .footer-contact:hover {
+    opacity: 0.7;
+  }
+
+  .footer-heading {
+    margin: 0 0 18px;
+    color: white;
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .footer-link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .footer-link-list a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-decoration: none;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .footer-link-list a:hover {
+    color: white;
+    transform: translateX(3px);
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.86rem;
+  }
+
+  @media (max-width: 900px) {
+    .footer-main {
+      grid-template-columns: 1fr 1fr;
+      gap: 44px 36px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .site-footer {
+      padding-top: 52px;
+    }
+
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 36px;
+      padding-bottom: 44px;
+    }
+
+    .footer-about {
+      max-width: none;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
   }
 </style>
