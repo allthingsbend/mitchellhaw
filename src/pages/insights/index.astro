@@ -1,0 +1,532 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const locations = [
+  {
+    name: 'Bend',
+    href: '/insights/bend/',
+    description:
+      'SEO, AI search, Google Maps, content strategy, and digital marketing insights for businesses in Bend, Oregon.',
+  },
+  {
+    name: 'Redmond',
+    href: '/insights/redmond/',
+    description:
+      'Practical search visibility and local marketing insights for businesses in Redmond, Oregon.',
+  },
+  {
+    name: 'Sisters',
+    href: '/insights/sisters/',
+    description:
+      'SEO, local search, and digital visibility ideas for businesses in Sisters and the surrounding area.',
+  },
+  {
+    name: 'Sunriver',
+    href: '/insights/sunriver/',
+    description:
+      'Search strategy and online visibility insights for businesses serving Sunriver and Central Oregon visitors.',
+  },
+];
+
+const topics = [
+  {
+    title: 'SEO',
+    description:
+      'Technical SEO, organic rankings, site architecture, keyword strategy, internal linking, and sustainable search growth.',
+  },
+  {
+    title: 'AI Search',
+    description:
+      'How businesses can improve visibility across ChatGPT, Google AI Overviews, Perplexity, Gemini, and other AI-driven search experiences.',
+  },
+  {
+    title: 'Local SEO',
+    description:
+      'Google Business Profile optimization, Google Maps visibility, reviews, local landing pages, and location-based search strategy.',
+  },
+  {
+    title: 'Content Strategy',
+    description:
+      'Useful content built around real questions, search intent, customer needs, and long-term organic visibility.',
+  },
+  {
+    title: 'Analytics & Reporting',
+    description:
+      'Practical insights about Google Search Console, GA4, Looker Studio, rankings, traffic, and measuring search performance.',
+  },
+  {
+    title: 'Videos & Guides',
+    description:
+      'Helpful videos, tutorials, walkthroughs, observations, and practical resources about modern search and digital visibility.',
+  },
+];
+---
+
+<Layout
+  title="SEO, AI Search & Local Marketing Insights | Mitchell Haw"
+  description="Guides, articles, videos, and insights about SEO, AI search, local search, content strategy, analytics, and digital visibility from Mitchell Haw in Bend, Oregon."
+>
+  <main>
+    <section class="insights-hero">
+      <div class="container">
+        <p class="eyebrow">Insights</p>
+
+        <h1>
+          Practical ideas for getting found across search, AI, maps, content, and more.
+        </h1>
+
+        <p class="hero-text">
+          Guides, articles, videos, observations, and useful resources covering SEO,
+          AI search, local visibility, content strategy, analytics, and the changing
+          ways people discover businesses online.
+        </p>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div class="container intro-grid">
+        <div>
+          <p class="section-label">Explore by topic</p>
+
+          <h2>
+            Search is changing. The goal is still simple: make your business easier to find.
+          </h2>
+        </div>
+
+        <div class="intro-copy">
+          <p>
+            People now find businesses through Google Search, Google Maps,
+            ChatGPT, AI-generated answers, YouTube, reviews, local listings,
+            social platforms, and content recommendations.
+          </p>
+
+          <p>
+            This is where I share practical ideas about how those pieces work
+            together and what businesses can do to improve their visibility.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="topics-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Topics</p>
+          <h2>Insights about modern search and digital visibility.</h2>
+        </div>
+
+        <div class="topic-grid">
+          {
+            topics.map((topic, index) => (
+              <article class="topic-card">
+                <span class="card-number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <h3>{topic.title}</h3>
+                <p>{topic.description}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="local-section">
+      <div class="container">
+        <div class="local-heading">
+          <div>
+            <p class="section-label light">Central Oregon</p>
+
+            <h2>
+              Local SEO and digital marketing insights for Central Oregon businesses.
+            </h2>
+          </div>
+
+          <div>
+            <p>
+              I am based in Bend and work with businesses that want stronger
+              visibility across Google, AI search, maps, local listings, content,
+              and the broader digital discovery journey.
+            </p>
+          </div>
+        </div>
+
+        <div class="location-grid">
+          {
+            locations.map((location) => (
+              <a class="location-card" href={location.href}>
+                <span class="location-label">Local insights</span>
+                <h3>{location.name}, Oregon</h3>
+                <p>{location.description}</p>
+                <span class="location-link">
+                  Explore {location.name} insights →
+                </span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Latest insights</p>
+          <h2>New guides, articles, videos, and observations.</h2>
+
+          <p class="section-intro">
+            This section will continue growing with practical resources about
+            SEO, AI search, local visibility, analytics, content, and digital marketing.
+          </p>
+        </div>
+
+        <div class="empty-state">
+          <span class="empty-label">Coming soon</span>
+
+          <h3>The first insights are on the way.</h3>
+
+          <p>
+            New content will include SEO guides, AI search observations,
+            Central Oregon business insights, videos, case studies, and practical
+            examples from real search strategy work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="insights-cta">
+      <div class="container cta-inner">
+        <p class="section-label">Need help with your visibility?</p>
+
+        <h2>Let’s make your business easier to find.</h2>
+
+        <p>
+          I help businesses improve how they show up across Google,
+          AI search, maps, content, local listings, and other discovery channels.
+        </p>
+
+        <a href="/contact" class="primary-btn">
+          Get a Visibility Review
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  :root {
+    --cream: #f5f1ea;
+    --sand: #e7dccb;
+    --pine: #245747;
+    --pine-dark: #15382f;
+    --sage: #d8e2d7;
+    --text: #1f2933;
+    --muted: #5f6f66;
+    --white: #ffffff;
+    --border: #d8d0c3;
+  }
+
+  .container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+  }
+
+  .insights-hero {
+    padding: 100px 0 90px;
+    background:
+      radial-gradient(
+        circle at 85% 20%,
+        rgba(216, 226, 215, 0.8),
+        transparent 32%
+      ),
+      var(--cream);
+  }
+
+  .insights-hero h1 {
+    max-width: 900px;
+    margin: 12px 0 24px;
+    font-size: clamp(46px, 7vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    color: var(--pine-dark);
+  }
+
+  .hero-text {
+    max-width: 760px;
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+
+  .eyebrow,
+  .section-label {
+    margin: 0 0 12px;
+    color: var(--pine);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .section-label.light {
+    color: #cbded6;
+  }
+
+  .intro-section,
+  .topics-section,
+  .latest-section {
+    padding: 90px 0;
+  }
+
+  .intro-section {
+    background: var(--white);
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+  }
+
+  .intro-grid h2,
+  .section-heading h2,
+  .local-heading h2,
+  .insights-cta h2 {
+    margin: 0;
+    color: var(--pine-dark);
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  .intro-copy {
+    color: var(--muted);
+    font-size: 18px;
+  }
+
+  .intro-copy p:first-child {
+    margin-top: 0;
+  }
+
+  .topics-section {
+    background: var(--cream);
+  }
+
+  .section-heading {
+    max-width: 780px;
+    margin-bottom: 45px;
+  }
+
+  .section-intro {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 18px;
+  }
+
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .topic-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+  }
+
+  .card-number {
+    display: block;
+    margin-bottom: 35px;
+    color: var(--pine);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .topic-card h3 {
+    margin: 0 0 12px;
+    color: var(--pine-dark);
+    font-size: 24px;
+  }
+
+  .topic-card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .local-section {
+    padding: 95px 0;
+    background: var(--pine-dark);
+    color: var(--white);
+  }
+
+  .local-heading {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 50px;
+  }
+
+  .local-heading h2 {
+    color: var(--white);
+  }
+
+  .local-heading > div:last-child {
+    color: #d8e2dd;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .location-card {
+    display: block;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--white);
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .location-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .location-label {
+    display: block;
+    margin-bottom: 20px;
+    color: #cbded6;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .location-card h3 {
+    margin: 0 0 12px;
+    font-size: 28px;
+  }
+
+  .location-card p {
+    margin: 0 0 24px;
+    color: #d8e2dd;
+    line-height: 1.7;
+  }
+
+  .location-link {
+    font-weight: 700;
+  }
+
+  .latest-section {
+    background: var(--white);
+  }
+
+  .empty-state {
+    max-width: 760px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--cream);
+  }
+
+  .empty-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: var(--sage);
+    color: var(--pine-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .empty-state h3 {
+    margin: 0 0 12px;
+    color: var(--pine-dark);
+    font-size: 28px;
+  }
+
+  .empty-state p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .insights-cta {
+    padding: 95px 0;
+    background: var(--sage);
+  }
+
+  .cta-inner {
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .insights-cta p:not(.section-label) {
+    max-width: 620px;
+    margin: 20px auto 28px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .primary-btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 9px;
+    background: var(--pine);
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .primary-btn:hover {
+    background: var(--pine-dark);
+  }
+
+  @media (max-width: 800px) {
+    .insights-hero {
+      padding: 70px 0 65px;
+    }
+
+    .intro-section,
+    .topics-section,
+    .latest-section,
+    .local-section,
+    .insights-cta {
+      padding: 65px 0;
+    }
+
+    .intro-grid,
+    .local-heading {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .topic-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .location-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
