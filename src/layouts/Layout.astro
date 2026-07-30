@@ -3,7 +3,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { title, description = "SEO, AI search, local SEO, content strategy, and digital visibility consulting from Mitchell Haw in Bend, Oregon." } = Astro.props;
+const {
+  title,
+  description = "SEO, AI search, local SEO, content strategy, and digital visibility consulting from Mitchell Haw in Bend, Oregon."
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -12,6 +15,24 @@ const { title, description = "SEO, AI search, local SEO, content strategy, and d
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/png" href="/images/mh-favicon.png" />
+
+    <!-- Google Analytics -->
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E7RJTWV4VN"
+    ></script>
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-E7RJTWV4VN');
+    </script>
 
     <title>{title}</title>
     <meta name="description" content={description} />
