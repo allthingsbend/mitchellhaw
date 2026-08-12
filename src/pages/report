@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3025 NW Fairway Heights — What the inspection actually found</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17202A;
+  --ink-soft:#4A5560;
+  --paper:#EEF0EA;
+  --surface:#FBFCF9;
+  --sage:#66735A;
+  --cedar:#9A5E38;
+  --water:#3F6076;
+  --rule:#D3D8CE;
+  --gold:#B08A2E;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Newsreader",Georgia,serif; font-size:17px; line-height:1.55;
+  font-optical-sizing:auto;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px 90px}
+
+/* ---------- masthead ---------- */
+header{padding:56px 0 34px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-soft);margin:0 0 18px
+}
+h1{
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+  font-size:clamp(32px,7vw,54px);line-height:1.02;letter-spacing:-.025em;margin:0 0 20px;
+}
+h1 em{font-style:normal;color:var(--water)}
+.standfirst{font-size:clamp(18px,2.6vw,21px);max-width:52ch;margin:0;color:var(--ink-soft)}
+.meta{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink-soft);
+  margin-top:26px;display:flex;flex-wrap:wrap;gap:6px 20px
+}
+
+/* ---------- the water chain (signature) ---------- */
+.chain{margin:44px 0 10px;background:var(--surface);border:1px solid var(--rule);padding:28px 24px 24px}
+.chain h2{
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:15px;
+  letter-spacing:.02em;margin:0 0 4px;color:var(--water)
+}
+.chain .sub{font-size:15px;color:var(--ink-soft);margin:0 0 26px;max-width:56ch}
+.chain-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0 22px;align-items:center}
+.col-label{
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px
+}
+.cause,.effect{
+  font-family:"Bricolage Grotesque",sans-serif;font-size:14.5px;line-height:1.3;
+  padding:9px 12px;margin-bottom:7px;border-left:3px solid var(--water)
+}
+.cause{background:#E4EAEE;font-weight:600}
+.effect{background:#F2EDE7;border-left-color:var(--cedar);font-weight:400}
+.arrowcell{display:flex;align-items:center;justify-content:center;height:100%}
+.arrow{
+  font-family:"IBM Plex Mono",monospace;font-size:22px;color:var(--water);
+}
+@media(max-width:640px){
+  .chain-grid{grid-template-columns:1fr;gap:0}
+  .arrowcell{padding:12px 0}
+  .arrow{transform:rotate(90deg)}
+}
+
+/* ---------- priority sections ---------- */
+.tier{margin-top:52px}
+.tier-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--ink);padding-bottom:10px;flex-wrap:wrap}
+.tier-num{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;
+  letter-spacing:.1em;padding:3px 8px;color:#fff;background:var(--ink)
+}
+.tier h2{
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+  font-size:clamp(21px,3.6vw,28px);letter-spacing:-.02em;margin:0;flex:1
+}
+.tier-note{font-size:15.5px;color:var(--ink-soft);margin:12px 0 22px;max-width:60ch}
+.t1 .tier-num{background:var(--cedar)}
+.t2 .tier-num{background:var(--gold)}
+.t3 .tier-num{background:var(--sage)}
+.t4 .tier-num{background:var(--ink-soft)}
+
+.item{
+  background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--rule);
+  padding:18px 20px;margin-bottom:12px
+}
+.t1 .item{border-left-color:var(--cedar)}
+.t2 .item{border-left-color:var(--gold)}
+.t3 .item{border-left-color:var(--sage)}
+.t4 .item{border-left-color:var(--ink-soft)}
+.open .item{border-left-color:var(--water)}
+.item-top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.item h3{
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:18px;
+  letter-spacing:-.01em;margin:0
+}
+.sec{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);
+  border:1px solid var(--rule);padding:2px 6px;white-space:nowrap
+}
+.item p{margin:0 0 9px;font-size:16.5px}
+.item p:last-child{margin-bottom:0}
+.quote{border-left:2px solid var(--water);padding-left:12px;font-style:italic;color:var(--water)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.03em;
+  padding:3px 9px;background:var(--paper);border:1px solid var(--rule)
+}
+.tag.money{background:#F2EDE7;border-color:#E0CFBF}
+.tag.who{background:#E4EAEE;border-color:#C7D4DB}
+
+/* ---------- good news ---------- */
+.good{margin-top:56px;background:#E7EDE1;border:1px solid #CBD6C0;padding:26px 24px}
+.good h2{
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:24px;
+  margin:0 0 6px;letter-spacing:-.02em;color:var(--sage)
+}
+.good .sub{margin:0 0 18px;color:var(--ink-soft);font-size:15.5px}
+.good ul{margin:0;padding-left:0;list-style:none}
+.good li{padding:9px 0;border-bottom:1px solid #CBD6C0;font-size:16.5px}
+.good li:last-child{border-bottom:0}
+.good b{font-family:"Bricolage Grotesque",sans-serif;font-weight:600}
+
+/* ---------- blind spots ---------- */
+.blind{margin-top:44px;border:1px dashed var(--ink-soft);padding:24px}
+.blind h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:19px;margin:0 0 10px}
+.blind ul{margin:0;padding-left:20px}
+.blind li{margin-bottom:7px;font-size:16px}
+
+/* ---------- bottom line ---------- */
+.bottom{margin-top:56px;background:var(--ink);color:#EEF0EA;padding:34px 28px}
+.bottom h2{
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(22px,4vw,30px);
+  margin:0 0 14px;letter-spacing:-.02em
+}
+.bottom p{margin:0 0 12px;font-size:17.5px;color:#D6DBD2}
+.bottom p:last-child{margin-bottom:0}
+.bottom strong{color:#fff}
+footer{margin-top:34px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-soft);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Porch Light Property Inspection · 08 / 11 / 2026 · John Schwencke, OCHI #1763</p>
+  <h1>Everything wrong with this house is <em>the same thing</em> going wrong in six places.</h1>
+  <p class="standfirst">Twenty-six findings across sixty pages. The structure, the wiring, the plumbing, the sewer and every mechanical system came back sound. What didn't is the outside of the building — and nearly all of it traces to roof water with nowhere to go.</p>
+  <div class="meta">
+    <span>3025 NW Fairway Heights Dr, Bend</span>
+    <span>Built 1999 · 2,367 sq ft</span>
+    <span>6 maintenance items · 20 recommendations</span>
+  </div>
+</header>
+
+<section class="chain">
+  <h2>The water chain</h2>
+  <p class="sub">Three pieces of hardware are missing from this house. Everything in the right-hand column is what happened because they're missing. This is the inspector's own causal chain, stated across five separate sections.</p>
+  <div class="chain-grid">
+    <div>
+      <div class="col-label">What's missing</div>
+      <div class="cause">No gutters anywhere on the house</div>
+      <div class="cause">No kick-out flashing where wall meets roof</div>
+      <div class="cause">No header flashing above a rear window</div>
+    </div>
+    <div class="arrowcell"><span class="arrow">&#10230;</span></div>
+    <div>
+      <div class="col-label">What it caused</div>
+      <div class="effect">Cement board siding deteriorating, front and rear</div>
+      <div class="effect">Water confirmed behind the siding</div>
+      <div class="effect">Soffit panels separating at the rear</div>
+      <div class="effect">Wood decay at the deck rim joist band</div>
+      <div class="effect">Decayed trim at the rear exterior door</div>
+      <div class="effect">Baseboard swelling inside the master bedroom</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIER 1 ============ -->
+<section class="tier t1">
+  <div class="tier-head"><span class="tier-num">PRIORITY 1</span><h2>Real money. This is the negotiation.</h2></div>
+  <p class="tier-note">Seven findings, roughly $29,000–$57,000 documented. These are the only items that belong in your repair request.</p>
+
+  <div class="item">
+    <div class="item-top"><h3>The roof is at the end of its life</h3><span class="sec">§3.1.1 · §3.1.2</span></div>
+    <p>He climbed onto it — that matters, it's not a guess from a ladder. He rated the life cycle <strong>"Late."</strong> Granule loss, weathered shingles, loose flashing, loose fasteners penetrating the shingles, loose shingles. He believes it's the original 1999 roof but couldn't confirm.</p>
+    <p><strong>The finding nobody expected:</strong> at the rear overhang there's a low spot. He lifted a shingle and the surface underneath <strong>was soft.</strong> That's the decking, not the shingles. Underlayment was still in place, and he thinks a deformed drip edge caused it.</p>
+    <p class="quote">"the roof may be approaching the need for replacement within a reasonable time frame, if not sooner"</p>
+    <p>Use that phrasing exactly. It's strong enough on its own, and overstating it hands the sellers a rebuttal.</p>
+    <div class="tags"><span class="tag money">$16,000 – $26,000</span><span class="tag who">In the ask</span><span class="tag">Get a bid this week</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>There are no gutters. Anywhere.</h3><span class="sec">§3.4.1</span></div>
+    <p>Not a single gutter on the house. The inspector names this as a cause of the siding damage, the soffit separation and the deck decay below. It's also dumping water at the foundation and eroding the perimeter grading.</p>
+    <p>Whoever replaces the roof should hang gutters at the same time. Doing one without the other is how you end up back here in five years.</p>
+    <div class="tags"><span class="tag money">$1,200 – $3,600</span><span class="tag who">In the ask</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Missing flashing — and water already behind the siding</h3><span class="sec">§3.2.1 · §2.4.1</span></div>
+    <p>This is the single most important paragraph in the report. Kick-out flashing is the little diverter that sends water into the gutter where a roof edge runs into a wall. It was never installed. There's a gap there, and the inspector found <strong>evidence that water had gotten behind the siding.</strong> He wrote that repair beyond just adding the flashing may be necessary.</p>
+    <p>Separately, header flashing is missing above a rear window, with swelling, peeling paint and deteriorated trim beneath it.</p>
+    <p>The flashing itself is cheap. What's behind the wall is the unknown — that's why you're asking for permission to look.</p>
+    <div class="tags"><span class="tag money">$400 – $1,500 for flashing</span><span class="tag who">In the ask</span><span class="tag">Justifies the investigation</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Cement board siding is failing, front and rear</h3><span class="sec">§2.1.1</span></div>
+    <p>Deterioration, bubbling, paint flaking and signs of water intrusion where roof drainage runs down the wall. Both the front and rear elevations. The fix is redirect the water first, then repair or replace the affected siding.</p>
+    <div class="tags"><span class="tag money">$3,500 – $7,000</span><span class="tag who">In the ask</span><span class="tag">Realtor's contractor figure</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Soffit panels separating</h3><span class="sec">§2.6.1</span></div>
+    <p>Rear exterior. The panels under the eaves are pulling away from position because water is getting behind them — again, because there's no guttering to divert it.</p>
+    <div class="tags"><span class="tag money">$500 – $2,000</span><span class="tag who">In the ask</span><span class="tag">Estimate, not a bid</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Wood decay at the deck rim joist</h3><span class="sec">§2.2.1</span></div>
+    <p>Front of the house. The deck boards don't overlap the belly band, so water gets trapped between the band and the rim joist. Result: <strong>actual wood decay and moss growth</strong> on a structural edge of the deck.</p>
+    <p>Worth flagging — the inspector explicitly could not fully evaluate the deck's framing because of low clearance. Whatever's under there is unknown.</p>
+    <div class="tags"><span class="tag money">$1,500 – $5,000</span><span class="tag who">In the ask</span><span class="tag">Framing not fully visible</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>The driveway probably needs replacing</h3><span class="sec">§2.3.1</span></div>
+    <p>Considerable heaving, most likely from a tree that has since been cut down, plus cracking and pitting throughout. The inspector's words: <strong>replacement of the driveway is likely necessary.</strong></p>
+    <p>Unrelated to the water story, but it's the second-biggest number in the report and it's documented in writing by a licensed inspector.</p>
+    <div class="tags"><span class="tag money">$6,000 – $12,000</span><span class="tag who">In the ask</span><span class="tag">Get a concrete bid</span></div>
+  </div>
+</section>
+
+<!-- ============ TIER 2 ============ -->
+<section class="tier t2">
+  <div class="tier-head"><span class="tier-num">PRIORITY 2</span><h2>Safety. Ask the sellers to fix these, not to pay for them.</h2></div>
+  <p class="tier-note">All four are cheap. Sellers almost never refuse safety items, and one of them is legally required before the house can change hands. Ask for these as repairs — it costs you nothing to include them and it doesn't dilute the money ask.</p>
+
+  <div class="item">
+    <div class="item-top"><h3>Carbon monoxide alarms are missing upstairs</h3><span class="sec">§6.7.1</span></div>
+    <p>None in the upstairs hallway. <strong>Oregon law requires compliant CO alarms at the time of property transfer</strong> in any home with fuel-burning appliances or an attached garage — this house has both. Alarms are needed within 15 feet of each bedroom and one on every floor.</p>
+    <p>The inspector wrote that correction is required before close of escrow. This isn't a negotiation, it's an obligation. The downstairs alarm was fine.</p>
+    <div class="tags"><span class="tag money">$100 – $300</span><span class="tag who">Seller fixes</span><span class="tag">Required by law</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>The left garage door won't stop for a person</h3><span class="sec">§5.6.1</span></div>
+    <p>The left opener <strong>failed its safety reverse test.</strong> When it met resistance it did not stop and reverse. That's the mechanism that keeps a closing door from crushing whatever is under it. The right door passed.</p>
+    <div class="tags"><span class="tag money">$150 – $500</span><span class="tag who">Seller fixes</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Hole in the garage ceiling firewall</h3><span class="sec">§5.1.1</span></div>
+    <p>The plumbing vent penetrations left a void in the garage ceiling. That ceiling is a fire barrier between the garage and the house attic, and right now it's breached. Sealed with sheet metal or fire-rated foam.</p>
+    <div class="tags"><span class="tag money">$150 – $500</span><span class="tag who">Seller fixes</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Exposed sharp screws at the garage door</h3><span class="sec">§5.4.1</span></div>
+    <p>Someone added weatherstripping at the bottom of the garage door using sharp-tipped screws, and the points are exposed right at floor level when the door closes. Injury hazard. Swap for countersunk or blunt fasteners.</p>
+    <div class="tags"><span class="tag money">Under $150</span><span class="tag who">Seller fixes</span></div>
+  </div>
+</section>
+
+<!-- ============ TIER 3 ============ -->
+<section class="tier t3">
+  <div class="tier-head"><span class="tier-num">PRIORITY 3</span><h2>Your first year. Budget for these, don't negotiate them.</h2></div>
+  <p class="tier-note">Roughly $2,250–$8,450. Real work that needs doing, but putting it in the repair request makes you look like you're re-trading the price. Absorb it.</p>
+
+  <div class="item">
+    <div class="item-top"><h3>The water heater's expansion tank has failed</h3><span class="sec">§7.3.1</span></div>
+    <p>It's unpressurized — no air escaped when he tested the valve, meaning the internal pre-charge has leaked out. The tank can no longer absorb the pressure surge every time the water heats. That stress goes into your pipes, fixtures and the water heater instead.</p>
+    <p>Worth doing early. This one protects a system that's otherwise in good shape.</p>
+    <div class="tags"><span class="tag money">$200 – $600</span><span class="tag who">You</span><span class="tag">Do it soon</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>The recirculation pump is corroding</h3><span class="sec">§7.3.2</span></div>
+    <p>Rust, corrosion and mineral deposits at the pump and its fittings, with deposits on other connections too. The inspector reads that as possible past seepage and says the pump may be aging equipment. Circulation pumps generally last 10–15 years.</p>
+    <p>Have a plumber look at it with the expansion tank in the same visit.</p>
+    <div class="tags"><span class="tag money">$600 – $1,800</span><span class="tag who">You</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Dryer vent is packed with lint</h3><span class="sec">§10.4.1</span></div>
+    <p>Debris and lint buildup in the duct. Restricts airflow, kills dryer efficiency, and it's a genuine fire risk. Do this before you move a thing in.</p>
+    <div class="tags"><span class="tag money">$150 – $350</span><span class="tag who">You</span><span class="tag">Do it first</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Gas fireplace is burning badly</h3><span class="sec">§8.6.1</span></div>
+    <p>Bright orange flame and condensation on the inside of the glass. Both point to a poor burn cycle, which affects efficiency and safety. He also suggested a Level 2 inspection of the venting at your discretion.</p>
+    <div class="tags"><span class="tag money">$250 – $800</span><span class="tag who">You</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Exterior trim loose and decayed</h3><span class="sec">§2.1.2</span></div>
+    <p>Loose, damaged or separating at several locations. Specifically: decayed wood at the rear exterior door, and decayed door trim at the base from moisture contact. Part of the same water story, but small enough to keep out of the formal ask.</p>
+    <div class="tags"><span class="tag money">$500 – $2,000</span><span class="tag who">You</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>The AC privacy wall is falling apart</h3><span class="sec">§2.3.2</span></div>
+    <p>Right side of the house. Unstable and loose, siding panels separating, wood decay at the gate and framing. Cosmetic-adjacent, but it will need rebuilding.</p>
+    <div class="tags"><span class="tag money">$800 – $2,500</span><span class="tag who">You</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Moss on the roof, juniper dumping on it</h3><span class="sec">§3.1.3</span></div>
+    <p>Moss on the northeast slope. Heavy landscape debris from the adjacent juniper piled on the southwest slope. He recommends trimming the tree back and clearing the roof.</p>
+    <p>Moot if you replace the roof — but the juniper still needs cutting back or it'll do the same thing to the new one.</p>
+    <div class="tags"><span class="tag money">$400 – $1,200</span><span class="tag who">You</span></div>
+  </div>
+</section>
+
+<!-- ============ TIER 4 ============ -->
+<section class="tier t4">
+  <div class="tier-head"><span class="tier-num">PRIORITY 4</span><h2>Minor. Whenever you get to them.</h2></div>
+  <p class="tier-note">Under $1,500 for all of it, and two are free.</p>
+
+  <div class="item">
+    <div class="item-top"><h3>Dining room window sticks</h3><span class="sec">§9.3.1</span></div>
+    <p>The vertical slider is hard to operate; the balancer is displaced. A window tech or carpenter fixes it. <strong>$150–$400.</strong></p>
+  </div>
+  <div class="item">
+    <div class="item-top"><h3>Retractable screen off its track</h3><span class="sec">§2.4.2</span></div>
+    <p>Rear of house. The spring mechanism needs service so it retracts properly. <strong>$150–$400.</strong></p>
+  </div>
+  <div class="item">
+    <div class="item-top"><h3>Guest bathroom baseboard swollen</h3><span class="sec">§9.2.2</span></div>
+    <p>Next to the guest shower, from ordinary shower splash. Unrelated to the exterior water issue — don't confuse the two when you're making the case. <strong>$150–$500.</strong></p>
+  </div>
+  <div class="item">
+    <div class="item-top"><h3>Attic hatch has no insulation</h3><span class="sec">§10.1.1</span></div>
+    <p>No insulated barrier on the hatch panel, so conditioned air leaks straight into the attic. The inspector called it a DIY project. Insulation board plus weatherstripping. <strong>Under $150.</strong></p>
+  </div>
+  <div class="item">
+    <div class="item-top"><h3>Water shutoff valve buried in debris</h3><span class="sec">§7.4.1</span></div>
+    <p>Landscape debris packed inside the valve conduit on the left exterior, blocking access. You'll want a curb key to reach it. Clear it out — that's a valve you want working the day you need it. <strong>Free.</strong></p>
+  </div>
+</section>
+
+<!-- ============ STILL OPEN ============ -->
+<section class="tier open">
+  <div class="tier-head"><span class="tier-num">STILL OPEN</span><h2>Three answers you don't have yet.</h2></div>
+  <p class="tier-note">All three land before your contingency does — assuming you get the extension.</p>
+
+  <div class="item">
+    <div class="item-top"><h3>What's inside the master bedroom wall</h3><span class="sec">§9.2.1</span></div>
+    <p>Baseboard swelling next to the exterior door. That interior wall backs directly onto the exterior area where drainage hits the siding, and he thinks moisture is transferring around the door frame. He called the swelling minor and said he could not tell whether more damage exists inside the wall.</p>
+    <p><strong>Read this carefully:</strong> his thermal images are captioned <em>"No evidence of the wall holding moisture"</em> — twice. That's genuinely good news. It is also weak evidence: he shot it in August, house vacant, ground dry, no rain. Thermal imaging finds water that's there right now, not a wall that soaks every February. The swollen baseboard is still physical proof that water has gotten in at some point.</p>
+    <p>Still worth the borescope. But if the sellers dig in, the kick-out flashing finding carries your ask by itself — don't burn the relationship over this.</p>
+    <div class="tags"><span class="tag who">Awaiting seller permission</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Mold lab results</h3><span class="sec">§14.1</span></div>
+    <p>Air sampling done on 8/11 — one outdoor control sample plus two or more indoor samples, shipped to Sporecyte for analysis. Results emailed to you and the inspector.</p>
+    <div class="tags"><span class="tag money">$1,500 – $6,000 if positive</span></div>
+  </div>
+
+  <div class="item">
+    <div class="item-top"><h3>Radon results</h3><span class="sec">§12</span></div>
+    <p>An Airthings electronic monitor was placed in the downstairs bedroom on 8/11. Results come 48–72 hours later, so around 8/13–8/14. The EPA action level is 4.0 pCi/L.</p>
+    <div class="tags"><span class="tag money">$800 – $1,500 to mitigate</span></div>
+  </div>
+</section>
+
+<!-- ============ GOOD NEWS ============ -->
+<section class="good">
+  <h2>What came back clean</h2>
+  <p class="sub">This is the half of the report that matters most for whether you buy the house at all — and it's the half nobody talks about.</p>
+  <ul>
+    <li><b>Sewer line.</b> Scoped 123 feet from the cleanout to the city tap. Cleanout satisfactory, ABS building drain, likely SDR35 for the rest of the run. No defects. This was the finding that could have been catastrophic.</li>
+    <li><b>Every mechanical system is from 2020.</b> A.O. Smith Polaris combination water heater, Lennox heat pump, Lennox air handler — all manufactured 2020, all rated "Early Middle" life, all tested and functional. That is roughly $15,000–$20,000 of equipment you will not be replacing.</li>
+    <li><b>Radiant floor heat works.</b> Tested and confirmed via thermal imaging across the downstairs. Fed by the same A.O. Smith unit.</li>
+    <li><b>Electrical.</b> 200-amp panel, thoroughly inspected, no defects reported anywhere in Section 6.</li>
+    <li><b>Structure.</b> Poured concrete foundation on slab, 2x6 wood stud walls, engineered trusses and 2x6 rafters with wood panel sheathing. Section 4 reports zero defects.</li>
+    <li><b>Plumbing.</b> All fixtures operated and stress-tested for leaks. None found. Copper and PEX supply, ABS waste. Water temperature 105–125°F, right where it should be.</li>
+    <li><b>Insulation and ventilation.</b> Blown fiberglass at R-38+, described as adequate and consistent. Continuous ridge vents and continuous soffit vents.</li>
+    <li><b>Smoke alarms.</b> Present and current at all required locations, meeting minimum standards. Downstairs CO alarm compliant too.</li>
+    <li><b>Appliances.</b> Jenn Air range, cooktop and dishwasher, Panasonic microwave, disposer, range hood — all tested and operating properly.</li>
+    <li><b>HVAC ducts.</b> Confirmed via thermal imaging delivering conditioned air to supply vents throughout the house.</li>
+  </ul>
+</section>
+
+<!-- ============ BLIND SPOTS ============ -->
+<section class="blind">
+  <h2>What he couldn't see — and you shouldn't assume is fine</h2>
+  <ul>
+    <li><strong>Inside the walls.</strong> A home inspection is visual and non-invasive by definition. Nothing behind the siding, drywall or sheathing was evaluated. That's the whole point of the investigation you're requesting.</li>
+    <li><strong>The deck's structural assembly.</strong> Explicitly noted as not fully evaluated — low clearance and skirting blocked access to the framing. Given there's already documented decay at the rim joist band, this is a real unknown.</li>
+    <li><strong>Most of the attic.</strong> Inspected from the entry hatch only, not walked, to avoid disturbing the insulation. He notes not all attic areas were visible.</li>
+    <li><strong>Anything intermittent.</strong> The house was vacant, the ground dry, the day warm and smoky. No inspection catches a leak that only happens in a February rain.</li>
+    <li><strong>Life expectancy.</strong> The report explicitly does not guarantee remaining life on any component, including the roof. That's why the roofing bid matters.</li>
+  </ul>
+</section>
+
+<!-- ============ BOTTOM LINE ============ -->
+<section class="bottom">
+  <h2>The bottom line</h2>
+  <p>The guts of this house are young and sound. The sewer is clear, the mechanicals are six years old, the structure is clean, the wiring is clean, the plumbing doesn't leak. Those are the findings that decide whether a house is worth buying, and they all came back the right way.</p>
+  <p>What's wrong is the envelope, and almost all of it comes from one cause that costs a few hundred dollars of hardware to fix going forward. The expensive part is undoing what fifteen years without gutters already did.</p>
+  <p><strong>That's a good problem to inherit — as long as you find out what's behind that wall before 8/21, and as long as the price reflects it.</strong></p>
+</section>
+
+<footer>
+  Prepared from the Porch Light Property Inspection report dated 08/11/2026.<br>
+  Findings and section numbers are the inspector's. Dollar figures are planning estimates from published Bend-area cost data and one contractor conversation — not bids.<br>
+  Cost detail, seller net math and the action checklist are in the companion spreadsheet.
+</footer>
+
+</div>
+</body>
+</html>
