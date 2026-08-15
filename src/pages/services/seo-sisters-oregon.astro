@@ -2,105 +2,756 @@
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import '../../styles/global.css';
+
+const title = 'Sisters Oregon SEO Consultant | Local SEO & SEO Services';
+const description =
+  'SEO consulting for Sisters, Oregon businesses. Improve local rankings, Google Maps visibility, website content, technical SEO, AI search visibility, and qualified leads.';
+
+const canonical = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site)
+  : Astro.url;
+
+const faqs = [
+  {
+    question: 'What does SEO for a Sisters, Oregon business include?',
+    answer:
+      'It depends on the business, but a Sisters SEO strategy may include Google Business Profile optimization, local keyword research, technical SEO, service pages, tourism and visitor content, internal linking, local search visibility, analytics, and conversion tracking.'
+  },
+  {
+    question: 'Is SEO different for a tourism-focused Sisters business?',
+    answer:
+      'Yes. A hotel, restaurant, shop, recreation company, or visitor-focused business may need to reach people before they arrive in Sisters as well as people searching while they are already in the area. That can create opportunities around trip planning, activities, lodging, dining, events, and other visitor searches in addition to traditional local SEO.'
+  },
+  {
+    question: 'Should I target Sisters, Bend, and Redmond on the same website?',
+    answer:
+      'Only when those markets reflect how your business actually operates. Some companies primarily serve Sisters, while contractors, professional services, and other regional businesses may serve customers throughout Central Oregon. I help determine which geographic pages deserve to exist instead of creating duplicate pages for every nearby city.'
+  },
+  {
+    question: 'What if my business serves Black Butte Ranch or Camp Sherman too?',
+    answer:
+      'If you genuinely serve those areas, they can be incorporated into your search strategy. That might mean service-area information, relevant content, internal links, or dedicated pages when there is enough unique value and search demand to justify them.'
+  },
+  {
+    question: 'Does Google Business Profile matter for Sisters businesses?',
+    answer:
+      'For many local businesses, yes. Google Business Profile can be especially important for searches involving restaurants, shops, professional services, home services, lodging, and other businesses where customers are looking for nearby options.'
+  },
+  {
+    question: 'Can SEO help with seasonal demand?',
+    answer:
+      'Yes. Search demand can change throughout the year, especially for tourism, recreation, lodging, restaurants, and event-related businesses. SEO can help build evergreen pages while also planning content around predictable seasonal opportunities.'
+  },
+  {
+    question: 'Do you help with AI search visibility too?',
+    answer:
+      'Yes. Modern SEO includes making your business easier for traditional search engines and AI-driven discovery tools to understand. Clear site structure, useful content, local relevance, authoritative information, and strong brand signals can all support broader search visibility.'
+  }
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Sisters Oregon SEO Consulting',
+  serviceType: 'Search Engine Optimization Consulting',
+  description,
+  areaServed: {
+    '@type': 'City',
+    name: 'Sisters',
+    containedInPlace: {
+      '@type': 'State',
+      name: 'Oregon'
+    }
+  },
+  provider: {
+    '@type': 'Person',
+    name: 'Mitchell Haw',
+    url: 'https://mitchellhaw.com/'
+  },
+  url: canonical.href
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer
+    }
+  }))
+};
 ---
 
 <html lang="en">
   <head>
-    <title>Sisters Oregon SEO Consultant | SEO Services in Sisters, OR</title>
-    <meta name="description" content="SEO consulting for Sisters, Oregon businesses that want better local rankings, stronger website content, improved search visibility, and more qualified leads." />
+    <title>{title}</title>
+
+    <meta
+      name="description"
+      content={description}
+    />
+
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <link rel="canonical" href={canonical.href} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(serviceSchema)}
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(faqSchema)}
+    />
   </head>
 
   <body>
     <Header />
 
     <main>
+
+      <!-- HERO -->
       <section class="page-hero">
         <div class="container narrow">
           <p class="section-label">Sisters Oregon SEO Services</p>
-          <h1>SEO services for Sisters businesses that want to be easier to find online.</h1>
+
+          <h1>
+            SEO for Sisters businesses that want to reach locals, visitors, and Central Oregon customers.
+          </h1>
+
           <p>
-            I help Sisters businesses improve local search visibility, build better service pages,
-            strengthen website content, and attract more qualified traffic from Google and beyond.
+            I help businesses in Sisters, Oregon improve their visibility in Google,
+            Maps, local search, and modern AI-driven search experiences. Whether your
+            customers live here, visit for the weekend, or come from across Central Oregon,
+            the goal is to help the right people find your business when they are actively
+            looking for what you offer.
+          </p>
+
+          <p>
+            <a class="button" href="/contact/">
+              Talk About Your Sisters SEO
+            </a>
           </p>
         </div>
       </section>
 
-      <section class="services">
+
+      <!-- CORE SERVICES -->
+      <section class="services" id="sisters-seo-services">
         <div class="container">
+
+          <div class="container narrow">
+            <p class="section-label">How I Can Help</p>
+
+            <h2>
+              Practical SEO services for Sisters businesses
+            </h2>
+
+            <p>
+              Strong search visibility usually comes from improving several things
+              together: your website, Google Business Profile, content, technical
+              foundation, local relevance, and measurement.
+            </p>
+          </div>
+
           <div class="service-grid three">
+
             <div class="service-card">
-              <h2>Local SEO</h2>
+              <h3>Local SEO & Google Maps</h3>
               <p>
-                Improve visibility for Sisters-area searches, nearby service terms, and local keywords
-                tied to what your customers need.
+                Improve how your business appears for Sisters searches through
+                stronger Google Business Profile optimization, local signals,
+                service information, reviews, and location relevance.
               </p>
             </div>
 
             <div class="service-card">
-              <h2>Website Optimization</h2>
+              <h3>Technical SEO</h3>
               <p>
-                Make your site easier for search engines and customers to understand with better
-                structure, metadata, headings, and internal links.
+                Find crawling, indexing, canonical, metadata, internal linking,
+                site architecture, speed, and other technical issues that may
+                be limiting organic visibility.
               </p>
             </div>
 
             <div class="service-card">
-              <h2>Search Content</h2>
+              <h3>Service & Location Pages</h3>
               <p>
-                Plan pages and content around real search demand, from service pages to local guides,
-                FAQs, and supporting articles.
+                Build useful pages around the services and geographic markets
+                your business actually serves without creating thin versions
+                of the same page for every Central Oregon community.
               </p>
             </div>
+
+            <div class="service-card">
+              <h3>Visitor & Tourism SEO</h3>
+              <p>
+                Reach people researching Sisters before their trip as well as
+                visitors searching for places to stay, eat, shop, explore, or
+                book once they arrive.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Content Strategy</h3>
+              <p>
+                Build useful service pages, guides, FAQs, resources, and
+                supporting content around what your potential customers are
+                actually searching for.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Analytics & SEO Reporting</h3>
+              <p>
+                Connect rankings and traffic to the outcomes that matter:
+                calls, form submissions, bookings, purchases, leads, and
+                revenue whenever that data is available.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
 
+
+      <!-- SISTERS-SPECIFIC STRATEGY -->
       <section class="content-section">
         <div class="container narrow">
-          <h2>SEO consulting for Sisters, Oregon businesses</h2>
+
+          <p class="section-label">Local Strategy</p>
+
+          <h2>
+            Sisters SEO has a different search audience than most Central Oregon markets.
+          </h2>
+
           <p>
-            Sisters has a strong local business community, steady visitor interest, and a lot of search
-            demand tied to travel, events, services, shops, lodging, food, contractors, and local
-            experiences.
+            A Sisters business may need to reach three very different groups:
+            people who live in Sisters, visitors planning a trip, and customers
+            coming from elsewhere in Central Oregon.
           </p>
 
           <p>
-            I help businesses make better use of that demand by improving how their websites are
-            structured, written, linked, and found. The goal is simple: more qualified people finding
-            your business when they are already searching.
-          </p>
-
-          <h2>SEO services for Sisters companies</h2>
-          <ul>
-            <li>Local SEO strategy for Sisters and Central Oregon</li>
-            <li>Google Business Profile guidance</li>
-            <li>SEO audits and technical recommendations</li>
-            <li>Keyword research for local services and tourism demand</li>
-            <li>Service page and location page planning</li>
-            <li>Content strategy for organic search growth</li>
-            <li>Internal linking improvements</li>
-            <li>Reporting tied to visibility, leads, and revenue</li>
-          </ul>
-
-          <h2>Practical SEO help without overcomplicating it</h2>
-          <p>
-            You do not need a huge SEO program to make progress. Many local sites need clearer pages,
-            stronger local signals, better internal links, cleaner metadata, and content that better
-            matches what customers are searching for.
-          </p>
-
-          <h2>Central Oregon experience</h2>
-          <p>
-            I understand how Sisters connects with nearby searches in Bend, Redmond, Black Butte Ranch,
-            Camp Sherman, and the broader Central Oregon area. That local context helps when deciding
-            what pages to build and how to position your business in search.
+            Those audiences do not necessarily search the same way.
+            A homeowner looking for a contractor has very different intent from
+            someone planning a weekend in Sisters, looking for dinner downtown,
+            searching for lodging near Black Butte Ranch, or researching an
+            outdoor activity before arriving.
           </p>
 
           <p>
-            <a class="button" href="/contact/">Contact Me About Sisters SEO</a>
+            I build the SEO strategy around those differences instead of assuming
+            every local business simply needs to rank for
+            “service + Sisters Oregon.”
           </p>
+
         </div>
       </section>
+
+
+      <!-- SEARCH AUDIENCES -->
+      <section class="services">
+        <div class="container">
+
+          <div class="container narrow">
+            <p class="section-label">Understanding Search Intent</p>
+
+            <h2>
+              Three search markets a Sisters business may need to consider
+            </h2>
+          </div>
+
+          <div class="service-grid three">
+
+            <div class="service-card">
+              <h3>Local Residents</h3>
+
+              <p>
+                These are traditional local searches from people looking for
+                contractors, healthcare providers, professional services,
+                restaurants, shops, and other businesses close to home.
+              </p>
+
+              <p>
+                Local SEO, Google Maps, reviews, service pages, and strong
+                conversion paths are often especially important here.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Visitors & Trip Planners</h3>
+
+              <p>
+                Visitors may search days, weeks, or months before arriving.
+                Businesses can potentially reach them through useful content
+                related to lodging, dining, shopping, recreation, events,
+                itineraries, and things to do around Sisters Country.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Regional Customers</h3>
+
+              <p>
+                Contractors, professional services, B2B companies, and other
+                businesses may serve a much wider area that includes Sisters,
+                Bend, Redmond, Black Butte Ranch, Camp Sherman, and other
+                Central Oregon communities.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- GOOGLE MAPS -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">Local Search</p>
+
+          <h2>
+            Showing up in Sisters Google Maps and local results
+          </h2>
+
+          <p>
+            For many Sisters businesses, the traditional organic search results
+            are only part of the opportunity. Google Business Profile and Maps
+            visibility can be especially important when someone is already
+            nearby and looking for a business right now.
+          </p>
+
+          <p>
+            Local SEO work may include:
+          </p>
+
+          <ul>
+            <li>Google Business Profile category and service optimization</li>
+            <li>Accurate hours, business information, and service areas</li>
+            <li>Review strategy and review response guidance</li>
+            <li>Business descriptions, services, photos, and profile completeness</li>
+            <li>Strong local service and product pages</li>
+            <li>Consistent business information across important listings</li>
+            <li>Location-relevant internal linking</li>
+            <li>Tracking calls, forms, bookings, reservations, and purchases</li>
+          </ul>
+
+          <p>
+            For a restaurant, shop, lodging property, or visitor-focused business,
+            this may look very different from the strategy for a contractor or
+            professional service company. The local search plan should reflect
+            how people actually find and choose your business.
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- TOURISM -->
+      <section class="services">
+        <div class="container">
+
+          <div class="container narrow">
+            <p class="section-label">Tourism & Visitor Search</p>
+
+            <h2>
+              Search can reach Sisters visitors before they ever arrive
+            </h2>
+
+            <p>
+              Tourism-oriented SEO is different from simply showing up when
+              someone searches for a nearby business.
+            </p>
+
+            <p>
+              Travelers often research where to stay, what to do, where to eat,
+              what events are happening, and which experiences are worth booking
+              well before their trip begins.
+            </p>
+          </div>
+
+          <div class="service-grid three">
+
+            <div class="service-card">
+              <h3>Before the Trip</h3>
+              <p>
+                Useful guides and destination-focused content can introduce your
+                business while visitors are still researching Sisters and
+                planning their itinerary.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>During the Visit</h3>
+              <p>
+                Google Maps, mobile search, reviews, accurate hours, strong
+                business information, and high-intent pages can help reach
+                people already in Sisters.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Seasonal Demand</h3>
+              <p>
+                Search behavior can change throughout the year. Content and
+                landing pages can be planned around predictable recreation,
+                travel, event, holiday, and seasonal demand.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- LOCAL CONTEXT -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">Sisters Country</p>
+
+          <h2>
+            Local search does not always stop at the Sisters city limits
+          </h2>
+
+          <p>
+            Depending on the business, relevant customers may also be staying,
+            living, or recreating around Black Butte Ranch, Camp Sherman,
+            Suttle Lake, the Metolius River area, Hoodoo, or other nearby
+            parts of Sisters Country.
+          </p>
+
+          <p>
+            That does not mean every place needs its own SEO page.
+            It means understanding how your customers describe the area,
+            which locations are actually relevant to your business, and
+            where there is enough unique search intent to justify additional
+            content.
+          </p>
+
+          <p>
+            A contractor that routinely works at Black Butte Ranch may need
+            a very different site structure from a downtown retailer, a lodge,
+            a restaurant, an outdoor guide, or a professional service company.
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- BUSINESS TYPES -->
+      <section class="services">
+        <div class="container">
+
+          <div class="container narrow">
+            <p class="section-label">Different Businesses, Different Strategies</p>
+
+            <h2>
+              SEO should match how your Sisters business gets customers
+            </h2>
+          </div>
+
+          <div class="service-grid three">
+
+            <div class="service-card">
+              <h3>Hospitality & Recreation</h3>
+              <p>
+                Lodging, vacation rentals, tour companies, outdoor recreation,
+                wellness businesses, and other visitor-focused companies can
+                benefit from both local searches and earlier trip-planning searches.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Restaurants, Shops & Arts</h3>
+              <p>
+                Downtown businesses may depend heavily on Maps, reviews,
+                mobile searches, accurate business information, local discovery,
+                products, menus, events, and visitor-oriented content.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Home & Professional Services</h3>
+              <p>
+                Contractors, real estate professionals, healthcare providers,
+                financial services, and other service businesses often need
+                stronger service pages, local authority, reviews, and a clear
+                Central Oregon service-area strategy.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- LOCATION PAGES -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">Location Pages</p>
+
+          <h2>
+            You probably do not need a page for every town near Sisters
+          </h2>
+
+          <p>
+            One of the easiest ways to create a weak local SEO site is to build
+            nearly identical pages for Sisters, Bend, Redmond, Camp Sherman,
+            Black Butte Ranch, and every other place you might serve.
+          </p>
+
+          <p>
+            I prefer fewer pages with a real reason to exist.
+          </p>
+
+          <p>
+            A strong location page might include:
+          </p>
+
+          <ul>
+            <li>Services genuinely offered in that market</li>
+            <li>Useful information about how you serve the area</li>
+            <li>Relevant customer questions</li>
+            <li>Local projects or examples when available</li>
+            <li>Testimonials connected to the area</li>
+            <li>Unique service-area information</li>
+            <li>Relevant internal links</li>
+            <li>A clear next step for the customer</li>
+          </ul>
+
+          <p>
+            That creates a better experience for users while giving search
+            engines clearer information about your business and where you work.
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- CONTENT -->
+      <section class="services">
+        <div class="container">
+
+          <div class="container narrow">
+            <p class="section-label">Content Strategy</p>
+
+            <h2>
+              Useful Sisters content can do more than target keywords
+            </h2>
+
+            <p>
+              Good content should answer a real question, help someone make a
+              decision, or move a potential customer closer to your business.
+            </p>
+          </div>
+
+          <div class="service-grid three">
+
+            <div class="service-card">
+              <h3>Service Content</h3>
+              <p>
+                Clearly explain what you offer, who it is for, how it works,
+                where you provide it, and why someone should choose your business.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Local Resources</h3>
+              <p>
+                Helpful local information can support both search visibility
+                and the customer experience when it naturally connects to
+                your products or services.
+              </p>
+            </div>
+
+            <div class="service-card">
+              <h3>Questions & Guides</h3>
+              <p>
+                FAQs, comparisons, planning resources, and educational content
+                can reach customers earlier in their search and strengthen the
+                authority of your core service pages.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- PROCESS -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">SEO Process</p>
+
+          <h2>
+            How I approach SEO for a Sisters business
+          </h2>
+
+          <h3>1. Understand how the business makes money</h3>
+          <p>
+            I start with your services, products, customers, geographic reach,
+            seasonality, and what a valuable conversion actually looks like.
+          </p>
+
+          <h3>2. Understand how your customers search</h3>
+          <p>
+            I separate local resident searches, regional searches, visitor
+            searches, informational research, and other opportunities rather
+            than treating every keyword the same.
+          </p>
+
+          <h3>3. Review the website and local search presence</h3>
+          <p>
+            I look at content, site structure, internal links, metadata,
+            crawlability, indexing, Google Business Profile, competitors,
+            local relevance, analytics, and conversion tracking.
+          </p>
+
+          <h3>4. Prioritize the highest-impact opportunities</h3>
+          <p>
+            SEO can generate a huge list of things that could be changed.
+            The more useful question is which changes are most likely to help
+            the business.
+          </p>
+
+          <h3>5. Measure business results</h3>
+          <p>
+            Rankings and organic traffic matter, but they are not the finish
+            line. Whenever possible, reporting should connect search visibility
+            to calls, leads, bookings, purchases, and revenue.
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- SEARCH EVERYWHERE -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">Modern Search</p>
+
+          <h2>
+            Your customers do not search in only one place anymore
+          </h2>
+
+          <p>
+            Google remains a major discovery channel, but customers may also
+            find businesses through Maps, video, social platforms, travel sites,
+            review platforms, and AI-driven search experiences.
+          </p>
+
+          <p>
+            I think about SEO more broadly as helping your business become easy
+            to discover and understand wherever people search.
+          </p>
+
+          <p>
+            The fundamentals still matter: clear information, genuinely useful
+            content, strong site structure, accurate business details, local
+            relevance, authority, and a website that makes the next step obvious.
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- WHY ME -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">Central Oregon SEO Consulting</p>
+
+          <h2>
+            Local context with a practical SEO approach
+          </h2>
+
+          <p>
+            I am based in Bend and provide SEO consulting for businesses
+            throughout Central Oregon, including Sisters.
+          </p>
+
+          <p>
+            That regional perspective is useful because the right geographic
+            strategy varies significantly from business to business.
+            A downtown Sisters shop may have almost no reason to target Bend,
+            while a contractor or professional service company may regularly
+            work across Sisters, Bend, Redmond, and surrounding communities.
+          </p>
+
+          <p>
+            My approach is straightforward: understand the opportunity,
+            identify what is holding the site back, prioritize the work,
+            and make SEO easier to understand.
+          </p>
+
+        </div>
+      </section>
+
+
+      <!-- FAQ -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">Frequently Asked Questions</p>
+
+          <h2>
+            Sisters Oregon SEO FAQs
+          </h2>
+
+          {faqs.map((faq) => (
+            <div>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+
+      <!-- CTA -->
+      <section class="content-section">
+        <div class="container narrow">
+
+          <p class="section-label">Sisters SEO Consultant</p>
+
+          <h2>
+            Want to improve your visibility in Sisters?
+          </h2>
+
+          <p>
+            Whether you need a full SEO strategy or simply want someone to
+            review your website and identify what to focus on next, I can
+            help find the strongest opportunities.
+          </p>
+
+          <p>
+            <a class="button" href="/contact/">
+              Contact Me About Sisters SEO
+            </a>
+          </p>
+
+        </div>
+      </section>
+
     </main>
 
     <Footer />
