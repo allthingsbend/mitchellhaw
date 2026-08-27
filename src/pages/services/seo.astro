@@ -1,63 +1,293 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import '../../styles/global.css';
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'SEO Consultant in Bend, Oregon | Mitchell Haw';
+const description =
+  'Practical SEO consulting for local, multi-location, and growing businesses. Technical SEO, content strategy, local search, measurement, and AI search visibility.';
+
+const faqs = [
+  {
+    question: 'What kind of SEO work do you do?',
+    answer:
+      'My work can include technical SEO, content and page strategy, local SEO, Google Business Profile guidance, site architecture, internal linking, migrations, reporting, and AI search visibility. The priorities depend on what is holding the business back and where search can create meaningful demand.'
+  },
+  {
+    question: 'Do you work only with businesses in Bend?',
+    answer:
+      'No. I am based in Bend and work with businesses in Central Oregon, but I also support multi-location and larger organizations in other markets. Local context matters when the project is local; the underlying work can apply to much broader websites and search programs.'
+  },
+  {
+    question: 'Can you audit our SEO without becoming our ongoing consultant?',
+    answer:
+      'Yes. A focused review can identify technical problems, content gaps, local-search issues, measurement weaknesses, and a prioritized plan. Ongoing support makes sense when you want help implementing, testing, reporting, and adjusting that plan over time.'
+  },
+  {
+    question: 'How long does SEO take?',
+    answer:
+      'There is no responsible one-size-fits-all timeline. Some technical or local-profile fixes can help quickly, while competitive rankings and durable content growth usually require more time. I set expectations based on the site, market, competition, resources, and work involved.'
+  },
+  {
+    question: 'Do you guarantee rankings?',
+    answer:
+      'No. Search results are controlled by search platforms and change constantly. I focus on work we can control: technical accessibility, useful content, clearer site structure, accurate local information, authority, measurement, and a better experience for the people you want to reach.'
+  },
+  {
+    question: 'Is AI search optimization separate from SEO?',
+    answer:
+      'Not entirely. Strong technical SEO, clear brand information, useful original content, crawlable pages, and trusted third-party signals support both traditional and AI-assisted discovery. AI visibility adds new research and measurement questions, but it should build on solid search fundamentals.'
+  }
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'SEO Consulting',
+  serviceType: 'Search Engine Optimization Consulting',
+  description,
+  provider: {
+    '@type': 'Person',
+    name: 'Mitchell Haw',
+    url: 'https://mitchellhaw.com/'
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Central Oregon' },
+    { '@type': 'Country', name: 'United States' }
+  ],
+  url: 'https://mitchellhaw.com/services/seo/'
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+  }))
+};
 ---
 
-<html lang="en">
-  <head>
-    <title>SEO Services | Mitchell Haw</title>
-    <meta name="description" content="SEO strategy, technical SEO, content planning, local SEO, and organic growth support from Mitchell Haw in Bend, Oregon." />
-  </head>
+<Layout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
 
-  <body>
-    <Header />
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-label">SEO Consulting</p>
+        <h1>SEO strategy built around how your business actually grows.</h1>
+        <p>
+          I help businesses find the search opportunities that matter, fix what is holding
+          their websites back, and turn clearer visibility into qualified traffic, leads,
+          bookings, visits, and revenue.
+        </p>
+        <div class="hero-buttons hero-buttons-center">
+          <a href="/contact/" class="primary-btn">Talk About Your SEO</a>
+          <a href="#seo-services" class="secondary-btn">See How I Can Help</a>
+        </div>
+      </div>
+    </section>
 
-    <main>
-      <section class="page-hero">
-        <div class="container narrow">
+    <section class="proof-strip" aria-label="Experience and approach">
+      <div class="container proof-grid">
+        <div><strong>12+ years</strong><span>working across evolving search</span></div>
+        <div><strong>Local + multi-location</strong><span>strategies matched to the business</span></div>
+        <div><strong>SEO + AI search</strong><span>one connected visibility strategy</span></div>
+        <div><strong>Business outcomes</strong><span>measurement beyond rankings alone</span></div>
+      </div>
+    </section>
+
+    <nav class="anchor-nav" aria-label="On this page">
+      <div class="container anchor-nav-inner">
+        <strong>Jump to:</strong>
+        <a href="#seo-services">Services</a>
+        <a href="#engagements">Ways to work together</a>
+        <a href="#process">Process</a>
+        <a href="#local-seo">Central Oregon</a>
+        <a href="#seo-faqs">FAQs</a>
+      </div>
+    </nav>
+
+    <section class="intro" id="seo-services">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">Where I Help</p>
+          <h2>SEO is not one checklist.</h2>
+          <p>
+            A small service business, a tourism company, and a national multi-location brand
+            can all need SEO—but the work, competition, customer journey, and measurement are
+            very different.
+          </p>
+        </div>
+        <div class="callout">
+          <h3>The first question is not “What can we optimize?”</h3>
+          <p>
+            It is “Where can search create meaningful value?” From there, I prioritize the
+            technical, content, local, and measurement work most likely to move the business.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <div class="section-heading">
           <p class="section-label">SEO Services</p>
-          <h1>SEO strategy that helps your business get found.</h1>
+          <h2>The pieces of a stronger search presence.</h2>
           <p>
-            I help businesses improve rankings, organic traffic, content visibility,
-            local search presence, and technical SEO foundations.
+            These services can stand alone, but they are usually most effective when the
+            priorities work together.
           </p>
         </div>
-      </section>
 
-      <section class="services">
-        <div class="container">
-          <div class="service-grid three">
-            <div class="card">
-              <h3>Technical SEO</h3>
-              <p>Site structure, crawlability, indexation, metadata, internal linking, redirects, schema, and migration support.</p>
-            </div>
-
-            <div class="card">
-              <h3>Content Strategy</h3>
-              <p>Keyword research, page planning, topic clusters, FAQs, service pages, location pages, and blog strategy.</p>
-            </div>
-
-            <div class="card">
-              <h3>Local SEO</h3>
-              <p>Google Business Profile optimization, local landing pages, maps visibility, reviews, and citation cleanup.</p>
-            </div>
-          </div>
+        <div class="service-grid three">
+          <article class="service-card">
+            <h3>Technical SEO</h3>
+            <p>Crawling, indexation, canonicals, redirects, migrations, rendering, structured data, speed, and technical quality control.</p>
+          </article>
+          <article class="service-card">
+            <h3>Content & Page Strategy</h3>
+            <p>Research and planning for service pages, product pages, location pages, guides, FAQs, hubs, and content that answers real customer needs.</p>
+          </article>
+          <article class="service-card">
+            <h3>Local SEO</h3>
+            <p>Google Business Profile guidance, Maps visibility, location relevance, reviews, local landing pages, listings, and service-area strategy.</p>
+          </article>
+          <article class="service-card">
+            <h3>Site Architecture</h3>
+            <p>Clear navigation, URL structure, internal linking, page relationships, and crawl paths that help people and search systems understand the site.</p>
+          </article>
+          <article class="service-card">
+            <h3>SEO Measurement</h3>
+            <p>Google Search Console, GA4, rank tracking, local visibility, dashboards, conversion measurement, and reporting tied to useful decisions.</p>
+          </article>
+          <article class="service-card">
+            <h3>AI Search Visibility</h3>
+            <p>Brand and competitor research across AI experiences, source analysis, entity clarity, content gaps, and practical recommendations grounded in SEO fundamentals.</p>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="intro">
-        <div class="container narrow">
-          <h2>Built for long-term organic growth.</h2>
+    <section class="content-section" id="engagements">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">Ways to Work Together</p>
+          <h2>A focused review or ongoing support.</h2>
           <p>
-            Good SEO is not just about ranking for one keyword. It is about making your website
-            easier for search engines, AI platforms, and real customers to understand.
+            Some businesses need a clear plan. Others need a partner who can stay involved
+            through prioritization, implementation, launch, and measurement.
           </p>
-          <a href="/contact" class="primary-btn">Reach Out</a>
         </div>
-      </section>
-    </main>
+        <div>
+          <h3>SEO review and roadmap</h3>
+          <ul class="check-list">
+            <li>Technical and indexation review</li>
+            <li>Search opportunity and competitor analysis</li>
+            <li>Content, page, and internal-link recommendations</li>
+            <li>Local-search review when relevant</li>
+            <li>Prioritized roadmap with clear next steps</li>
+          </ul>
 
-    <Footer />
-  </body>
-</html>
+          <h3>Ongoing SEO consulting</h3>
+          <ul class="check-list">
+            <li>Strategy, prioritization, and stakeholder guidance</li>
+            <li>Content briefs, page reviews, and implementation support</li>
+            <li>Developer coordination and release quality control</li>
+            <li>Performance monitoring and reporting</li>
+            <li>Iteration as the business and search landscape change</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">A Practical Process</p>
+          <h2>Understand, prioritize, improve, and measure.</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process-card"><span>01</span><h3>Business</h3><p>Clarify customers, offers, markets, margins, seasonality, and meaningful conversions.</p></article>
+          <article class="process-card"><span>02</span><h3>Demand</h3><p>Find how people search, compare options, ask questions, and decide what to do next.</p></article>
+          <article class="process-card"><span>03</span><h3>Diagnosis</h3><p>Review the website, search visibility, competitors, content, local presence, and data.</p></article>
+          <article class="process-card"><span>04</span><h3>Priorities</h3><p>Separate high-impact work from long lists of low-value SEO tasks.</p></article>
+          <article class="process-card"><span>05</span><h3>Results</h3><p>Measure visibility and traffic, then connect them to leads, bookings, sales, or revenue.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">SEO Without the Theater</p>
+          <h2>Useful work, clear reasoning, no ranking promises.</h2>
+        </div>
+        <div>
+          <p>
+            Good SEO should make the website better for the people using it as well as the
+            systems discovering it. I focus on original value, accurate information,
+            crawlable pages, understandable structure, and honest measurement.
+          </p>
+          <p>
+            That aligns with Google’s own emphasis on
+            <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener">helpful, reliable, people-first content</a>
+            and strong technical foundations—not shortcuts or content created only to manipulate rankings.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="local-seo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Central Oregon SEO</p>
+          <h2>Local strategy for distinct Central Oregon markets.</h2>
+          <p>
+            I am based in Bend. For local companies, I shape the strategy around the people,
+            geography, seasonality, visitor demand, and service area that genuinely fit the business.
+          </p>
+        </div>
+        <div class="service-grid">
+          <a class="card location-service-link" href="/services/seo-bend-oregon/"><h3>Bend SEO</h3><p>Local, service, visitor, and competitive search strategy in Bend.</p><span>Explore Bend SEO →</span></a>
+          <a class="card location-service-link" href="/services/seo-redmond-oregon/"><h3>Redmond SEO</h3><p>Local and regional visibility for Redmond businesses.</p><span>Explore Redmond SEO →</span></a>
+          <a class="card location-service-link" href="/services/seo-sisters-oregon/"><h3>Sisters SEO</h3><p>Search strategy for residents, visitors, and Sisters Country.</p><span>Explore Sisters SEO →</span></a>
+          <a class="card location-service-link" href="/services/seo-sunriver-oregon/"><h3>Sunriver SEO</h3><p>Local, travel, lodging, and seasonal search opportunities.</p><span>Explore Sunriver SEO →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="seo-faqs">
+      <div class="container narrow">
+        <p class="section-label">Frequently Asked Questions</p>
+        <h2>SEO consulting FAQs</h2>
+        <div class="faq-list">
+          {faqs.map((faq) => (
+            <details class="faq-item">
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container narrow">
+        <p class="section-label">Start With the Opportunity</p>
+        <h2>Let’s identify what search can realistically do for your business.</h2>
+        <p>Share what you are trying to improve, where you operate, and what has or has not worked so far.</p>
+        <a href="/contact/" class="primary-btn">Contact Mitchell</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero-buttons-center { justify-content: center; margin-top: 30px; }
+  .location-service-link { text-decoration: none; }
+  .location-service-link span { display: inline-block; margin-top: 16px; color: var(--pine); font-weight: 900; }
+  .content-section a { color: var(--pine); font-weight: 800; }
+</style>
