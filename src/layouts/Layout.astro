@@ -5,8 +5,26 @@ import '../styles/global.css';
 
 const {
   title,
-  description = "SEO, AI search, local SEO, content strategy, and digital visibility consulting from Mitchell Haw in Bend, Oregon."
+  description = "SEO, AI search, local SEO, content strategy, and digital visibility consulting from Mitchell Haw in Bend, Oregon.",
+  image = "/images/smith-rock-central-oregon.jpg"
 } = Astro.props;
+
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : Astro.url;
+const socialImage = new URL(image, Astro.site ?? Astro.url);
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mitchell Haw',
+  url: 'https://mitchellhaw.com/',
+  jobTitle: 'SEO and AI Search Consultant',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bend',
+    addressRegion: 'OR',
+    addressCountry: 'US'
+  }
+};
 ---
 
 <html lang="en">
@@ -36,6 +54,23 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href={canonical.href} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mitchell Haw" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content={socialImage.href} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage.href} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+    <slot name="head" />
   </head>
 
   <body>
