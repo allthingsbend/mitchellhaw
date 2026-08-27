@@ -1,108 +1,263 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import '../../styles/global.css';
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Sunriver Oregon SEO Consultant | Local & Tourism SEO';
+const description =
+  'SEO consulting for Sunriver, Oregon businesses. Improve local, travel, lodging, service, seasonal, Google Maps, content, and AI search visibility.';
+
+const faqs = [
+  {
+    question: 'What is different about SEO for a Sunriver business?',
+    answer:
+      'Many Sunriver businesses serve a mix of residents, second-home owners, visitors planning trips, and travelers already in the area. Those audiences search at different times and with different needs, so the strategy may combine local SEO, tourism content, seasonal planning, and strong booking or inquiry pages.'
+  },
+  {
+    question: 'Can SEO help a vacation rental or lodging business in Sunriver?',
+    answer:
+      'Yes, but the opportunity depends on the website, inventory, competition, booking model, and relationship with third-party platforms. Useful property information, destination content, technical indexation, internal linking, and clear booking paths can all matter.'
+  },
+  {
+    question: 'Should a Sunriver business also target Bend and La Pine?',
+    answer:
+      'Only if those markets reflect how the business truly operates and how customers search. A mobile service provider may serve a broad area, while a shop or restaurant may be primarily relevant to people in and around Sunriver. Separate pages should offer unique value rather than simply changing city names.'
+  },
+  {
+    question: 'Does Google Business Profile matter in Sunriver?',
+    answer:
+      'For eligible businesses that meet customers in person, it can be extremely important. Accurate categories, hours, location or service area, photos, reviews, and business details help people decide where to go or whom to contact. The profile should always follow Google’s eligibility and representation guidelines.'
+  },
+  {
+    question: 'How do you plan around seasonal search demand?',
+    answer:
+      'I separate evergreen needs from predictable seasonal opportunities, review when people begin researching, and work backward from the demand period. Important pages should be useful and discoverable before customers are ready to book, visit, or hire.'
+  },
+  {
+    question: 'Do you include AI search visibility?',
+    answer:
+      'Yes. Clear business information, crawlable pages, useful original content, consistent brand signals, and trusted references can support discovery in both traditional and AI-assisted search. I treat AI search as an extension of a strong visibility strategy, not a set of unsupported hacks.'
+  }
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Sunriver Oregon SEO Consulting',
+  serviceType: 'Search Engine Optimization Consulting',
+  description,
+  areaServed: {
+    '@type': 'Place',
+    name: 'Sunriver, Oregon'
+  },
+  provider: {
+    '@type': 'Person',
+    name: 'Mitchell Haw',
+    url: 'https://mitchellhaw.com/'
+  },
+  url: 'https://mitchellhaw.com/services/seo-sunriver-oregon/'
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+  }))
+};
 ---
 
-<html lang="en">
-  <head>
-    <title>Sunriver Oregon SEO Consultant | SEO Services in Sunriver, OR</title>
-    <meta name="description" content="SEO consulting for Sunriver, Oregon businesses, tourism companies, local services, and hospitality brands that want better search visibility and more qualified traffic." />
-  </head>
+<Layout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
 
-  <body>
-    <Header />
+  <main>
+    <section class="page-hero sunriver-hero">
+      <div class="container narrow">
+        <p class="section-label">Sunriver Oregon SEO Services</p>
+        <h1>SEO for the way people discover, plan, visit, and buy around Sunriver.</h1>
+        <p>
+          I help Sunriver-area businesses improve visibility across Google Search, Maps,
+          travel research, local results, and AI-assisted discovery—whether the customer
+          lives nearby, owns a second home, or is planning a Central Oregon trip.
+        </p>
+        <div class="hero-buttons hero-buttons-center">
+          <a class="primary-btn" href="/contact/">Talk About Sunriver SEO</a>
+          <a class="secondary-btn" href="#sunriver-opportunity">See the Opportunity</a>
+        </div>
+      </div>
+    </section>
 
-    <main>
-      <section class="page-hero">
-        <div class="container narrow">
-          <p class="section-label">Sunriver Oregon SEO Services</p>
-          <h1>SEO help for Sunriver businesses that rely on local, travel, and seasonal search demand.</h1>
+    <section class="proof-strip" aria-label="Sunriver SEO focus areas">
+      <div class="container proof-grid">
+        <div><strong>Local residents</strong><span>nearby needs and high-intent searches</span></div>
+        <div><strong>Trip planners</strong><span>research before arrival</span></div>
+        <div><strong>In-market visitors</strong><span>mobile, Maps, and “near me” discovery</span></div>
+        <div><strong>Seasonal demand</strong><span>pages ready before interest peaks</span></div>
+      </div>
+    </section>
+
+    <nav class="anchor-nav" aria-label="On this page">
+      <div class="container anchor-nav-inner">
+        <strong>Jump to:</strong>
+        <a href="#sunriver-opportunity">Search audiences</a>
+        <a href="#sunriver-services">Services</a>
+        <a href="#tourism-seo">Tourism SEO</a>
+        <a href="#local-seo">Local SEO</a>
+        <a href="#sunriver-faqs">FAQs</a>
+      </div>
+    </nav>
+
+    <section class="intro" id="sunriver-opportunity">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">A Different Search Market</p>
+          <h2>One location, several customer journeys.</h2>
           <p>
-            I help Sunriver businesses improve visibility in search, create stronger local and service
-            pages, and reach people planning trips, booking services, or looking for nearby businesses.
+            Sunriver is both a community and a destination. A local homeowner looking for
+            property service, a family comparing lodging, and a visitor deciding where to eat
+            tonight may all use search—but they need different pages, information, and next steps.
           </p>
         </div>
-      </section>
-
-      <section class="services">
-        <div class="container">
-          <div class="service-grid three">
-            <div class="service-card">
-              <h2>Tourism SEO</h2>
-              <p>
-                Reach visitors searching for places to stay, things to do, local services, dining,
-                rentals, events, and trip planning information near Sunriver.
-              </p>
-            </div>
-
-            <div class="service-card">
-              <h2>Local Service SEO</h2>
-              <p>
-                Help your business show up for high-intent searches from locals, second-home owners,
-                visitors, and nearby Central Oregon customers.
-              </p>
-            </div>
-
-            <div class="service-card">
-              <h2>Content Strategy</h2>
-              <p>
-                Build pages and content around seasonal demand, service needs, visitor questions, and
-                searches tied to Sunriver and the surrounding area.
-              </p>
-            </div>
-          </div>
+        <div class="callout">
+          <h3>Build around intent, not a list of keywords.</h3>
+          <p>
+            The useful question is who is searching, when they are searching, what decision
+            they are making, and what your business can genuinely help them do.
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="content-section">
-        <div class="container narrow">
-          <h2>SEO consulting for Sunriver, Oregon businesses</h2>
+    <section class="services" id="sunriver-services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">How I Can Help</p>
+          <h2>SEO services matched to Sunriver demand.</h2>
+        </div>
+        <div class="service-grid three">
+          <article class="service-card"><h3>Local SEO & Maps</h3><p>Improve business information, categories, reviews, location relevance, landing pages, and the signals that support nearby discovery.</p></article>
+          <article class="service-card"><h3>Tourism & Travel SEO</h3><p>Reach people comparing places to stay, eat, shop, visit, book, or experience before and during a trip.</p></article>
+          <article class="service-card"><h3>Technical SEO</h3><p>Find crawl, indexation, canonical, internal-link, metadata, performance, and site-architecture problems that limit visibility.</p></article>
+          <article class="service-card"><h3>Service & Location Pages</h3><p>Create useful pages for the actual services and geographic markets the business serves without duplicating thin city pages.</p></article>
+          <article class="service-card"><h3>Seasonal Content</h3><p>Plan evergreen and seasonal pages early enough to be discovered when customers start researching.</p></article>
+          <article class="service-card"><h3>Measurement</h3><p>Track qualified traffic, calls, forms, bookings, purchases, direction requests, and other outcomes that matter.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="tourism-seo">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">Tourism & Hospitality</p>
+          <h2>Be useful before the trip and easy to choose during it.</h2>
           <p>
-            Sunriver search demand is different from a typical local market. Some people are searching
-            from town, some are planning a trip months ahead, and others are already in the area looking
-            for something nearby right now.
+            Travel research can begin long before arrival. Lodging, vacation rentals,
+            restaurants, recreation providers, shops, event businesses, and other visitor-focused
+            companies need content for both advance planning and immediate local decisions.
           </p>
-
-          <p>
-            That means your SEO needs to be clear, local, and useful. I can help improve your website
-            structure, service pages, local visibility, content strategy, and reporting so search becomes
-            a stronger part of how customers find you.
-          </p>
-
-          <h2>What I can help with</h2>
-          <ul>
-            <li>SEO strategy for Sunriver businesses</li>
-            <li>Tourism and hospitality SEO</li>
-            <li>Local SEO for service businesses</li>
-            <li>Google Business Profile recommendations</li>
-            <li>Keyword research for seasonal and local demand</li>
-            <li>Service page and location page planning</li>
-            <li>Technical SEO cleanup</li>
-            <li>Content ideas based on real customer searches</li>
+        </div>
+        <div>
+          <h3>Before arrival</h3>
+          <ul class="check-list">
+            <li>Clear lodging, activity, dining, product, or service pages</li>
+            <li>Useful planning information tied naturally to the offer</li>
+            <li>Seasonal details published before demand peaks</li>
+            <li>Strong photos, policies, availability context, and next steps</li>
           </ul>
+          <h3>While visitors are nearby</h3>
+          <ul class="check-list">
+            <li>Accurate hours, location, and contact information</li>
+            <li>Mobile-friendly pages and fast decision paths</li>
+            <li>Google Maps, reviews, menus, products, or services</li>
+            <li>Clear booking, calling, ordering, or direction actions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-          <h2>Good fit for tourism and local service businesses</h2>
-          <p>
-            I can help vacation rental companies, property service businesses, restaurants, activity
-            providers, contractors, wellness businesses, shops, and professional service companies
-            improve how they appear in search.
-          </p>
+    <section class="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Different Businesses, Different SEO</p>
+          <h2>The strategy should reflect how customers actually choose you.</h2>
+        </div>
+        <div class="service-grid three">
+          <article class="service-card"><h3>Lodging & Vacation Rentals</h3><p>Property discovery, destination research, indexable inventory, useful amenity information, internal linking, and direct-booking paths.</p></article>
+          <article class="service-card"><h3>Restaurants, Retail & Recreation</h3><p>Maps, reviews, mobile discovery, accurate business details, high-intent pages, visitor questions, and seasonal visibility.</p></article>
+          <article class="service-card"><h3>Home & Property Services</h3><p>Services for residents, homeowners, property managers, and second-home owners across the areas the business truly serves.</p></article>
+        </div>
+      </div>
+    </section>
 
-          <h2>SEO that accounts for Central Oregon search behavior</h2>
+    <section class="content-section" id="local-seo">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">Google Maps & Service Areas</p>
+          <h2>Local visibility has to match the real business.</h2>
           <p>
-            Sunriver businesses often need to capture searches tied to Sunriver, Bend, La Pine, Mt.
-            Bachelor, Deschutes County, and broader Central Oregon travel planning. I can help build a
-            strategy that fits how people actually search in this area.
-          </p>
-
-          <p>
-            <a class="button" href="/contact/">Contact Me About Sunriver SEO</a>
+            A Sunriver-area company should not create fake locations or pretend to have an
+            office in every nearby community. Website pages and Google Business Profile settings
+            should accurately represent where the business is located and where it actually works.
           </p>
         </div>
-      </section>
-    </main>
+        <div class="callout">
+          <h3>Accuracy is part of the strategy.</h3>
+          <p>
+            Google asks businesses to use a precise address or service area and to represent
+            their real-world operations consistently. I help translate those rules into a practical
+            local structure for Sunriver, Bend, La Pine, and other relevant markets.
+          </p>
+          <p><a href="https://support.google.com/business/answer/3038177" rel="noopener">Read Google’s Business Profile guidelines</a></p>
+        </div>
+      </div>
+    </section>
 
-    <Footer />
-  </body>
-</html>
+    <section class="services" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">SEO Process</p>
+          <h2>A plan based on the business—not a template.</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process-card"><span>01</span><h3>Customers</h3><p>Separate residents, owners, regional customers, and visitor audiences.</p></article>
+          <article class="process-card"><span>02</span><h3>Demand</h3><p>Map local, travel, service, and seasonal search behavior.</p></article>
+          <article class="process-card"><span>03</span><h3>Website</h3><p>Review technical health, pages, local presence, content, and conversions.</p></article>
+          <article class="process-card"><span>04</span><h3>Priorities</h3><p>Choose the work most likely to affect discovery and decisions.</p></article>
+          <article class="process-card"><span>05</span><h3>Results</h3><p>Measure visibility, qualified traffic, leads, bookings, and revenue where possible.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="sunriver-faqs">
+      <div class="container narrow">
+        <p class="section-label">Frequently Asked Questions</p>
+        <h2>Sunriver Oregon SEO FAQs</h2>
+        <div class="faq-list">
+          {faqs.map((faq) => (
+            <details class="faq-item">
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container narrow">
+        <p class="section-label">Sunriver SEO Consultant</p>
+        <h2>Want a clearer plan for getting found around Sunriver?</h2>
+        <p>I can review the opportunity, identify what is holding the site back, and prioritize the work worth doing next.</p>
+        <a href="/contact/" class="primary-btn">Contact Me About Sunriver SEO</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero-buttons-center { justify-content: center; margin-top: 30px; }
+  .content-section a { color: var(--pine); font-weight: 900; }
+</style>
