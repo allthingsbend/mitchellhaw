@@ -1,63 +1,257 @@
 ---
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import '../../styles/global.css';
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'AI Search Optimization & GEO Consulting | Mitchell Haw';
+const description =
+  'AI search visibility consulting for ChatGPT, Google AI experiences, Perplexity, Gemini, and other discovery tools—grounded in strong SEO and useful content.';
+
+const faqs = [
+  {
+    question: 'What is AI search optimization?',
+    answer:
+      'It is the work of making a brand and its information easier to discover, understand, verify, and accurately represent in AI-assisted search experiences. It includes research and measurement specific to AI answers, while building on technical SEO, useful content, clear entity information, and trusted web signals.'
+  },
+  {
+    question: 'Is GEO different from SEO?',
+    answer:
+      'There are new interfaces, behaviors, and measurement challenges, but much of the foundation is shared. Google explicitly says its established SEO best practices remain relevant to its generative AI features. Other platforms have different systems, so I evaluate them directly rather than assuming one tactic works everywhere.'
+  },
+  {
+    question: 'Can you guarantee that ChatGPT or another AI tool will mention my brand?',
+    answer:
+      'No. AI answers are variable, personalized, and controlled by the platforms producing them. The responsible goal is to improve the information and signals we can influence, measure visibility across a defined prompt set, and learn which sources and gaps appear to matter.'
+  },
+  {
+    question: 'How do you measure AI search visibility?',
+    answer:
+      'Measurement can include brand mention rate, competitive share of voice, linked or cited sources, answer accuracy, sentiment, recommendation context, prompt categories, and whether the brand persists as a conversation becomes more specific. These metrics should be paired with website, search, referral, and conversion data where available.'
+  },
+  {
+    question: 'Do I need special AI schema or an llms.txt file?',
+    answer:
+      'There is no universal special markup that guarantees AI visibility. Google states that no special schema or AI text file is required for its generative search features. Valid structured data and clear machine-readable information can still support normal search understanding when they accurately match visible page content.'
+  },
+  {
+    question: 'What businesses are a good fit for this work?',
+    answer:
+      'It is most useful when people are already using AI tools to compare, research, plan, or ask for recommendations in your category—and when the business has the ability to improve its website, content, brand information, or broader web presence based on what the research finds.'
+  }
+];
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'AI Search Visibility Consulting',
+  serviceType: 'AI Search Optimization and Generative Engine Optimization Consulting',
+  description,
+  provider: { '@type': 'Person', name: 'Mitchell Haw', url: 'https://mitchellhaw.com/' },
+  url: 'https://mitchellhaw.com/services/ai-search/'
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer }
+  }))
+};
 ---
 
-<html lang="en">
-  <head>
-    <title>AI Search Consulting | Mitchell Haw</title>
-    <meta name="description" content="AI search strategy for ChatGPT, Perplexity, Gemini, Google AI Overviews, and emerging answer engines." />
-  </head>
+<Layout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
 
-  <body>
-    <Header />
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="section-label">AI Search Optimization</p>
+        <h1>Help your brand become easier to find, understand, and trust in AI search.</h1>
+        <p>
+          I help businesses evaluate and improve visibility across ChatGPT, Google’s AI
+          search experiences, Perplexity, Gemini, and other discovery tools—without losing
+          sight of the SEO, content, and brand fundamentals that support long-term visibility.
+        </p>
+        <div class="hero-buttons hero-buttons-center">
+          <a class="primary-btn" href="/contact/">Talk About AI Visibility</a>
+          <a class="secondary-btn" href="#ai-search-work">See What the Work Includes</a>
+        </div>
+      </div>
+    </section>
 
-    <main>
-      <section class="page-hero">
-        <div class="container narrow">
-          <p class="section-label">AI Search</p>
-          <h1>Help your brand show up in AI-powered search.</h1>
+    <section class="proof-strip" aria-label="AI search channels">
+      <div class="container proof-grid">
+        <div><strong>ChatGPT</strong><span>answers, recommendations, and sources</span></div>
+        <div><strong>Google AI</strong><span>AI Overviews and AI Mode</span></div>
+        <div><strong>Perplexity & Gemini</strong><span>research and answer discovery</span></div>
+        <div><strong>Search foundations</strong><span>technical, content, and brand clarity</span></div>
+      </div>
+    </section>
+
+    <nav class="anchor-nav" aria-label="On this page">
+      <div class="container anchor-nav-inner">
+        <strong>Jump to:</strong>
+        <a href="#ai-search-work">Services</a>
+        <a href="#ai-measurement">Measurement</a>
+        <a href="#seo-foundation">SEO foundation</a>
+        <a href="#ai-process">Process</a>
+        <a href="#ai-faqs">FAQs</a>
+      </div>
+    </nav>
+
+    <section class="intro">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">A Broader Discovery Journey</p>
+          <h2>People can now research without following a traditional results page.</h2>
           <p>
-            Search is changing. I help businesses prepare for visibility across ChatGPT,
-            Perplexity, Gemini, Google AI Overviews, and other answer engines.
+            A customer may ask for options, refine the requirements, compare brands, question
+            an answer, and request a recommendation—all inside one conversation. That changes
+            what should be researched and how visibility should be evaluated.
           </p>
         </div>
-      </section>
-
-      <section class="services">
-        <div class="container">
-          <div class="service-grid three">
-            <div class="card">
-              <h3>AI Visibility Strategy</h3>
-              <p>Identify where your brand appears, where competitors are mentioned, and what content gaps need to be filled.</p>
-            </div>
-
-            <div class="card">
-              <h3>Entity & Brand Clarity</h3>
-              <p>Improve how AI systems understand who you are, what you offer, where you operate, and why you are trustworthy.</p>
-            </div>
-
-            <div class="card">
-              <h3>Answer-Friendly Content</h3>
-              <p>Create clear, useful content that answers real questions and supports both traditional SEO and AI discovery.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="intro">
-        <div class="container narrow">
-          <h2>AI search builds on strong SEO.</h2>
+        <div class="callout">
+          <h3>A mention is not the finish line.</h3>
           <p>
-            The best AI search strategy starts with a clean website, helpful content,
-            consistent brand signals, structured information, and strong web presence.
+            It matters whether the brand is described accurately, appears for relevant needs,
+            remains present as the prompt gets more specific, and is supported by sources a
+            customer can use to continue the journey.
           </p>
-          <a href="/contact" class="primary-btn">Reach Out</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <Footer />
-  </body>
-</html>
+    <section class="services" id="ai-search-work">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">AI Search Services</p>
+          <h2>Research first, then improve the right signals.</h2>
+        </div>
+        <div class="service-grid three">
+          <article class="service-card"><h3>Prompt & Journey Research</h3><p>Build a useful prompt set around real needs, comparisons, recommendations, questions, and follow-up turns—not just one broad query.</p></article>
+          <article class="service-card"><h3>Brand Visibility Benchmark</h3><p>Compare brand mentions, competitors, answer context, linked sources, accuracy, and gaps across relevant AI experiences.</p></article>
+          <article class="service-card"><h3>Source & Citation Analysis</h3><p>Identify which owned and third-party sources shape answers and where stronger, more accurate information may be needed.</p></article>
+          <article class="service-card"><h3>Entity & Brand Clarity</h3><p>Clarify who the business is, what it offers, where it operates, and how key facts are represented consistently across the web.</p></article>
+          <article class="service-card"><h3>Content Opportunity Plan</h3><p>Improve pages and create original resources that answer important questions better than generic, interchangeable content.</p></article>
+          <article class="service-card"><h3>Technical & Access Review</h3><p>Check crawlability, indexability, rendering, internal linking, structured data accuracy, and other foundations that affect discovery.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="ai-measurement">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">Measurement That Admits the Limits</p>
+          <h2>AI answers vary. The reporting should say so.</h2>
+          <p>
+            Results can change by model, date, location, personalization, prompt wording, and
+            conversation history. A useful benchmark uses a defined methodology and avoids
+            presenting a small sample as universal truth.
+          </p>
+        </div>
+        <div>
+          <h3>What I may track</h3>
+          <ul class="check-list">
+            <li>Brand mention rate and competitive share of voice</li>
+            <li>Recommendation context, accuracy, and sentiment</li>
+            <li>Linked or cited domains and pages</li>
+            <li>Visibility by prompt theme and customer stage</li>
+            <li>First-answer visibility and multi-turn persistence</li>
+            <li>AI referral traffic and conversions when identifiable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="seo-foundation">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">SEO + AI Search</p>
+          <h2>New interfaces, familiar foundations.</h2>
+          <p>
+            Google’s current guidance is direct: established SEO best practices continue to
+            matter for its generative AI features. Valuable non-commodity content, technical
+            eligibility, crawlable links, accurate business details, and strong user experience
+            remain central.
+          </p>
+        </div>
+        <div class="service-grid three">
+          <article class="service-card"><h3>Still foundational</h3><p>Indexable pages, useful original content, clear site structure, internal links, accurate facts, and credible brand signals.</p></article>
+          <article class="service-card"><h3>New research questions</h3><p>Which prompts trigger recommendations, which sources influence answers, how competitors appear, and what happens across follow-up turns.</p></article>
+          <article class="service-card"><h3>No universal hack</h3><p>No special file, schema type, or content formula guarantees inclusion. Tactics should be tested against the platform and business—not repeated as folklore.</p></article>
+        </div>
+        <p class="source-note">
+          See Google Search Central’s current guide to
+          <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener">optimizing for generative AI features</a>.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">A Good Fit</p>
+          <h2>This work is useful when it can change a real decision.</h2>
+        </div>
+        <div>
+          <ul class="check-list">
+            <li>Your customers use AI tools to research, compare, plan, or ask for recommendations</li>
+            <li>You want to understand why competitors appear and which sources shape the answers</li>
+            <li>Important facts about the brand are missing, inconsistent, or described inaccurately</li>
+            <li>You can improve your website, content, digital PR, listings, or brand information based on the findings</li>
+            <li>You want AI visibility connected to the broader SEO and customer-acquisition strategy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="ai-process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">AI Visibility Process</p>
+          <h2>Define, benchmark, diagnose, improve, repeat.</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process-card"><span>01</span><h3>Questions</h3><p>Define the audiences, needs, and decisions worth researching.</p></article>
+          <article class="process-card"><span>02</span><h3>Baseline</h3><p>Run a documented prompt set across relevant platforms.</p></article>
+          <article class="process-card"><span>03</span><h3>Sources</h3><p>Study competitors, citations, gaps, inaccuracies, and patterns.</p></article>
+          <article class="process-card"><span>04</span><h3>Changes</h3><p>Prioritize content, technical, entity, and authority improvements.</p></article>
+          <article class="process-card"><span>05</span><h3>Learning</h3><p>Repeat the benchmark and connect visibility to business data.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="ai-faqs">
+      <div class="container narrow">
+        <p class="section-label">Frequently Asked Questions</p>
+        <h2>AI search optimization FAQs</h2>
+        <div class="faq-list">
+          {faqs.map((faq) => (
+            <details class="faq-item">
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container narrow">
+        <p class="section-label">AI Search Visibility</p>
+        <h2>Want to know how your brand actually appears in AI search?</h2>
+        <p>We can start with the questions your customers ask, establish a useful baseline, and turn the findings into a practical plan.</p>
+        <a href="/contact/" class="primary-btn">Contact Mitchell</a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero-buttons-center { justify-content: center; margin-top: 30px; }
+  .source-note { margin: 30px 0 0; color: var(--muted); }
+  .source-note a { color: var(--pine); font-weight: 900; }
+</style>
