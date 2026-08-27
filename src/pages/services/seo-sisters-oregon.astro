@@ -87,6 +87,22 @@ const faqSchema = {
 
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/mh-favicon.png" />
+
+    <script
+      is:inline
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E7RJTWV4VN"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-E7RJTWV4VN');
+    </script>
+
     <title>{title}</title>
 
     <meta
@@ -99,13 +115,16 @@ const faqSchema = {
     <link rel="canonical" href={canonical.href} />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mitchell Haw" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical.href} />
+    <meta property="og:image" content="https://mitchellhaw.com/images/smith-rock-central-oregon.jpg" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://mitchellhaw.com/images/smith-rock-central-oregon.jpg" />
 
     <script
       type="application/ld+json"
@@ -140,13 +159,33 @@ const faqSchema = {
             looking for what you offer.
           </p>
 
-          <p>
-            <a class="button" href="/contact/">
-              Talk About Your Sisters SEO
-            </a>
-          </p>
+          <div class="hero-buttons hero-buttons-center">
+            <a class="primary-btn" href="/contact/">Talk About Your Sisters SEO</a>
+            <a class="secondary-btn" href="#sisters-search-audiences">Explore the Strategy</a>
+          </div>
         </div>
       </section>
+
+      <section class="proof-strip" aria-label="Sisters SEO focus areas">
+        <div class="container proof-grid">
+          <div><strong>Local residents</strong><span>nearby, high-intent searches</span></div>
+          <div><strong>Trip planners</strong><span>research before arriving</span></div>
+          <div><strong>In-market visitors</strong><span>Maps and mobile discovery</span></div>
+          <div><strong>Regional customers</strong><span>real Central Oregon service areas</span></div>
+        </div>
+      </section>
+
+      <nav class="anchor-nav" aria-label="On this page">
+        <div class="container anchor-nav-inner">
+          <strong>Jump to:</strong>
+          <a href="#sisters-seo-services">Services</a>
+          <a href="#sisters-search-audiences">Search audiences</a>
+          <a href="#sisters-maps">Maps & local SEO</a>
+          <a href="#sisters-tourism">Tourism SEO</a>
+          <a href="#sisters-process">Process</a>
+          <a href="#sisters-faqs">FAQs</a>
+        </div>
+      </nav>
 
 
       <!-- CORE SERVICES -->
@@ -263,7 +302,7 @@ const faqSchema = {
 
 
       <!-- SEARCH AUDIENCES -->
-      <section class="services">
+      <section class="services" id="sisters-search-audiences">
         <div class="container">
 
           <div class="container narrow">
@@ -319,7 +358,7 @@ const faqSchema = {
 
 
       <!-- GOOGLE MAPS -->
-      <section class="content-section">
+      <section class="content-section" id="sisters-maps">
         <div class="container narrow">
 
           <p class="section-label">Local Search</p>
@@ -362,7 +401,7 @@ const faqSchema = {
 
 
       <!-- TOURISM -->
-      <section class="services">
+      <section class="services" id="sisters-tourism">
         <div class="container">
 
           <div class="container narrow">
@@ -595,7 +634,7 @@ const faqSchema = {
 
 
       <!-- PROCESS -->
-      <section class="content-section">
+      <section class="content-section" id="sisters-process">
         <div class="container narrow">
 
           <p class="section-label">SEO Process</p>
@@ -707,7 +746,7 @@ const faqSchema = {
 
 
       <!-- FAQ -->
-      <section class="content-section">
+      <section class="content-section" id="sisters-faqs">
         <div class="container narrow">
 
           <p class="section-label">Frequently Asked Questions</p>
@@ -716,19 +755,21 @@ const faqSchema = {
             Sisters Oregon SEO FAQs
           </h2>
 
-          {faqs.map((faq) => (
-            <div>
-              <h3>{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
-          ))}
+          <div class="faq-list">
+            {faqs.map((faq) => (
+              <details class="faq-item">
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
 
         </div>
       </section>
 
 
       <!-- CTA -->
-      <section class="content-section">
+      <section class="cta">
         <div class="container narrow">
 
           <p class="section-label">Sisters SEO Consultant</p>
@@ -757,3 +798,10 @@ const faqSchema = {
     <Footer />
   </body>
 </html>
+
+<style>
+  .hero-buttons-center {
+    justify-content: center;
+    margin-top: 30px;
+  }
+</style>
