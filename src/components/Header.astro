@@ -1,17 +1,16 @@
----
-// src/components/Header.astro
----
-
 <header class="site-header">
   <div class="nav-container">
-    <a href="/" class="logo">Mitchell Haw</a>
+    <a href="/" class="logo" aria-label="Mitchell Haw home">
+      <span class="logo-mark">MH</span>
+      <span class="logo-name">Mitchell Haw</span>
+    </a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary navigation">
       <a href="/services/seo">SEO</a>
       <a href="/services/ai-search">AI Search</a>
-      <a href="/services/video-marketing">Video</a>
+      <a href="/insights/">Insights</a>
       <a href="/about">About</a>
-      <a href="/contact" class="nav-cta">Reach Out</a>
+      <a href="/contact" class="nav-cta">Contact ↗</a>
     </nav>
   </div>
 </header>
@@ -21,75 +20,129 @@
     position: sticky;
     top: 0;
     z-index: 999;
-    background: rgba(246, 241, 232, 0.96);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(35, 79, 66, 0.1);
+    background: rgba(247, 247, 242, 0.92);
+    border-bottom: 1px solid #d9dbd4;
+    backdrop-filter: blur(14px);
   }
 
-  .nav-container {
-    width: min(1180px, 94%);
+  .site-header .nav-container {
+    width: min(1240px, 92%);
+    min-height: 76px;
     margin: 0 auto;
-    min-height: 78px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 30px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
-  .logo {
-    font-size: 1.15rem;
-    font-weight: 800;
+  .site-header .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #171817;
     text-decoration: none;
-    color: #102f29;
-    white-space: nowrap;
+    letter-spacing: -0.02em;
   }
 
-  .main-nav {
+  .site-header .logo-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    background: #2457ff;
+    color: #fff;
+    font-family: "Manrope", "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+
+  .site-header .logo-name {
+    font-size: 0.96rem;
+    font-weight: 700;
+  }
+
+  .site-header .main-nav {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 25px;
+    flex-wrap: nowrap;
   }
 
-  .main-nav a {
+  .site-header .main-nav a {
+    padding: 4px 0;
+    border-radius: 0;
+    background: transparent;
+    color: #171817;
+    font-size: 0.79rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     text-decoration: none;
-    font-weight: 700;
-    color: #102f29;
-    white-space: nowrap;
+    transition: color 0.18s ease;
   }
 
-  .nav-cta {
-    background: #234f42;
-    color: white !important;
-    padding: 10px 18px;
-    border-radius: 999px;
+  .site-header .main-nav a:hover {
+    background: transparent;
+    color: #2457ff;
+    transform: none;
   }
 
-  @media (max-width: 700px) {
-    .nav-container {
+  .site-header .main-nav .nav-cta {
+    padding-left: 16px;
+    border-left: 1px solid #d9dbd4;
+    background: transparent;
+    color: #2457ff;
+    box-shadow: none;
+  }
+
+  @media (max-width: 760px) {
+    .site-header .nav-container {
       min-height: auto;
-      padding: 16px 0;
+      padding: 14px 0 12px;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 14px;
+      align-items: stretch;
+      gap: 12px;
     }
 
-    .main-nav {
+    .site-header .logo {
+      justify-content: space-between;
+    }
+
+    .site-header .logo-name {
+      margin-right: auto;
+    }
+
+    .site-header .main-nav {
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      gap: 18px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: none;
     }
 
-    .main-nav a {
-      font-size: 0.95rem;
-      padding: 8px 10px;
-      background: rgba(35, 79, 66, 0.08);
-      border-radius: 999px;
+    .site-header .main-nav::-webkit-scrollbar {
+      display: none;
     }
 
-    .main-nav .nav-cta {
-      padding: 8px 14px;
-      background: #234f42;
+    .site-header .main-nav a {
+      flex: 0 0 auto;
+      padding: 0;
+      background: transparent;
+      font-size: 0.76rem;
+    }
+
+    .site-header .main-nav .nav-cta {
+      border-left: 0;
+      padding-left: 0;
+      background: transparent;
+      color: #2457ff;
     }
   }
 </style>
