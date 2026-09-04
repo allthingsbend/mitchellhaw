@@ -87,3 +87,39 @@ const personSchema = {
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  /* Shared service-page cleanup: keep inner pages aligned with the site header. */
+  .page-hero .container.narrow {
+    width: min(1180px, 92%) !important;
+    max-width: 1180px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
+
+  .page-hero h1 {
+    max-width: 860px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: clamp(3rem, 5vw, 5.1rem) !important;
+    line-height: 1 !important;
+  }
+
+  .page-hero p:not(.section-label):not(.eyebrow) {
+    max-width: 760px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: 1.04rem !important;
+  }
+
+  .page-hero .hero-buttons {
+    justify-content: flex-start !important;
+  }
+
+  @media (max-width: 720px) {
+    .page-hero h1 {
+      font-size: clamp(2.75rem, 12vw, 4rem) !important;
+    }
+  }
+</style>
