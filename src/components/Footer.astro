@@ -1,142 +1,150 @@
 <footer class="site-footer">
   <div class="footer-container">
+    <div class="footer-lead">
+      <p class="footer-kicker">Mitchell Haw / Bend, Oregon</p>
+      <h2>Have something interesting to work on?</h2>
+      <a href="/contact/" class="footer-contact">Start a conversation ↗</a>
+    </div>
+
     <div class="footer-main">
-      
       <div class="footer-about">
         <a href="/" class="footer-logo">Mitchell Haw</a>
-
         <p class="footer-description">
-          SEO consultant based in Bend, Oregon, helping businesses improve
-          Google visibility, local search performance, website strategy,
-          content, and AI search visibility.
+          SEO, AI search, content, local visibility, analytics, and digital strategy for brands that want to be easier to find.
         </p>
-
-        <a href="/contact/" class="footer-contact">
-          Get in touch →
-        </a>
       </div>
 
       <div class="footer-column">
-        <p class="footer-heading">Services</p>
-
+        <p class="footer-heading">Work</p>
         <div class="footer-link-list">
-          <a href="/services/seo/">SEO Services</a>
-          <a href="/services/seo-bend-oregon/">Bend Oregon SEO</a>
-          <a href="/services/ai-search/">AI Search Strategy</a>
-          <a href="/services/video-marketing/">Video Marketing</a>
-        </div>
-      </div>
-
-      <div class="footer-column">
-        <p class="footer-heading">Central Oregon SEO</p>
-
-        <div class="footer-link-list">
-          <a href="/services/seo-bend-oregon/">Bend SEO</a>
-          <a href="/services/seo-redmond-oregon/">Redmond SEO</a>
-          <a href="/services/seo-sisters-oregon/">Sisters SEO</a>
-          <a href="/services/seo-sunriver-oregon/">Sunriver SEO</a>
+          <a href="/services/seo/">SEO Strategy</a>
+          <a href="/services/ai-search/">AI Search</a>
+          <a href="/services/seo-bend-oregon/">Local SEO</a>
+          <a href="/services/video-marketing/">Video & Content</a>
         </div>
       </div>
 
       <div class="footer-column">
         <p class="footer-heading">Explore</p>
-
         <div class="footer-link-list">
+          <a href="/insights/">Insights</a>
           <a href="/about/">About</a>
           <a href="/contact/">Contact</a>
           <a href="/sitemap-html/">Sitemap</a>
         </div>
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      <p>© {new Date().getFullYear()} Mitchell Haw. All rights reserved.</p>
-      <p>Bend, Oregon</p>
+      <p>© {new Date().getFullYear()} Mitchell Haw</p>
+      <p>Search strategy for a changing internet.</p>
     </div>
   </div>
 </footer>
 
 <style>
   .site-footer {
-    background: #081f2d;
-    color: white;
-    padding: 72px 0 0;
+    background: #e8edff;
+    color: #171817;
+    padding: 92px 0 0;
+    border-top: 1px solid #d9dbd4;
   }
 
   .footer-container {
-    width: min(1180px, 94%);
+    width: min(1240px, 92%);
     margin: 0 auto;
+  }
+
+  .footer-lead {
+    display: grid;
+    grid-template-columns: 0.55fr 1.45fr;
+    gap: 70px;
+    align-items: start;
+    padding-bottom: 78px;
+  }
+
+  .footer-kicker {
+    margin: 9px 0 0;
+    color: #2457ff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .footer-lead h2 {
+    max-width: 880px;
+    margin: 0;
+    color: #171817;
+    font-size: clamp(3rem, 6.5vw, 6.4rem);
+    font-weight: 600;
+    line-height: 0.92;
+    letter-spacing: -0.065em;
+  }
+
+  .footer-contact {
+    grid-column: 2;
+    width: fit-content;
+    margin-top: -22px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #2457ff;
+    color: #2457ff;
+    font-weight: 700;
+    text-decoration: none;
   }
 
   .footer-main {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 56px;
-    padding-bottom: 56px;
+    grid-template-columns: 1.5fr 0.7fr 0.7fr;
+    gap: 60px;
+    padding: 48px 0 54px;
+    border-top: 1px solid rgba(23, 24, 23, 0.2);
   }
 
   .footer-about {
-    max-width: 440px;
+    max-width: 480px;
   }
 
   .footer-logo {
     display: inline-block;
-    margin-bottom: 18px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 900;
-    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    color: #171817;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
     text-decoration: none;
   }
 
   .footer-description {
-    margin: 0 0 22px;
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  .footer-contact {
-    display: inline-block;
-    color: white;
-    font-weight: 900;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-  }
-
-  .footer-contact:hover {
-    opacity: 0.7;
+    margin: 0;
+    color: #555a55;
+    font-size: 0.95rem;
+    line-height: 1.65;
   }
 
   .footer-heading {
-    margin: 0 0 18px;
-    color: white;
-    font-size: 0.76rem;
-    font-weight: 900;
-    letter-spacing: 1.5px;
+    margin: 0 0 16px;
+    color: #777c76;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
     text-transform: uppercase;
   }
 
   .footer-link-list {
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 10px;
   }
 
   .footer-link-list a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
-    line-height: 1.5;
+    color: #171817;
+    font-size: 0.9rem;
     text-decoration: none;
-    transition:
-      color 0.2s ease,
-      transform 0.2s ease;
   }
 
   .footer-link-list a:hover {
-    color: white;
-    transform: translateX(3px);
+    color: #2457ff;
   }
 
   .footer-bottom {
@@ -144,42 +152,40 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 24px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 22px 0;
+    border-top: 1px solid rgba(23, 24, 23, 0.2);
   }
 
   .footer-bottom p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 0.86rem;
+    color: #777c76;
+    font-size: 0.72rem;
   }
 
-  @media (max-width: 900px) {
-    .footer-main {
-      grid-template-columns: 1fr 1fr;
-      gap: 44px 36px;
-    }
-  }
-
-  @media (max-width: 640px) {
+  @media (max-width: 760px) {
     .site-footer {
-      padding-top: 52px;
+      padding-top: 70px;
     }
 
+    .footer-lead,
     .footer-main {
       grid-template-columns: 1fr;
-      gap: 36px;
-      padding-bottom: 44px;
+      gap: 34px;
     }
 
-    .footer-about {
-      max-width: none;
+    .footer-contact {
+      grid-column: 1;
+      margin-top: 0;
+    }
+
+    .footer-main {
+      gap: 34px;
     }
 
     .footer-bottom {
       flex-direction: column;
       align-items: flex-start;
-      gap: 6px;
+      gap: 4px;
     }
   }
 </style>
