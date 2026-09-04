@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Mitchell Haw | SEO, AI Search & Digital Strategy"
-  description="Mitchell Haw helps brands improve visibility across Google, AI search, maps, content, local discovery, and the changing search landscape."
-  image="/images/mitchell-haw.jpg"
+  title="Mitchell Haw | SEO & AI Search Consultant in Bend, Oregon"
+  description="SEO, AI search, local SEO, content strategy, and digital visibility consulting for businesses in Bend and Central Oregon."
+  image="/images/smith-rock-central-oregon.jpg"
 >
   <script type="application/ld+json">
     {
@@ -16,12 +16,18 @@ import Layout from '../layouts/Layout.astro';
           "@id": "https://mitchellhaw.com/#person",
           "name": "Mitchell Haw",
           "url": "https://mitchellhaw.com/",
-          "jobTitle": "Digital Strategist & SEO / AI Search Lead",
+          "jobTitle": "SEO & AI Search Consultant",
           "image": "https://mitchellhaw.com/images/mitchell-haw.jpg",
           "sameAs": [
             "https://www.linkedin.com/in/mitchellhaw"
           ],
-          "description": "Digital strategist specializing in SEO, AI search, local visibility, content strategy, and organic growth."
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bend",
+            "addressRegion": "OR",
+            "addressCountry": "US"
+          },
+          "description": "Bend-based digital strategist specializing in SEO, AI search, local visibility, content strategy, and organic growth."
         },
         {
           "@type": "WebSite",
@@ -38,150 +44,122 @@ import Layout from '../layouts/Layout.astro';
 
   <main class="home-main">
     <section class="home-hero">
-      <div class="container home-hero-inner">
-        <div>
-          <p class="home-kicker">Mitchell Haw / Search Strategy</p>
-          <h1>
-            Search is changing.<br />
-            I help brands stay <em>visible.</em>
-          </h1>
-        </div>
-
-        <div>
-          <div class="home-hero-bottom">
-            <p class="home-hero-copy">
-              SEO, AI search, local discovery, content, analytics, and digital strategy for a world where people no longer search in just one place.
-            </p>
-
-            <div class="home-hero-actions">
-              <a class="home-link-primary" href="/contact/">Start a conversation</a>
-              <a class="home-link-secondary" href="#work">See what I do</a>
-            </div>
-          </div>
-
-          <div class="home-meta" aria-label="Areas of focus">
-            <span>SEO</span>
-            <span>AI Search</span>
-            <span>Content Strategy</span>
-            <span>Bend, Oregon</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-shift">
-      <div class="container home-shift-grid">
-        <div>
-          <p class="home-section-kicker">The shift</p>
-          <h2>People don't search in <em>one place</em> anymore.</h2>
-        </div>
-
-        <div class="home-shift-copy">
-          <p>
-            Search now moves between traditional results, AI answers, maps, video, reviews, communities, and recommendations. The job is not simply to rank. It is to make a brand useful, understandable, and discoverable across the whole journey.
+      <div class="container home-hero-grid">
+        <div class="home-hero-copy">
+          <p class="home-kicker">SEO & AI Search Consultant · Bend, Oregon</p>
+          <h1>Get found in Bend. And everywhere people search.</h1>
+          <p class="home-hero-text">
+            I help businesses improve visibility across Google, AI search, maps, content, and local discovery—with practical strategy built around what will actually move the needle.
           </p>
 
-          <div class="channel-words" aria-label="Search and discovery channels">
-            <span>Google</span>
-            <span>ChatGPT</span>
-            <span>Maps</span>
-            <span>YouTube</span>
-            <span>Reviews</span>
-            <span>Reddit</span>
-            <span>AI Answers</span>
-            <span>Content</span>
+          <div class="home-hero-actions">
+            <a class="home-btn home-btn-primary" href="/contact/">Get a Visibility Review</a>
+            <a class="home-btn home-btn-secondary" href="#services">Explore Services</a>
+          </div>
+
+          <div class="home-trust-line" aria-label="Business focus">
+            <span>Bend-based</span>
+            <span>Central Oregon</span>
+            <span>National brand experience</span>
+          </div>
+        </div>
+
+        <div class="home-hero-visual">
+          <img
+            src="/images/smith-rock-central-oregon.jpg"
+            alt="Smith Rock in Central Oregon"
+          />
+          <div class="home-visual-caption">
+            <span>Based in Bend, Oregon</span>
+            <strong>Local perspective. Modern search strategy.</strong>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="home-services" id="work">
-      <div class="container">
-        <div class="home-section-head">
-          <p class="home-section-kicker">What I do</p>
-          <h2>Strategy for how people find things now.</h2>
+    <section class="home-intro">
+      <div class="container home-intro-grid">
+        <div>
+          <p class="home-section-kicker">Modern search strategy</p>
+          <h2>Search changed. The goal didn’t.</h2>
         </div>
-
-        <div class="service-rows">
-          <article class="service-row">
-            <span class="row-number">01</span>
-            <h3>SEO Strategy</h3>
-            <p>
-              Technical SEO, site architecture, migrations, internal linking, search intent, content planning, and organic growth strategy.
-            </p>
-            <a class="row-link" href="/services/seo/" aria-label="Explore SEO strategy">Explore</a>
-          </article>
-
-          <article class="service-row">
-            <span class="row-number">02</span>
-            <h3>AI Search</h3>
-            <p>
-              Understand and improve how a brand appears across ChatGPT, Gemini, Perplexity, AI Overviews, and the answer engines changing discovery.
-            </p>
-            <a class="row-link" href="/services/ai-search/" aria-label="Explore AI search strategy">Explore</a>
-          </article>
-
-          <article class="service-row">
-            <span class="row-number">03</span>
-            <h3>Local Discovery</h3>
-            <p>
-              Google Maps, Business Profile strategy, reviews, local landing pages, listings, and the signals that help businesses win nearby searches.
-            </p>
-            <a class="row-link" href="/services/seo-bend-oregon/" aria-label="Explore local SEO">Explore</a>
-          </article>
-
-          <article class="service-row">
-            <span class="row-number">04</span>
-            <h3>Content & Video</h3>
-            <p>
-              Useful content systems built around real questions, search behavior, video discovery, and the information people actually need.
-            </p>
-            <a class="row-link" href="/services/video-marketing/" aria-label="Explore video and content strategy">Explore</a>
-          </article>
+        <div class="home-intro-copy">
+          <p class="home-intro-lead">Your business still needs to be easy to find, understand, and trust.</p>
+          <p>
+            The difference is that discovery now happens across Google Search, Google Maps, ChatGPT, AI Overviews, YouTube, reviews, local listings, and the content those platforms rely on. I help connect those pieces into one clear strategy.
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="home-work">
+    <section class="home-services" id="services">
       <div class="container">
-        <div class="home-section-head">
-          <p class="home-section-kicker">Selected focus</p>
-          <h2>Less marketing theater. More useful work.</h2>
+        <div class="home-section-heading">
+          <div>
+            <p class="home-section-kicker">Services</p>
+            <h2>What I can help with.</h2>
+          </div>
+          <p>
+            Strategy and hands-on support for businesses that want stronger organic visibility without turning search into a pile of disconnected tactics.
+          </p>
         </div>
 
-        <div class="work-rows">
-          <article class="work-row">
-            <span class="row-number">01</span>
-            <div>
-              <span class="row-type">Enterprise search</span>
-              <h3>Large websites & migrations</h3>
-            </div>
-            <p>
-              Search strategy across complex, multi-location websites: architecture, technical foundations, migrations, content systems, measurement, and organic visibility.
-            </p>
-          </article>
+        <div class="home-service-grid">
+          <a class="home-service-card" href="/services/seo/">
+            <span class="service-number">01</span>
+            <h3>SEO Strategy</h3>
+            <p>Technical SEO, site architecture, migrations, keyword strategy, internal linking, content planning, and organic growth.</p>
+            <span class="service-link">Explore SEO →</span>
+          </a>
 
-          <article class="work-row">
-            <span class="row-number">02</span>
-            <div>
-              <span class="row-type">Local discovery</span>
-              <h3>Central Oregon businesses</h3>
-            </div>
-            <p>
-              Practical local search work across websites, Google Maps, content, reviews, and location signals—with a close-up view from Bend, Oregon.
-            </p>
-          </article>
+          <a class="home-service-card" href="/services/ai-search/">
+            <span class="service-number">02</span>
+            <h3>AI Search Visibility</h3>
+            <p>Improve how your brand is understood and surfaced across ChatGPT, Gemini, Perplexity, Google AI Overviews, and answer engines.</p>
+            <span class="service-link">Explore AI Search →</span>
+          </a>
 
-          <article class="work-row">
-            <span class="row-number">03</span>
-            <div>
-              <span class="row-type">Emerging search</span>
-              <h3>AI visibility & measurement</h3>
-            </div>
-            <p>
-              Testing how brands surface in AI answers, what those systems retrieve and cite, and how search strategy changes when discovery becomes conversational.
-            </p>
-          </article>
+          <a class="home-service-card" href="/services/seo-bend-oregon/">
+            <span class="service-number">03</span>
+            <h3>Local SEO</h3>
+            <p>Google Business Profile, maps visibility, reviews, local landing pages, listings, and stronger local discovery across Central Oregon.</p>
+            <span class="service-link">Explore Local SEO →</span>
+          </a>
+
+          <a class="home-service-card" href="/services/video-marketing/">
+            <span class="service-number">04</span>
+            <h3>Content & Video</h3>
+            <p>Useful content, search intent coverage, video discovery, and content systems built around the questions customers actually ask.</p>
+            <span class="service-link">Explore Content & Video →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-local">
+      <div class="container home-local-grid">
+        <div class="home-local-copy">
+          <p class="home-section-kicker">Central Oregon SEO</p>
+          <h2>Local search matters more when you actually know the market.</h2>
+          <p>
+            I’m based in Bend and work with businesses across Central Oregon. That means local SEO is not treated like a generic location-page exercise—it is built around how people here actually search, compare, visit, and buy.
+          </p>
+          <a class="home-text-link" href="/services/seo-bend-oregon/">Local SEO in Bend →</a>
+        </div>
+
+        <div class="home-location-list">
+          <a href="/services/seo-bend-oregon/">
+            <span>Bend</span><strong>SEO & local visibility</strong><b>→</b>
+          </a>
+          <a href="/services/seo-redmond-oregon/">
+            <span>Redmond</span><strong>SEO & local visibility</strong><b>→</b>
+          </a>
+          <a href="/services/seo-sisters-oregon/">
+            <span>Sisters</span><strong>SEO & local visibility</strong><b>→</b>
+          </a>
+          <a href="/services/seo-sunriver-oregon/">
+            <span>Sunriver</span><strong>SEO & local visibility</strong><b>→</b>
+          </a>
         </div>
       </div>
     </section>
@@ -191,78 +169,75 @@ import Layout from '../layouts/Layout.astro';
         <div class="home-about-media">
           <img
             src="/images/mitchell-haw.jpg"
-            alt="Mitchell Haw, digital strategist based in Bend, Oregon"
+            alt="Mitchell Haw, SEO and AI search consultant in Bend, Oregon"
             loading="lazy"
           />
         </div>
 
         <div class="home-about-copy">
-          <div>
-            <p class="home-section-kicker">About</p>
-            <h2>I'm Mitchell. I work where search, content, data, and <em>curiosity</em> overlap.</h2>
+          <p class="home-section-kicker">About Mitchell</p>
+          <h2>Local perspective. National-level experience.</h2>
+          <p class="home-about-lead">
+            I’m Mitchell Haw, a Bend-based digital strategist focused on SEO, AI search, local visibility, content strategy, analytics, and organic growth.
+          </p>
+          <p>
+            My work spans large national websites, complex migrations, multi-location search programs, local businesses, and my own web projects. I bring the same approach to all of them: understand the problem, prioritize what matters, and make the work useful enough to act on.
+          </p>
+
+          <div class="home-proof-grid">
+            <div><strong>SEO</strong><span>Technical + content</span></div>
+            <div><strong>AI Search</strong><span>Visibility + measurement</span></div>
+            <div><strong>Local</strong><span>Maps + discovery</span></div>
+            <div><strong>Analytics</strong><span>GA4 + Search Console</span></div>
           </div>
 
-          <div class="home-about-body">
-            <p>
-              I’m a digital strategist focused on SEO, AI search, content strategy, local visibility, analytics, and organic growth.
-            </p>
-            <p>
-              My work spans large national websites, local businesses, and my own web projects. I like technical problems, useful content, clear measurement, and figuring out what changed before turning it into a slide full of jargon.
-            </p>
-            <p>
-              I’m based in Bend, Oregon, and I’m especially interested in where search is headed next—not just where it has been.
-            </p>
-            <a class="text-link" href="/about/">More about me</a>
-          </div>
+          <a class="home-text-link" href="/about/">More about me →</a>
         </div>
       </div>
     </section>
 
-    <section class="home-notes">
+    <section class="home-process">
       <div class="container">
-        <div class="home-section-head">
-          <p class="home-section-kicker">How I think</p>
-          <h2>A few things I believe about modern search.</h2>
+        <div class="home-section-heading compact">
+          <div>
+            <p class="home-section-kicker">How I work</p>
+            <h2>Clear priorities. Useful work.</h2>
+          </div>
+          <p>
+            No giant audit that disappears into a folder. The goal is to figure out what matters most and turn it into a practical plan.
+          </p>
         </div>
 
-        <div class="note-rows">
-          <article class="note-row">
-            <span class="row-number">01</span>
-            <h3>SEO is not dead. The surface area got bigger.</h3>
-            <p>
-              Traditional search still matters. So do AI answers, maps, video, reviews, communities, and the sources those systems use to form an answer.
-            </p>
-          </article>
-
-          <article class="note-row">
-            <span class="row-number">02</span>
-            <h3>Useful beats optimized-looking.</h3>
-            <p>
-              The best content answers something clearly, earns trust, and gives people a reason to stay. Search optimization should make that easier—not bury it.
-            </p>
-          </article>
-
-          <article class="note-row">
-            <span class="row-number">03</span>
-            <h3>Measurement needs to evolve with discovery.</h3>
-            <p>
-              Rankings and traffic are only part of the picture now. Visibility, citations, brand persistence, local discovery, and assisted journeys matter too.
-            </p>
-          </article>
+        <div class="home-process-grid">
+          <div class="home-process-step">
+            <span>01</span>
+            <h3>Find the opportunity</h3>
+            <p>Understand the site, market, competition, search landscape, and where visibility is being lost.</p>
+          </div>
+          <div class="home-process-step">
+            <span>02</span>
+            <h3>Prioritize what matters</h3>
+            <p>Separate high-impact work from the long list of things that are technically possible but not actually important.</p>
+          </div>
+          <div class="home-process-step">
+            <span>03</span>
+            <h3>Make it actionable</h3>
+            <p>Turn strategy into clear recommendations, content plans, technical requirements, measurement, and next steps.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="home-final">
-      <div class="container home-final-inner">
-        <p class="home-section-kicker">Let's talk</p>
-        <h2>Have a search problem worth <em>figuring out?</em></h2>
-        <div class="home-final-line">
+      <div class="container home-final-card">
+        <div>
+          <p class="home-section-kicker">Need help getting found?</p>
+          <h2>Let’s figure out where the biggest opportunity is.</h2>
           <p>
-            Whether it is a migration, an AI-search question, a local visibility problem, or a bigger organic strategy challenge, I’m always interested in the problem first.
+            Tell me a little about your business, website, or search challenge. I can help you work out what is worth focusing on next.
           </p>
-          <a class="text-link" href="/contact/">Start a conversation</a>
         </div>
+        <a class="home-btn home-btn-primary" href="/contact/">Get a Visibility Review</a>
       </div>
     </section>
   </main>
