@@ -59,35 +59,44 @@ const faqSchema = {
 };
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} image="/images/river-bend.png">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
 
   <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="section-label">AI Search Optimization</p>
-        <h1>Help your brand become easier to find, understand, and trust in AI search.</h1>
-        <p>
-          I help businesses evaluate and improve visibility across ChatGPT, Google’s AI
-          search experiences, Perplexity, Gemini, and other discovery tools—without losing
-          sight of the SEO, content, and brand fundamentals that support long-term visibility.
-        </p>
-        <div class="hero-buttons hero-buttons-center">
-          <a class="primary-btn" href="/contact/">Talk About AI Visibility</a>
-          <a class="secondary-btn" href="#ai-search-work">See What the Work Includes</a>
+    <section class="page-hero ai-page-hero">
+      <div class="container ai-hero-grid">
+        <div class="ai-hero-copy">
+          <p class="section-label">AI Search for Businesses</p>
+          <h1>Make your business easier to find in AI search.</h1>
+          <p>
+            Customers are starting to ask ChatGPT, Google AI, Gemini, and Perplexity who to hire, where to go, and what to buy. I help businesses understand how they show up, where competitors are winning, and what can realistically improve.
+          </p>
+          <div class="hero-buttons">
+            <a class="primary-btn" href="/contact/">Talk About AI Visibility</a>
+            <a class="secondary-btn" href="#ai-search-work">See What the Work Includes</a>
+          </div>
+          <div class="ai-local-note">Based in Bend, Oregon · Working with local and growing businesses</div>
+        </div>
+
+        <div class="ai-hero-visual">
+          <img src="/images/river-bend.png" alt="River and landscape in Bend, Oregon" />
+          <div class="ai-hero-card">
+            <span>WHAT I LOOK AT</span>
+            <strong>Are you mentioned? Are you described accurately? Who gets recommended instead? What sources are shaping the answer?</strong>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="proof-strip" aria-label="AI search channels">
       <div class="container proof-grid">
-        <div><strong>ChatGPT</strong><span>answers, recommendations, and sources</span></div>
+        <div><strong>ChatGPT</strong><span>mentions, recommendations, and sources</span></div>
         <div><strong>Google AI</strong><span>AI Overviews and AI Mode</span></div>
-        <div><strong>Perplexity & Gemini</strong><span>research and answer discovery</span></div>
-        <div><strong>Search foundations</strong><span>technical, content, and brand clarity</span></div>
+        <div><strong>Competitors</strong><span>who appears and why</span></div>
+        <div><strong>Source signals</strong><span>the pages shaping answers</span></div>
       </div>
     </section>
 
@@ -105,20 +114,16 @@ const faqSchema = {
     <section class="intro">
       <div class="container split-grid">
         <div>
-          <p class="section-label">A Broader Discovery Journey</p>
-          <h2>People can now research without following a traditional results page.</h2>
+          <p class="section-label">Why it matters</p>
+          <h2>People are already asking AI tools to narrow down their options.</h2>
           <p>
-            A customer may ask for options, refine the requirements, compare brands, question
-            an answer, and request a recommendation—all inside one conversation. That changes
-            what should be researched and how visibility should be evaluated.
+            That can be a homeowner asking who to call, a traveler asking where to go, or a buyer comparing a short list of businesses. The question is no longer only “where do you rank?” It is also “does the system know enough about you to include you?”
           </p>
         </div>
         <div class="callout">
           <h3>A mention is not the finish line.</h3>
           <p>
-            It matters whether the brand is described accurately, appears for relevant needs,
-            remains present as the prompt gets more specific, and is supported by sources a
-            customer can use to continue the journey.
+            It matters whether your business is described accurately, appears for the right needs, survives follow-up questions, and is supported by sources a customer can use to keep researching.
           </p>
         </div>
       </div>
@@ -128,14 +133,14 @@ const faqSchema = {
       <div class="container">
         <div class="section-heading">
           <p class="section-label">AI Search Services</p>
-          <h2>Research first, then improve the right signals.</h2>
+          <h2>First figure out what is happening. Then fix the right things.</h2>
         </div>
         <div class="service-grid three">
-          <article class="service-card"><h3>Prompt & Journey Research</h3><p>Build a useful prompt set around real needs, comparisons, recommendations, questions, and follow-up turns—not just one broad query.</p></article>
-          <article class="service-card"><h3>Brand Visibility Benchmark</h3><p>Compare brand mentions, competitors, answer context, linked sources, accuracy, and gaps across relevant AI experiences.</p></article>
-          <article class="service-card"><h3>Source & Citation Analysis</h3><p>Identify which owned and third-party sources shape answers and where stronger, more accurate information may be needed.</p></article>
-          <article class="service-card"><h3>Entity & Brand Clarity</h3><p>Clarify who the business is, what it offers, where it operates, and how key facts are represented consistently across the web.</p></article>
-          <article class="service-card"><h3>Content Opportunity Plan</h3><p>Improve pages and create original resources that answer important questions better than generic, interchangeable content.</p></article>
+          <article class="service-card"><h3>Customer Question Research</h3><p>Build a useful prompt set around the questions, comparisons, recommendations, and follow-up turns real customers are likely to use.</p></article>
+          <article class="service-card"><h3>Visibility Benchmark</h3><p>Compare your brand mentions, competitors, recommendation context, linked sources, accuracy, and gaps across relevant AI experiences.</p></article>
+          <article class="service-card"><h3>Source & Citation Analysis</h3><p>Identify the owned and third-party pages that shape answers and where stronger or more accurate information may be needed.</p></article>
+          <article class="service-card"><h3>Business & Brand Clarity</h3><p>Make it clearer who you are, what you offer, where you operate, and which facts should be represented consistently across the web.</p></article>
+          <article class="service-card"><h3>Content Opportunity Plan</h3><p>Improve pages and create resources that answer useful questions better than generic, interchangeable content.</p></article>
           <article class="service-card"><h3>Technical & Access Review</h3><p>Check crawlability, indexability, rendering, internal linking, structured data accuracy, and other foundations that affect discovery.</p></article>
         </div>
       </div>
@@ -144,12 +149,10 @@ const faqSchema = {
     <section class="content-section" id="ai-measurement">
       <div class="container split-grid">
         <div>
-          <p class="section-label">Measurement That Admits the Limits</p>
-          <h2>AI answers vary. The reporting should say so.</h2>
+          <p class="section-label">Measurement</p>
+          <h2>AI answers change. The reporting should be honest about that.</h2>
           <p>
-            Results can change by model, date, location, personalization, prompt wording, and
-            conversation history. A useful benchmark uses a defined methodology and avoids
-            presenting a small sample as universal truth.
+            Results can vary by model, date, location, personalization, wording, and conversation history. A useful benchmark uses a defined methodology instead of pretending a small sample is universal truth.
           </p>
         </div>
         <div>
@@ -158,7 +161,7 @@ const faqSchema = {
             <li>Brand mention rate and competitive share of voice</li>
             <li>Recommendation context, accuracy, and sentiment</li>
             <li>Linked or cited domains and pages</li>
-            <li>Visibility by prompt theme and customer stage</li>
+            <li>Visibility by question theme and customer stage</li>
             <li>First-answer visibility and multi-turn persistence</li>
             <li>AI referral traffic and conversions when identifiable</li>
           </ul>
@@ -170,17 +173,14 @@ const faqSchema = {
       <div class="container">
         <div class="section-heading">
           <p class="section-label">SEO + AI Search</p>
-          <h2>New interfaces, familiar foundations.</h2>
+          <h2>New search experiences still depend on strong fundamentals.</h2>
           <p>
-            Google’s current guidance is direct: established SEO best practices continue to
-            matter for its generative AI features. Valuable non-commodity content, technical
-            eligibility, crawlable links, accurate business details, and strong user experience
-            remain central.
+            Useful content, technically accessible pages, clear business information, credible third-party signals, and a site that is easy to understand still matter. AI search adds new questions to measure—it does not erase the basics.
           </p>
         </div>
         <div class="service-grid three">
           <article class="service-card"><h3>Still foundational</h3><p>Indexable pages, useful original content, clear site structure, internal links, accurate facts, and credible brand signals.</p></article>
-          <article class="service-card"><h3>New research questions</h3><p>Which prompts trigger recommendations, which sources influence answers, how competitors appear, and what happens across follow-up turns.</p></article>
+          <article class="service-card"><h3>New research questions</h3><p>Which questions trigger recommendations, which sources influence answers, how competitors appear, and what happens across follow-up turns.</p></article>
           <article class="service-card"><h3>No universal hack</h3><p>No special file, schema type, or content formula guarantees inclusion. Tactics should be tested against the platform and business—not repeated as folklore.</p></article>
         </div>
         <p class="source-note">
@@ -194,14 +194,14 @@ const faqSchema = {
       <div class="container split-grid">
         <div>
           <p class="section-label">A Good Fit</p>
-          <h2>This work is useful when it can change a real decision.</h2>
+          <h2>This is useful when better visibility can affect a real customer decision.</h2>
         </div>
         <div>
           <ul class="check-list">
             <li>Your customers use AI tools to research, compare, plan, or ask for recommendations</li>
             <li>You want to understand why competitors appear and which sources shape the answers</li>
-            <li>Important facts about the brand are missing, inconsistent, or described inaccurately</li>
-            <li>You can improve your website, content, digital PR, listings, or brand information based on the findings</li>
+            <li>Important facts about the business are missing, inconsistent, or described inaccurately</li>
+            <li>You can improve your website, content, listings, PR, or broader web presence based on the findings</li>
             <li>You want AI visibility connected to the broader SEO and customer-acquisition strategy</li>
           </ul>
         </div>
@@ -242,16 +242,37 @@ const faqSchema = {
     <section class="cta">
       <div class="container narrow">
         <p class="section-label">AI Search Visibility</p>
-        <h2>Want to know how your brand actually appears in AI search?</h2>
+        <h2>Want to see how your business actually appears in AI search?</h2>
         <p>We can start with the questions your customers ask, establish a useful baseline, and turn the findings into a practical plan.</p>
-        <a href="/contact/" class="primary-btn">Contact Mitchell</a>
+        <a href="/contact/" class="primary-btn">Talk About Your Business</a>
       </div>
     </section>
   </main>
 </Layout>
 
 <style>
-  .hero-buttons-center { justify-content: center; margin-top: 30px; }
+  .ai-page-hero { padding: 72px 0 74px; }
+  .ai-hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(360px, .75fr); gap: 70px; align-items: center; }
+  .ai-hero-copy h1 { max-width: 760px !important; margin: 0 0 22px !important; font-size: clamp(3.35rem, 5.7vw, 5.4rem) !important; line-height: .98 !important; }
+  .ai-hero-copy > p:not(.section-label) { max-width: 720px; margin: 0; color: var(--ink-soft); font-size: 1.08rem; }
+  .ai-hero-copy .hero-buttons { justify-content: flex-start; margin-top: 28px; }
+  .ai-local-note { margin-top: 22px; color: #6f7c75; font-size: .76rem; font-weight: 700; }
+  .ai-hero-visual { position: relative; min-height: 470px; overflow: hidden; border-radius: 20px; background: #dbe2de; box-shadow: 0 20px 50px rgba(28,49,40,.09); }
+  .ai-hero-visual > img { width: 100%; height: 100%; min-height: 470px; display: block; object-fit: cover; }
+  .ai-hero-card { position: absolute; left: 16px; right: 16px; bottom: 16px; padding: 17px 18px; border-radius: 13px; background: rgba(255,255,255,.92); backdrop-filter: blur(10px); }
+  .ai-hero-card span { display: block; margin-bottom: 5px; color: #356b57; font-size: .68rem; font-weight: 800; letter-spacing: .09em; }
+  .ai-hero-card strong { display: block; color: #1c2923; font-size: .88rem; line-height: 1.45; }
   .source-note { margin: 30px 0 0; color: var(--muted); }
-  .source-note a { color: var(--pine); font-weight: 900; }
+  .source-note a { color: #2f6f8f; font-weight: 800; }
+
+  @media (max-width: 900px) {
+    .ai-hero-grid { grid-template-columns: 1fr; gap: 38px; }
+    .ai-hero-visual, .ai-hero-visual > img { min-height: 390px; }
+  }
+
+  @media (max-width: 640px) {
+    .ai-page-hero { padding: 58px 0 60px; }
+    .ai-hero-copy h1 { font-size: clamp(2.9rem, 13vw, 4rem) !important; }
+    .ai-hero-visual, .ai-hero-visual > img { min-height: 330px; }
+  }
 </style>
