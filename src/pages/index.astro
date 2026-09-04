@@ -3,9 +3,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Mitchell Haw | SEO & AI Search Consultant in Bend, Oregon"
-  description="SEO, AI search, local SEO, content strategy, and digital visibility consulting for businesses in Bend and Central Oregon."
-  image="/images/smith-rock-central-oregon.jpg"
+  title="Bend Oregon SEO & AI Search Consultant | Mitchell Haw"
+  description="SEO, local search, Google Maps, AI search, content, and website strategy for businesses in Bend and Central Oregon."
+  image="/images/bend-river.png"
 >
   <script type="application/ld+json">
     {
@@ -18,227 +18,352 @@ import Layout from '../layouts/Layout.astro';
           "url": "https://mitchellhaw.com/",
           "jobTitle": "SEO & AI Search Consultant",
           "image": "https://mitchellhaw.com/images/mitchell-haw.jpg",
-          "sameAs": [
-            "https://www.linkedin.com/in/mitchellhaw"
-          ],
+          "sameAs": ["https://www.linkedin.com/in/mitchellhaw"],
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Bend",
             "addressRegion": "OR",
             "addressCountry": "US"
           },
-          "description": "Bend-based digital strategist specializing in SEO, AI search, local visibility, content strategy, and organic growth."
+          "description": "Bend-based digital strategist helping businesses improve SEO, local visibility, AI search visibility, content, and organic growth."
         },
         {
           "@type": "WebSite",
           "@id": "https://mitchellhaw.com/#website",
           "url": "https://mitchellhaw.com/",
           "name": "Mitchell Haw",
-          "publisher": {
-            "@id": "https://mitchellhaw.com/#person"
-          }
+          "publisher": {"@id": "https://mitchellhaw.com/#person"}
         }
       ]
     }
   </script>
 
-  <main class="home-main">
-    <section class="home-hero">
-      <div class="container home-hero-grid">
-        <div class="home-hero-copy">
-          <p class="home-kicker">SEO & AI Search Consultant · Bend, Oregon</p>
-          <h1>Get found in Bend. And everywhere people search.</h1>
-          <p class="home-hero-text">
-            I help businesses improve visibility across Google, AI search, maps, content, and local discovery—with practical strategy built around what will actually move the needle.
+  <main class="co-home">
+    <section class="co-hero">
+      <div class="container co-hero-grid">
+        <div class="co-hero-copy">
+          <p class="co-kicker">SEO + LOCAL SEARCH · BEND & CENTRAL OREGON</p>
+          <h1>Help more local customers find your business.</h1>
+          <p class="co-hero-text">
+            When someone searches Google, opens Maps, or asks ChatGPT who to call in Bend, your business should be easy to find and easy to choose. I help Central Oregon businesses improve visibility, strengthen their websites, and turn more discovery into calls, bookings, visits, and leads.
           </p>
-
-          <div class="home-hero-actions">
-            <a class="home-btn home-btn-primary" href="/contact/">Get a Visibility Review</a>
-            <a class="home-btn home-btn-secondary" href="#services">Explore Services</a>
+          <div class="co-actions">
+            <a class="co-btn co-btn-primary" href="/contact/">Talk About Your Business</a>
+            <a class="co-btn co-btn-secondary" href="/services/seo-bend-oregon/">See Local SEO Services</a>
           </div>
-
-          <div class="home-trust-line" aria-label="Business focus">
-            <span>Bend-based</span>
-            <span>Central Oregon</span>
-            <span>National brand experience</span>
+          <div class="co-trust-row">
+            <span>Based in Bend</span>
+            <span>Serving Central Oregon</span>
+            <span>Local + national experience</span>
           </div>
         </div>
 
-        <div class="home-hero-visual">
-          <img
-            src="/images/smith-rock-central-oregon.jpg"
-            alt="Smith Rock in Central Oregon"
-          />
-          <div class="home-visual-caption">
-            <span>Based in Bend, Oregon</span>
-            <strong>Local perspective. Modern search strategy.</strong>
-          </div>
+        <div class="co-hero-media" aria-label="Central Oregon scenes">
+          <figure class="co-media-main">
+            <img src="/images/bend-river.png" alt="Deschutes River in Bend, Oregon" />
+            <figcaption>Bend, Oregon</figcaption>
+          </figure>
+          <figure class="co-media-small">
+            <img src="/images/black-butte-hike.png" alt="Central Oregon mountain landscape near Black Butte" loading="lazy" />
+          </figure>
+          <figure class="co-media-small">
+            <img src="/images/deschutes-brewery-bend-downtown.png" alt="Downtown Bend, Oregon" loading="lazy" />
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="home-intro">
-      <div class="container home-intro-grid">
-        <div>
-          <p class="home-section-kicker">Modern search strategy</p>
-          <h2>Search changed. The goal didn’t.</h2>
-        </div>
-        <div class="home-intro-copy">
-          <p class="home-intro-lead">Your business still needs to be easy to find, understand, and trust.</p>
-          <p>
-            The difference is that discovery now happens across Google Search, Google Maps, ChatGPT, AI Overviews, YouTube, reviews, local listings, and the content those platforms rely on. I help connect those pieces into one clear strategy.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-services" id="services">
+    <section class="co-owner-needs">
       <div class="container">
-        <div class="home-section-heading">
+        <div class="co-heading co-heading-split">
           <div>
-            <p class="home-section-kicker">Services</p>
-            <h2>What I can help with.</h2>
+            <p class="co-kicker">WHAT LOCAL OWNERS ACTUALLY NEED</p>
+            <h2>More of the right people finding you.</h2>
           </div>
           <p>
-            Strategy and hands-on support for businesses that want stronger organic visibility without turning search into a pile of disconnected tactics.
+            You do not need more marketing jargon. You need to know where customers are looking, whether they can find you, and what is worth fixing first.
           </p>
         </div>
 
-        <div class="home-service-grid">
-          <a class="home-service-card" href="/services/seo/">
-            <span class="service-number">01</span>
-            <h3>SEO Strategy</h3>
-            <p>Technical SEO, site architecture, migrations, keyword strategy, internal linking, content planning, and organic growth.</p>
-            <span class="service-link">Explore SEO →</span>
-          </a>
-
-          <a class="home-service-card" href="/services/ai-search/">
-            <span class="service-number">02</span>
-            <h3>AI Search Visibility</h3>
-            <p>Improve how your brand is understood and surfaced across ChatGPT, Gemini, Perplexity, Google AI Overviews, and answer engines.</p>
-            <span class="service-link">Explore AI Search →</span>
-          </a>
-
-          <a class="home-service-card" href="/services/seo-bend-oregon/">
-            <span class="service-number">03</span>
-            <h3>Local SEO</h3>
-            <p>Google Business Profile, maps visibility, reviews, local landing pages, listings, and stronger local discovery across Central Oregon.</p>
-            <span class="service-link">Explore Local SEO →</span>
-          </a>
-
-          <a class="home-service-card" href="/services/video-marketing/">
-            <span class="service-number">04</span>
-            <h3>Content & Video</h3>
-            <p>Useful content, search intent coverage, video discovery, and content systems built around the questions customers actually ask.</p>
-            <span class="service-link">Explore Content & Video →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-local">
-      <div class="container home-local-grid">
-        <div class="home-local-copy">
-          <p class="home-section-kicker">Central Oregon SEO</p>
-          <h2>Local search matters more when you actually know the market.</h2>
-          <p>
-            I’m based in Bend and work with businesses across Central Oregon. That means local SEO is not treated like a generic location-page exercise—it is built around how people here actually search, compare, visit, and buy.
-          </p>
-          <a class="home-text-link" href="/services/seo-bend-oregon/">Local SEO in Bend →</a>
-        </div>
-
-        <div class="home-location-list">
-          <a href="/services/seo-bend-oregon/">
-            <span>Bend</span><strong>SEO & local visibility</strong><b>→</b>
-          </a>
-          <a href="/services/seo-redmond-oregon/">
-            <span>Redmond</span><strong>SEO & local visibility</strong><b>→</b>
-          </a>
-          <a href="/services/seo-sisters-oregon/">
-            <span>Sisters</span><strong>SEO & local visibility</strong><b>→</b>
-          </a>
-          <a href="/services/seo-sunriver-oregon/">
-            <span>Sunriver</span><strong>SEO & local visibility</strong><b>→</b>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-about">
-      <div class="container home-about-grid">
-        <div class="home-about-media">
-          <img
-            src="/images/mitchell-haw.jpg"
-            alt="Mitchell Haw, SEO and AI search consultant in Bend, Oregon"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="home-about-copy">
-          <p class="home-section-kicker">About Mitchell</p>
-          <h2>Local perspective. National-level experience.</h2>
-          <p class="home-about-lead">
-            I’m Mitchell Haw, a Bend-based digital strategist focused on SEO, AI search, local visibility, content strategy, analytics, and organic growth.
-          </p>
-          <p>
-            My work spans large national websites, complex migrations, multi-location search programs, local businesses, and my own web projects. I bring the same approach to all of them: understand the problem, prioritize what matters, and make the work useful enough to act on.
-          </p>
-
-          <div class="home-proof-grid">
-            <div><strong>SEO</strong><span>Technical + content</span></div>
-            <div><strong>AI Search</strong><span>Visibility + measurement</span></div>
-            <div><strong>Local</strong><span>Maps + discovery</span></div>
-            <div><strong>Analytics</strong><span>GA4 + Search Console</span></div>
-          </div>
-
-          <a class="home-text-link" href="/about/">More about me →</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-process">
-      <div class="container">
-        <div class="home-section-heading compact">
-          <div>
-            <p class="home-section-kicker">How I work</p>
-            <h2>Clear priorities. Useful work.</h2>
-          </div>
-          <p>
-            No giant audit that disappears into a folder. The goal is to figure out what matters most and turn it into a practical plan.
-          </p>
-        </div>
-
-        <div class="home-process-grid">
-          <div class="home-process-step">
+        <div class="co-outcome-grid">
+          <article class="co-outcome-card">
             <span>01</span>
-            <h3>Find the opportunity</h3>
-            <p>Understand the site, market, competition, search landscape, and where visibility is being lost.</p>
-          </div>
-          <div class="home-process-step">
+            <h3>Show up when people are looking</h3>
+            <p>Improve visibility in Google Search, Google Maps, local results, and the searches that actually lead to calls, visits, estimates, or bookings.</p>
+          </article>
+          <article class="co-outcome-card">
             <span>02</span>
-            <h3>Prioritize what matters</h3>
-            <p>Separate high-impact work from the long list of things that are technically possible but not actually important.</p>
-          </div>
-          <div class="home-process-step">
+            <h3>Make your website work harder</h3>
+            <p>Build clearer service pages, stronger local content, better site structure, and an easier path from “I found you” to “I want to contact you.”</p>
+          </article>
+          <article class="co-outcome-card">
             <span>03</span>
-            <h3>Make it actionable</h3>
-            <p>Turn strategy into clear recommendations, content plans, technical requirements, measurement, and next steps.</p>
+            <h3>Keep up with how search is changing</h3>
+            <p>Understand how your business appears in ChatGPT, Google AI, Gemini, Perplexity, and other places customers now use to compare options.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="co-services" id="services">
+      <div class="container">
+        <div class="co-heading co-heading-split">
+          <div>
+            <p class="co-kicker">SERVICES</p>
+            <h2>Practical search help for growing businesses.</h2>
+          </div>
+          <p>
+            From a local service business that needs more visibility in Bend to a larger company with technical SEO or AI-search questions, the work starts with the business problem—not a preset package.
+          </p>
+        </div>
+
+        <div class="co-service-grid">
+          <a class="co-service-card co-service-featured" href="/services/seo-bend-oregon/">
+            <div class="co-service-topline"><span>LOCAL SEO</span><b>Best fit for Central Oregon businesses</b></div>
+            <h3>Be easier to find in Bend and nearby.</h3>
+            <p>Google Business Profile, Maps visibility, local landing pages, reviews, listings, service-area strategy, and the local signals that help customers find you.</p>
+            <strong>Explore Bend SEO →</strong>
+          </a>
+
+          <a class="co-service-card" href="/services/seo/">
+            <div class="co-service-topline"><span>SEO STRATEGY</span></div>
+            <h3>Fix what is holding organic growth back.</h3>
+            <p>Technical SEO, website structure, content planning, migrations, internal linking, keyword strategy, and clear priorities for organic growth.</p>
+            <strong>Explore SEO →</strong>
+          </a>
+
+          <a class="co-service-card" href="/services/ai-search/">
+            <div class="co-service-topline"><span>AI SEARCH</span></div>
+            <h3>See how AI tools understand your business.</h3>
+            <p>Benchmark visibility, compare competitors, review cited sources, identify gaps, and improve the information AI systems rely on when forming answers.</p>
+            <strong>Explore AI Search →</strong>
+          </a>
+
+          <a class="co-service-card" href="/services/video-marketing/">
+            <div class="co-service-topline"><span>CONTENT + WEBSITE</span></div>
+            <h3>Answer the questions customers are already asking.</h3>
+            <p>Service content, local guides, video discovery, search-intent coverage, and useful pages that help both people and search engines understand what you offer.</p>
+            <strong>Explore Content →</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="co-local-story">
+      <div class="container co-local-grid">
+        <div class="co-local-images">
+          <img class="co-local-large" src="/images/metolius-river.png" alt="Metolius River in Central Oregon" loading="lazy" />
+          <img src="/images/smith-rock-central-oregon.jpg" alt="Smith Rock in Central Oregon" loading="lazy" />
+          <img src="/images/river-bend.png" alt="River scene in Bend, Oregon" loading="lazy" />
+        </div>
+
+        <div class="co-local-copy">
+          <p class="co-kicker">CENTRAL OREGON</p>
+          <h2>This is not a generic “local SEO” market to me.</h2>
+          <p class="co-local-lead">
+            I live in Bend. I know that a contractor, clinic, restaurant, outfitter, real estate business, professional service, and visitor-focused company do not need the same search strategy.
+          </p>
+          <p>
+            Local visibility should reflect how your customers actually make decisions here—whether that is a resident comparing providers, a homeowner looking for help, or a visitor planning what to do once they arrive.
+          </p>
+
+          <div class="co-location-links">
+            <a href="/services/seo-bend-oregon/"><span>Bend</span><b>SEO + local visibility</b></a>
+            <a href="/services/seo-redmond-oregon/"><span>Redmond</span><b>SEO + local visibility</b></a>
+            <a href="/services/seo-sisters-oregon/"><span>Sisters</span><b>SEO + local visibility</b></a>
+            <a href="/services/seo-sunriver-oregon/"><span>Sunriver</span><b>SEO + local visibility</b></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="home-final">
-      <div class="container home-final-card">
-        <div>
-          <p class="home-section-kicker">Need help getting found?</p>
-          <h2>Let’s figure out where the biggest opportunity is.</h2>
-          <p>
-            Tell me a little about your business, website, or search challenge. I can help you work out what is worth focusing on next.
-          </p>
+    <section class="co-about">
+      <div class="container co-about-grid">
+        <div class="co-about-media">
+          <img src="/images/mitchell-haw.jpg" alt="Mitchell Haw, SEO consultant in Bend, Oregon" loading="lazy" />
+          <div class="co-about-badge">
+            <strong>Bend-based</strong>
+            <span>SEO · Local · AI Search · Analytics</span>
+          </div>
         </div>
-        <a class="home-btn home-btn-primary" href="/contact/">Get a Visibility Review</a>
+
+        <div class="co-about-copy">
+          <p class="co-kicker">ABOUT MITCHELL</p>
+          <h2>You should not have to become an SEO expert to know what to do next.</h2>
+          <p class="co-about-lead">
+            I’m Mitchell Haw, a Bend-based digital strategist with experience across large national websites, multi-location search programs, technical migrations, local businesses, and my own web projects.
+          </p>
+          <p>
+            My job is to make search simpler: find the biggest opportunities, explain what matters in plain English, and give you work that is actually useful to your business—not a 70-page audit that sits in a folder.
+          </p>
+          <div class="co-proof-row">
+            <div><strong>Local perspective</strong><span>Based in Bend, Oregon</span></div>
+            <div><strong>Broad experience</strong><span>Local businesses + national brands</span></div>
+            <div><strong>Clear measurement</strong><span>GA4, Search Console, rankings + visibility</span></div>
+          </div>
+          <a class="co-text-link" href="/about/">More about me →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="co-process">
+      <div class="container">
+        <div class="co-heading co-heading-split">
+          <div>
+            <p class="co-kicker">HOW IT WORKS</p>
+            <h2>Start with what you are trying to grow.</h2>
+          </div>
+          <p>No bloated process. We figure out the business goal, find what is getting in the way, and work on the highest-value opportunities first.</p>
+        </div>
+        <div class="co-process-grid">
+          <article><span>01</span><h3>Tell me what you want more of</h3><p>Calls, bookings, local visibility, website traffic, better leads, stronger rankings, or simply a clearer strategy.</p></article>
+          <article><span>02</span><h3>Find where visibility is being lost</h3><p>Review the website, Google presence, competitors, content, technical setup, local signals, and newer AI-search surfaces where relevant.</p></article>
+          <article><span>03</span><h3>Fix the most valuable work first</h3><p>Prioritize the changes most likely to matter, explain them clearly, and build a practical plan your business can actually use.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="co-final">
+      <div class="container co-final-card">
+        <div>
+          <p class="co-kicker">BEND + CENTRAL OREGON</p>
+          <h2>Want more of the right people finding your business?</h2>
+          <p>Tell me what you do, where you serve customers, and what you want to improve. We can start there.</p>
+        </div>
+        <a class="co-btn co-btn-primary" href="/contact/">Talk About Your Business</a>
       </div>
     </section>
   </main>
 </Layout>
+
+<style>
+  .co-home {
+    --co-cream: #f6f4ee;
+    --co-paper: #fffdf9;
+    --co-ink: #1c2923;
+    --co-copy: #59665f;
+    --co-forest: #356b57;
+    --co-river: #2f6f8f;
+    --co-sage: #e6eee8;
+    --co-sky: #e9f2f5;
+    --co-line: #d9ddd7;
+    --co-clay: #b86f52;
+    overflow: hidden;
+    background: var(--co-cream);
+    color: var(--co-ink);
+  }
+
+  .co-home .container { width: min(1180px, 92%); margin: 0 auto; }
+  .co-kicker { margin: 0 0 16px; color: var(--co-forest); font-size: .72rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .co-home h1, .co-home h2, .co-home h3 { color: var(--co-ink); }
+
+  .co-hero { padding: 76px 0 86px; background: var(--co-cream); }
+  .co-hero-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(430px, 1.05fr); gap: 68px; align-items: center; }
+  .co-hero-copy h1 { max-width: 700px; margin: 0 0 24px; font-size: clamp(3.6rem, 6.7vw, 6.1rem); line-height: .95; letter-spacing: -.06em; font-weight: 700; }
+  .co-hero-text { max-width: 680px; margin: 0 0 28px; color: var(--co-copy); font-size: 1.14rem; line-height: 1.65; }
+  .co-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .co-btn { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 10px; font-size: .9rem; font-weight: 800; text-decoration: none; transition: .18s ease; }
+  .co-btn-primary { background: var(--co-forest); border: 1px solid var(--co-forest); color: #fff; }
+  .co-btn-primary:hover { background: #2b5847; border-color: #2b5847; transform: translateY(-1px); }
+  .co-btn-secondary { background: var(--co-paper); border: 1px solid #cfd6d0; color: var(--co-ink); }
+  .co-btn-secondary:hover { border-color: #aebbb2; transform: translateY(-1px); }
+  .co-trust-row { display: flex; gap: 12px 22px; flex-wrap: wrap; margin-top: 27px; color: #77817b; font-size: .75rem; font-weight: 700; }
+  .co-trust-row span:not(:last-child)::after { content: '•'; margin-left: 22px; color: #aeb7b1; }
+
+  .co-hero-media { display: grid; grid-template-columns: 1.35fr .75fr; grid-template-rows: 1fr 1fr; gap: 12px; min-height: 545px; }
+  .co-hero-media figure { position: relative; margin: 0; overflow: hidden; border-radius: 18px; background: #d8dfdb; box-shadow: 0 18px 48px rgba(30, 51, 41, .08); }
+  .co-hero-media img { width: 100%; height: 100%; display: block; object-fit: cover; }
+  .co-media-main { grid-row: 1 / 3; }
+  .co-media-main figcaption { position: absolute; left: 16px; bottom: 16px; padding: 9px 12px; border-radius: 999px; background: rgba(255,255,255,.9); color: var(--co-forest); font-size: .72rem; font-weight: 800; backdrop-filter: blur(10px); }
+
+  .co-owner-needs, .co-services, .co-local-story, .co-about, .co-process, .co-final { padding: 94px 0; }
+  .co-owner-needs { background: var(--co-paper); border-top: 1px solid var(--co-line); border-bottom: 1px solid var(--co-line); }
+  .co-heading-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr); gap: 72px; align-items: end; margin-bottom: 42px; }
+  .co-heading h2, .co-local-copy h2, .co-about-copy h2, .co-final-card h2 { margin: 0; font-size: clamp(2.6rem, 4.8vw, 4.5rem); line-height: 1.02; letter-spacing: -.05em; font-weight: 700; }
+  .co-heading-split > p { max-width: 560px; margin: 0 0 4px; color: var(--co-copy); }
+
+  .co-outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .co-outcome-card { min-height: 265px; padding: 28px; border: 1px solid var(--co-line); border-radius: 16px; background: #fff; }
+  .co-outcome-card > span { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-bottom: 44px; border-radius: 9px; background: var(--co-sage); color: var(--co-forest); font-size: .72rem; font-weight: 800; }
+  .co-outcome-card h3 { margin: 0 0 10px; font-size: 1.35rem; line-height: 1.2; letter-spacing: -.03em; }
+  .co-outcome-card p { margin: 0; color: var(--co-copy); font-size: .94rem; }
+
+  .co-services { background: var(--co-cream); }
+  .co-service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .co-service-card { display: flex; min-height: 310px; flex-direction: column; padding: 30px; border: 1px solid var(--co-line); border-radius: 18px; background: #fff; color: var(--co-ink); text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .co-service-card:hover { transform: translateY(-3px); border-color: #bcc8c0; box-shadow: 0 16px 38px rgba(30, 51, 41, .07); }
+  .co-service-featured { background: var(--co-sage); border-color: #c9d9ce; }
+  .co-service-topline { display: flex; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 48px; }
+  .co-service-topline span { color: var(--co-forest); font-size: .7rem; font-weight: 800; letter-spacing: .1em; }
+  .co-service-topline b { padding: 6px 9px; border-radius: 999px; background: rgba(255,255,255,.68); color: var(--co-forest); font-size: .66rem; font-weight: 800; }
+  .co-service-card h3 { max-width: 520px; margin: 0 0 12px; font-size: clamp(1.65rem, 3vw, 2.3rem); line-height: 1.08; letter-spacing: -.04em; }
+  .co-service-card p { max-width: 550px; margin: 0 0 25px; color: var(--co-copy); }
+  .co-service-card strong { margin-top: auto; color: var(--co-river); font-size: .88rem; }
+
+  .co-local-story { background: var(--co-sky); }
+  .co-local-grid { display: grid; grid-template-columns: minmax(420px, 1.05fr) minmax(0, .95fr); gap: 72px; align-items: center; }
+  .co-local-images { display: grid; grid-template-columns: 1.25fr .75fr; grid-template-rows: 220px 220px; gap: 12px; }
+  .co-local-images img { width: 100%; height: 100%; display: block; object-fit: cover; border-radius: 16px; }
+  .co-local-large { grid-row: 1 / 3; }
+  .co-local-copy > p:not(.co-kicker) { color: var(--co-copy); }
+  .co-local-lead { margin: 24px 0 12px; color: var(--co-ink) !important; font-size: 1.14rem; font-weight: 650; }
+  .co-location-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+  .co-location-links a { display: flex; flex-direction: column; padding: 15px 16px; border: 1px solid rgba(53,107,87,.16); border-radius: 12px; background: rgba(255,255,255,.74); color: var(--co-ink); text-decoration: none; }
+  .co-location-links span { font-weight: 800; }
+  .co-location-links b { margin-top: 2px; color: var(--co-copy); font-size: .74rem; font-weight: 600; }
+
+  .co-about { background: var(--co-paper); }
+  .co-about-grid { display: grid; grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr); gap: 72px; align-items: center; }
+  .co-about-media { position: relative; min-height: 520px; overflow: hidden; border-radius: 20px; background: #d8dfdb; }
+  .co-about-media > img { width: 100%; height: 100%; min-height: 520px; display: block; object-fit: cover; object-position: center top; }
+  .co-about-badge { position: absolute; left: 16px; right: 16px; bottom: 16px; padding: 16px 18px; border-radius: 13px; background: rgba(255,255,255,.91); backdrop-filter: blur(10px); }
+  .co-about-badge strong, .co-about-badge span { display: block; }
+  .co-about-badge strong { color: var(--co-forest); }
+  .co-about-badge span { margin-top: 2px; color: var(--co-copy); font-size: .75rem; }
+  .co-about-lead { margin: 24px 0 14px; color: var(--co-ink); font-size: 1.14rem; font-weight: 650; }
+  .co-about-copy > p:not(.co-kicker):not(.co-about-lead) { color: var(--co-copy); }
+  .co-proof-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 28px 0 22px; }
+  .co-proof-row div { padding: 15px; border: 1px solid var(--co-line); border-radius: 11px; background: var(--co-cream); }
+  .co-proof-row strong, .co-proof-row span { display: block; }
+  .co-proof-row strong { font-size: .86rem; }
+  .co-proof-row span { margin-top: 3px; color: var(--co-copy); font-size: .72rem; }
+  .co-text-link { color: var(--co-river); font-weight: 800; text-decoration: none; }
+
+  .co-process { background: var(--co-sage); }
+  .co-process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .co-process-grid article { padding: 28px; border: 1px solid #ccd9cf; border-radius: 15px; background: rgba(255,255,255,.76); }
+  .co-process-grid article > span { color: var(--co-river); font-size: .72rem; font-weight: 800; }
+  .co-process-grid h3 { margin: 42px 0 10px; font-size: 1.3rem; letter-spacing: -.03em; }
+  .co-process-grid p { margin: 0; color: var(--co-copy); font-size: .92rem; }
+
+  .co-final { background: var(--co-cream); }
+  .co-final-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 54px; align-items: center; padding: 48px; border: 1px solid #c8d9d0; border-radius: 20px; background: var(--co-sage); }
+  .co-final-card h2 { max-width: 760px; }
+  .co-final-card p:not(.co-kicker) { max-width: 640px; margin: 18px 0 0; color: var(--co-copy); }
+
+  @media (max-width: 980px) {
+    .co-hero-grid, .co-heading-split, .co-local-grid, .co-about-grid, .co-final-card { grid-template-columns: 1fr; gap: 40px; }
+    .co-hero-media { min-height: 470px; }
+    .co-local-images { min-height: 440px; }
+    .co-final-card { align-items: start; }
+    .co-final-card .co-btn { width: fit-content; }
+  }
+
+  @media (max-width: 760px) {
+    .co-hero, .co-owner-needs, .co-services, .co-local-story, .co-about, .co-process, .co-final { padding: 66px 0; }
+    .co-hero-copy h1 { font-size: clamp(3.15rem, 15vw, 4.7rem); }
+    .co-actions { flex-direction: column; }
+    .co-btn { width: 100%; }
+    .co-trust-row { flex-direction: column; gap: 7px; }
+    .co-trust-row span::after { display: none; }
+    .co-hero-media { grid-template-columns: 1fr 1fr; grid-template-rows: 300px 155px; min-height: auto; }
+    .co-media-main { grid-column: 1 / 3; grid-row: 1; }
+    .co-outcome-grid, .co-service-grid, .co-process-grid, .co-proof-row { grid-template-columns: 1fr; }
+    .co-service-card { min-height: 285px; }
+    .co-local-images { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 150px; min-height: auto; }
+    .co-local-large { grid-column: 1 / 3; grid-row: 1; }
+    .co-location-links { grid-template-columns: 1fr; }
+    .co-about-media, .co-about-media > img { min-height: 420px; }
+    .co-final-card { padding: 32px 24px; }
+  }
+</style>
