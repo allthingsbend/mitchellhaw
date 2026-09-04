@@ -2,15 +2,19 @@
   <div class="nav-container">
     <a href="/" class="logo" aria-label="Mitchell Haw home">
       <span class="logo-mark">MH</span>
-      <span class="logo-name">Mitchell Haw</span>
+      <span class="logo-copy">
+        <strong>Mitchell Haw</strong>
+        <small>SEO & AI Search · Bend, OR</small>
+      </span>
     </a>
 
     <nav class="main-nav" aria-label="Primary navigation">
-      <a href="/services/seo">SEO</a>
-      <a href="/services/ai-search">AI Search</a>
+      <a href="/services/seo/">SEO</a>
+      <a href="/services/ai-search/">AI Search</a>
+      <a href="/services/seo-bend-oregon/">Local SEO</a>
       <a href="/insights/">Insights</a>
-      <a href="/about">About</a>
-      <a href="/contact" class="nav-cta">Contact ↗</a>
+      <a href="/about/">About</a>
+      <a href="/contact/" class="nav-cta">Contact</a>
     </nav>
   </div>
 </header>
@@ -20,14 +24,14 @@
     position: sticky;
     top: 0;
     z-index: 999;
-    background: rgba(247, 247, 242, 0.92);
-    border-bottom: 1px solid #d9dbd4;
+    background: rgba(248, 247, 243, 0.94);
+    border-bottom: 1px solid #d8ded9;
     backdrop-filter: blur(14px);
   }
 
   .site-header .nav-container {
-    width: min(1240px, 92%);
-    min-height: 76px;
+    width: min(1180px, 92%);
+    min-height: 78px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -44,84 +48,96 @@
   .site-header .logo {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    color: #171817;
+    gap: 11px;
+    color: #17211d;
     text-decoration: none;
-    letter-spacing: -0.02em;
   }
 
   .site-header .logo-mark {
     display: inline-grid;
     place-items: center;
-    width: 34px;
-    height: 34px;
-    background: #2457ff;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border-radius: 10px;
+    background: #1f67d7;
     color: #fff;
     font-family: "Manrope", "Helvetica Neue", Arial, sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
   }
 
-  .site-header .logo-name {
-    font-size: 0.96rem;
-    font-weight: 700;
+  .site-header .logo-copy {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .site-header .logo-copy strong {
+    color: #17211d;
+    font-size: 0.94rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .site-header .logo-copy small {
+    margin-top: 3px;
+    color: #738079;
+    font-size: 0.62rem;
+    font-weight: 600;
   }
 
   .site-header .main-nav {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 21px;
     flex-wrap: nowrap;
   }
 
   .site-header .main-nav a {
-    padding: 4px 0;
+    padding: 8px 0;
     border-radius: 0;
     background: transparent;
-    color: #171817;
-    font-size: 0.79rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
+    color: #28332e;
+    font-size: 0.78rem;
+    font-weight: 700;
     text-decoration: none;
     transition: color 0.18s ease;
   }
 
   .site-header .main-nav a:hover {
     background: transparent;
-    color: #2457ff;
+    color: #1f67d7;
     transform: none;
   }
 
   .site-header .main-nav .nav-cta {
-    padding-left: 16px;
-    border-left: 1px solid #d9dbd4;
-    background: transparent;
-    color: #2457ff;
+    padding: 10px 16px;
+    border-radius: 9px;
+    background: #1f67d7;
+    color: #fff;
     box-shadow: none;
   }
 
-  @media (max-width: 760px) {
+  .site-header .main-nav .nav-cta:hover {
+    background: #1854b5;
+    color: #fff;
+  }
+
+  @media (max-width: 860px) {
     .site-header .nav-container {
       min-height: auto;
-      padding: 14px 0 12px;
+      padding: 13px 0 11px;
       flex-direction: column;
       align-items: stretch;
-      gap: 12px;
-    }
-
-    .site-header .logo {
-      justify-content: space-between;
-    }
-
-    .site-header .logo-name {
-      margin-right: auto;
+      gap: 11px;
     }
 
     .site-header .main-nav {
       width: 100%;
       display: flex;
-      gap: 18px;
+      gap: 16px;
       overflow-x: auto;
       padding-bottom: 2px;
       scrollbar-width: none;
@@ -133,16 +149,13 @@
 
     .site-header .main-nav a {
       flex: 0 0 auto;
-      padding: 0;
-      background: transparent;
-      font-size: 0.76rem;
+      padding: 4px 0;
+      font-size: 0.75rem;
     }
 
     .site-header .main-nav .nav-cta {
-      border-left: 0;
-      padding-left: 0;
-      background: transparent;
-      color: #2457ff;
+      padding: 6px 11px;
+      border-radius: 7px;
     }
   }
 </style>
