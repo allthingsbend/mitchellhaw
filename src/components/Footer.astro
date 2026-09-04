@@ -1,26 +1,41 @@
 <footer class="site-footer">
   <div class="footer-container">
-    <div class="footer-lead">
-      <p class="footer-kicker">Mitchell Haw / Bend, Oregon</p>
-      <h2>Have something interesting to work on?</h2>
-      <a href="/contact/" class="footer-contact">Start a conversation ↗</a>
+    <div class="footer-cta">
+      <div>
+        <p class="footer-kicker">SEO & AI Search · Bend, Oregon</p>
+        <h2>Need help getting your business found?</h2>
+        <p>
+          SEO, AI search, local visibility, content strategy, and practical digital strategy for businesses in Bend, Central Oregon, and beyond.
+        </p>
+      </div>
+      <a href="/contact/" class="footer-contact">Get a Visibility Review</a>
     </div>
 
     <div class="footer-main">
       <div class="footer-about">
         <a href="/" class="footer-logo">Mitchell Haw</a>
         <p class="footer-description">
-          SEO, AI search, content, local visibility, analytics, and digital strategy for brands that want to be easier to find.
+          Bend-based SEO and AI search consultant helping businesses improve visibility across Google, maps, AI search, content, and local discovery.
         </p>
       </div>
 
       <div class="footer-column">
-        <p class="footer-heading">Work</p>
+        <p class="footer-heading">Services</p>
         <div class="footer-link-list">
           <a href="/services/seo/">SEO Strategy</a>
           <a href="/services/ai-search/">AI Search</a>
           <a href="/services/seo-bend-oregon/">Local SEO</a>
-          <a href="/services/video-marketing/">Video & Content</a>
+          <a href="/services/video-marketing/">Content & Video</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Central Oregon</p>
+        <div class="footer-link-list">
+          <a href="/services/seo-bend-oregon/">Bend</a>
+          <a href="/services/seo-redmond-oregon/">Redmond</a>
+          <a href="/services/seo-sisters-oregon/">Sisters</a>
+          <a href="/services/seo-sunriver-oregon/">Sunriver</a>
         </div>
       </div>
 
@@ -37,114 +52,131 @@
 
     <div class="footer-bottom">
       <p>© {new Date().getFullYear()} Mitchell Haw</p>
-      <p>Search strategy for a changing internet.</p>
+      <p>Bend, Oregon</p>
     </div>
   </div>
 </footer>
 
 <style>
   .site-footer {
-    background: #e8edff;
-    color: #171817;
-    padding: 92px 0 0;
-    border-top: 1px solid #d9dbd4;
+    background: #f3f5f2;
+    color: #17211d;
+    padding: 78px 0 0;
+    border-top: 1px solid #d8ded9;
   }
 
   .footer-container {
-    width: min(1240px, 92%);
+    width: min(1180px, 92%);
     margin: 0 auto;
   }
 
-  .footer-lead {
+  .footer-cta {
     display: grid;
-    grid-template-columns: 0.55fr 1.45fr;
-    gap: 70px;
-    align-items: start;
-    padding-bottom: 78px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 54px;
+    align-items: center;
+    padding: 42px 44px;
+    border: 1px solid #cfdbef;
+    border-radius: 20px;
+    background: #eaf2ff;
   }
 
   .footer-kicker {
-    margin: 9px 0 0;
-    color: #2457ff;
+    margin: 0 0 10px;
+    color: #1f67d7;
     font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
-  .footer-lead h2 {
-    max-width: 880px;
+  .footer-cta h2 {
+    max-width: 760px;
     margin: 0;
-    color: #171817;
-    font-size: clamp(3rem, 6.5vw, 6.4rem);
-    font-weight: 600;
-    line-height: 0.92;
-    letter-spacing: -0.065em;
+    color: #17211d;
+    font-size: clamp(2.3rem, 4.5vw, 4.1rem);
+    font-weight: 650;
+    line-height: 1;
+    letter-spacing: -0.045em;
+  }
+
+  .footer-cta p:not(.footer-kicker) {
+    max-width: 650px;
+    margin: 16px 0 0;
+    color: #5d6963;
+    font-size: 0.95rem;
   }
 
   .footer-contact {
-    grid-column: 2;
-    width: fit-content;
-    margin-top: -22px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #2457ff;
-    color: #2457ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #1f67d7;
+    color: #fff;
+    font-size: 0.88rem;
     font-weight: 700;
     text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .footer-contact:hover {
+    background: #1854b5;
   }
 
   .footer-main {
     display: grid;
-    grid-template-columns: 1.5fr 0.7fr 0.7fr;
-    gap: 60px;
-    padding: 48px 0 54px;
-    border-top: 1px solid rgba(23, 24, 23, 0.2);
+    grid-template-columns: 1.5fr 0.7fr 0.7fr 0.7fr;
+    gap: 46px;
+    padding: 58px 0 48px;
   }
 
   .footer-about {
-    max-width: 480px;
+    max-width: 430px;
   }
 
   .footer-logo {
     display: inline-block;
-    margin-bottom: 14px;
-    color: #171817;
-    font-size: 1.05rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    margin-bottom: 13px;
+    color: #17211d;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     text-decoration: none;
   }
 
   .footer-description {
     margin: 0;
-    color: #555a55;
-    font-size: 0.95rem;
+    color: #68746e;
+    font-size: 0.9rem;
     line-height: 1.65;
   }
 
   .footer-heading {
-    margin: 0 0 16px;
-    color: #777c76;
-    font-size: 0.68rem;
+    margin: 0 0 14px;
+    color: #7a857f;
+    font-size: 0.66rem;
     font-weight: 700;
-    letter-spacing: 0.11em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   .footer-link-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
   }
 
   .footer-link-list a {
-    color: #171817;
-    font-size: 0.9rem;
+    color: #2a3731;
+    font-size: 0.87rem;
     text-decoration: none;
   }
 
   .footer-link-list a:hover {
-    color: #2457ff;
+    color: #1f67d7;
   }
 
   .footer-bottom {
@@ -152,34 +184,44 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 22px 0;
-    border-top: 1px solid rgba(23, 24, 23, 0.2);
+    padding: 20px 0;
+    border-top: 1px solid #d8ded9;
   }
 
   .footer-bottom p {
     margin: 0;
-    color: #777c76;
+    color: #7a857f;
     font-size: 0.72rem;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 860px) {
     .site-footer {
-      padding-top: 70px;
+      padding-top: 62px;
     }
 
-    .footer-lead,
+    .footer-cta,
     .footer-main {
       grid-template-columns: 1fr;
-      gap: 34px;
+    }
+
+    .footer-cta {
+      gap: 28px;
+      padding: 34px 28px;
     }
 
     .footer-contact {
-      grid-column: 1;
-      margin-top: 0;
+      width: fit-content;
     }
 
     .footer-main {
-      gap: 34px;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px 28px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-main {
+      grid-template-columns: 1fr;
     }
 
     .footer-bottom {
