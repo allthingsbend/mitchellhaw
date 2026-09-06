@@ -8,145 +8,63 @@
       </span>
     </a>
 
-    <nav class="main-nav" aria-label="Primary navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+      <b>Menu</b>
+    </button>
+
+    <nav class="main-nav" id="primary-nav" aria-label="Primary navigation">
       <a href="/services/seo/">SEO</a>
       <a href="/services/ai-search/">AI Search</a>
       <a href="/services/seo-bend-oregon/">Local SEO</a>
       <a href="/insights/">Insights</a>
       <a href="/about/">About</a>
-      <a href="/contact/" class="nav-cta">Let’s Talk</a>
+      <a href="/contact/" class="nav-cta">Let's Talk</a>
     </nav>
   </div>
 </header>
 
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#primary-nav');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+    nav?.classList.toggle('is-open', !open);
+  });
+</script>
+
 <style is:global>
-  .site-header {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 9999 !important;
-    background: #f6f4ee !important;
-    border-bottom: 1px solid #d7ddd7 !important;
-    box-shadow: 0 8px 28px rgba(28, 41, 35, 0.05) !important;
-    backdrop-filter: none !important;
-  }
-
-  .site-header .nav-container {
-    width: min(1180px, 92%) !important;
-    min-height: 80px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 30px !important;
-    background: #f6f4ee !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-  }
-
-  .site-header .logo {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 11px !important;
-    color: #1c2923 !important;
-    text-decoration: none !important;
-  }
-
-  .site-header .logo-mark {
-    display: inline-grid !important;
-    place-items: center !important;
-    width: 38px !important;
-    height: 38px !important;
-    flex: 0 0 38px !important;
-    border-radius: 10px !important;
-    background: #356b57 !important;
-    color: #fff !important;
-    font-family: "Manrope", "Helvetica Neue", Arial, sans-serif !important;
-    font-size: 0.72rem !important;
-    font-weight: 800 !important;
-    letter-spacing: -0.03em !important;
-  }
-
-  .site-header .logo-copy {
-    display: flex !important;
-    flex-direction: column !important;
-    line-height: 1.2 !important;
-  }
-
-  .site-header .logo-copy strong {
-    color: #1c2923 !important;
-    font-size: 0.95rem !important;
-    font-weight: 800 !important;
-    letter-spacing: -0.02em !important;
-  }
-
-  .site-header .logo-copy small {
-    margin-top: 3px !important;
-    color: #68756e !important;
-    font-size: 0.61rem !important;
-    font-weight: 650 !important;
-  }
-
-  .site-header .main-nav {
-    display: flex !important;
-    align-items: center !important;
-    gap: 21px !important;
-    flex-wrap: nowrap !important;
-  }
-
-  .site-header .main-nav a {
-    padding: 8px 0 !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    color: #25342d !important;
-    font-size: 0.78rem !important;
-    font-weight: 750 !important;
-    text-decoration: none !important;
-    text-shadow: none !important;
-    transition: color 0.18s ease !important;
-  }
-
-  .site-header .main-nav a:hover {
-    background: transparent !important;
-    color: #2f6f8f !important;
-    transform: none !important;
-  }
-
-  .site-header .main-nav .nav-cta {
-    padding: 10px 16px !important;
-    border-radius: 9px !important;
-    background: #356b57 !important;
-    color: #fff !important;
-    box-shadow: none !important;
-  }
-
-  .site-header .main-nav .nav-cta:hover {
-    background: #2b5847 !important;
-    color: #fff !important;
-  }
+  .site-header { position: sticky !important; top: 0 !important; z-index: 9999 !important; background: #f6f4ee !important; border-bottom: 1px solid #d7ddd7 !important; box-shadow: 0 8px 28px rgba(28,41,35,.05) !important; }
+  .site-header .nav-container { width: min(1180px,92%) !important; min-height: 80px !important; margin: 0 auto !important; display:flex !important; align-items:center !important; justify-content:space-between !important; gap:30px !important; }
+  .site-header .logo { display:inline-flex !important; align-items:center !important; gap:11px !important; color:#1c2923 !important; text-decoration:none !important; }
+  .site-header .logo-mark { display:inline-grid !important; place-items:center !important; width:38px !important; height:38px !important; flex:0 0 38px !important; border-radius:10px !important; background:#356b57 !important; color:#fff !important; font-family:"Manrope","Helvetica Neue",Arial,sans-serif !important; font-size:.72rem !important; font-weight:800 !important; }
+  .site-header .logo-copy { display:flex !important; flex-direction:column !important; line-height:1.2 !important; }
+  .site-header .logo-copy strong { color:#1c2923 !important; font-size:.95rem !important; font-weight:800 !important; letter-spacing:-.02em !important; }
+  .site-header .logo-copy small { margin-top:3px !important; color:#68756e !important; font-size:.61rem !important; font-weight:650 !important; }
+  .site-header .main-nav { display:flex !important; align-items:center !important; gap:21px !important; }
+  .site-header .main-nav a { padding:8px 0 !important; color:#25342d !important; font-size:.78rem !important; font-weight:750 !important; text-decoration:none !important; }
+  .site-header .main-nav a:hover { color:#2f6f8f !important; }
+  .site-header .main-nav .nav-cta { padding:10px 16px !important; border-radius:9px !important; background:#356b57 !important; color:#fff !important; }
+  .menu-toggle { display:none; }
 
   @media (max-width: 860px) {
-    .site-header .nav-container {
-      min-height: auto !important;
-      padding: 13px 0 11px !important;
-      flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 11px !important;
-    }
+    .site-header .nav-container { width:100% !important; min-height:72px !important; padding:0 20px !important; gap:12px !important; position:relative !important; }
+    .site-header .logo-mark { width:40px !important; height:40px !important; flex-basis:40px !important; }
+    .site-header .logo-copy strong { font-size:.98rem !important; }
+    .site-header .logo-copy small { font-size:.62rem !important; }
+    .menu-toggle { display:flex; align-items:center; justify-content:center; gap:4px; flex-direction:column; width:54px; height:44px; border:1px solid #cfd6d1; border-radius:10px; background:#fff; color:#25342d; cursor:pointer; }
+    .menu-toggle span { display:block; width:18px; height:2px; border-radius:2px; background:#25342d; }
+    .menu-toggle b { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+    .site-header .main-nav { display:none !important; position:absolute !important; top:calc(100% + 1px) !important; left:0 !important; right:0 !important; padding:12px 20px 20px !important; background:#f6f4ee !important; border-bottom:1px solid #d7ddd7 !important; box-shadow:0 18px 28px rgba(28,41,35,.12) !important; grid-template-columns:1fr 1fr !important; gap:8px !important; }
+    .site-header .main-nav.is-open { display:grid !important; }
+    .site-header .main-nav a { display:flex !important; align-items:center !important; min-height:46px !important; padding:11px 13px !important; border:1px solid #dce1dd !important; border-radius:9px !important; background:#fff !important; font-size:.86rem !important; }
+    .site-header .main-nav .nav-cta { grid-column:1 / -1 !important; justify-content:center !important; border-color:#356b57 !important; background:#356b57 !important; color:#fff !important; font-size:.9rem !important; }
+  }
 
-    .site-header .main-nav {
-      width: 100% !important;
-      display: flex !important;
-      gap: 16px !important;
-      overflow-x: auto !important;
-      padding-bottom: 2px !important;
-      scrollbar-width: none !important;
-    }
-
-    .site-header .main-nav::-webkit-scrollbar { display: none !important; }
-    .site-header .main-nav a { flex: 0 0 auto !important; padding: 4px 0 !important; font-size: 0.75rem !important; }
-    .site-header .main-nav .nav-cta { padding: 6px 11px !important; border-radius: 7px !important; }
+  @media (max-width: 390px) {
+    .site-header .nav-container { padding:0 14px !important; }
+    .site-header .logo-copy small { display:none !important; }
   }
 </style>
